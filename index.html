@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benjamin Balde</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: #1e1e2e;
+      --accent: #6c63ff;
+      --accent-light: #a89cff;
+      --text: #e8e8f0;
+      --muted: #8888a8;
+      --dim: #4a4a6a;
+      --max-width: 760px;
+      --transition: 0.25s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background: rgba(10, 10, 15, 0.8);
+      border-bottom: 1px solid var(--border); padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; height: 60px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text); }
+    #hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 64px; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(108, 99, 255, 0.12) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(168, 156, 255, 0.06) 0%, transparent 60%); }
+    .hero-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, var(--dim) 1px, transparent 1px); background-size: 32px 32px; opacity: 0.25; }
+    .hero-content { position: relative; max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; width: 100%; }
+    .hero-label { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); background: rgba(108, 99, 255, 0.1); border: 1px solid rgba(108, 99, 255, 0.25); border-radius: 100px; padding: 4px 14px; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+    h1 .gradient { background: linear-gradient(135deg, var(--text) 0%, var(--accent-light) 50%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-tagline { font-size: 1.15rem; color: var(--muted); max-width: 480px; margin-bottom: 2.5rem; line-height: 1.6; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all var(--transition); letter-spacing: 0.01em; }
+    .btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+    .btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(108, 99, 255, 0.3); }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    section { padding: 5rem 2rem; }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 3rem; }
+    #about { border-top: 1px solid var(--border); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+    .card-title { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 13px; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; }
+    #contact { border-top: 1px solid var(--border); text-align: center; }
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--accent); border-radius: 16px; padding: 3rem 2rem; max-width: 500px; margin: 0 auto; }
+    .contact-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .contact-card p { color: var(--muted); margin-bottom: 2rem; }
+    .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .contact-link { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 500; background: transparent; color: var(--muted); border: 1px solid var(--border); text-decoration: none; transition: all var(--transition); letter-spacing: 0.01em; }
+    .contact-link:hover { color: var(--text); border-color: var(--accent); background: rgba(108, 99, 255, 0.08); }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--dim); font-size: 13px; }
+    .footer-dot { color: var(--accent); margin: 0 6px; }
+    @media (max-width: 480px) { nav { padding: 0 1rem; } .nav-links { gap: 1rem; } section { padding: 4rem 1rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Benjamin<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-content">
+      <span class="hero-label">Verfügbar für Gespräche</span>
+      <h1><span class="gradient">Benjamin Balde</span></h1>
+      <p class="hero-tagline">Ich gestalte digitale Erfahrungen und beschäftige mich mit den großen Fragen unserer Zeit — KI, Gesellschaft und Verantwortung.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
+        <a href="#about" class="btn btn-outline">Mehr erfahren</a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Über mich</p>
+      <h2 class="section-title">Wer ich bin</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Ich bin Benjamin Balde — Denker, Gestalter und jemand, der an der Schnittstelle von Technologie und Gesellschaft arbeitet.</p>
+          <p>Mein Fokus liegt darauf, wie wir als Gesellschaft mit den Chancen und Risiken fortgeschrittener KI-Systeme umgehen sollten. Ich bin bei <strong style="color: var(--text)">ControlAI</strong> aktiv, einer gemeinnützigen Organisation, die sich mit KI-Sicherheit befasst.</p>
+          <p>Ich glaube daran, dass gute Entscheidungen über Technologie nur durch offenen Dialog entstehen — zwischen Zivilgesellschaft, Politik und Forschung.</p>
+        </div>
+        <div>
+          <div class="card" style="margin-bottom: 1rem;">
+            <p class="card-title">Schwerpunkte</p>
+            <div class="tags">
+              <span class="tag">KI-Sicherheit</span>
+              <span class="tag">Policy</span>
+              <span class="tag">ControlAI</span>
+              <span class="tag">Governance</span>
+              <span class="tag">Digitalpolitik</span>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-title">Werte</p>
+            <div class="tags">
+              <span class="tag">Transparenz</span>
+              <span class="tag">Verantwortung</span>
+              <span class="tag">Dialog</span>
+              <span class="tag">Langzeitdenken</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <h3>Lass uns sprechen</h3>
+        <p>Ich freue mich über einen Austausch — ob per E-Mail, LinkedIn oder einem kurzen Anruf.</p>
+        <div class="contact-links">
+          <a href="mailto:benjamin@benjaminbalde.com" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            E-Mail
+          </a>
+          <a href="https://linkedin.com/in/amirbalde" target="_blank" rel="noopener" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>Benjamin Balde<span class="footer-dot">&middot;</span>2026</p>
+      <p style="margin-top:4px">Designed &amp; built with care</p>
+    </div>
+  </footer>
+</body>
+</html>
