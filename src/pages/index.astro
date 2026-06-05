@@ -1,0 +1,245 @@
+---
+import Base from '../layouts/Base.astro';
+
+const focus = [
+  { n: '01', title: 'Strategie', body: 'Richtung vor Aktivität.' },
+  { n: '02', title: 'Transformation', body: 'Veränderung, die trägt.' },
+  { n: '03', title: 'Beratung', body: 'Ein verlässliches Gegenüber.' },
+];
+---
+
+<Base>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="shell hero-shell">
+      <p class="avail" data-reveal>
+        <span class="dot" aria-hidden="true"></span> Für ausgewählte Mandate
+      </p>
+      <h1 class="display hero-title">
+        <span data-reveal>Strategie</span>
+        <span data-reveal style="--delay:120ms">und <em>Klarheit.</em></span>
+      </h1>
+      <div class="hero-foot" data-reveal style="--delay:240ms">
+        <p class="lede">Beratung für komplexe Entscheidungen.</p>
+        <a href="#kontakt" class="link">
+          Gespräch anfragen
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== HALTUNG ===================== -->
+  <section class="section" id="ansatz-teaser">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(I)</span>
+        <span class="sec-label">Haltung</span>
+      </div>
+      <div class="statement" data-reveal style="--delay:80ms">
+        <p class="big">Weniger Lärm. <em>Mehr Substanz.</em></p>
+        <a href="/ansatz" class="link">Ansatz <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== SCHWERPUNKTE ===================== -->
+  <section class="section" id="fokus">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(II)</span>
+        <span class="sec-label">Schwerpunkte</span>
+      </div>
+      <div class="focus-grid">
+        {focus.map((f, i) => (
+          <article class="focus-card" data-reveal style={`--delay:${i * 100}ms`}>
+            <span class="focus-n">{f.n}</span>
+            <h3 class="focus-title">{f.title}</h3>
+            <p class="focus-body">{f.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== BLOG TEASER ===================== -->
+  <section class="section" id="blog-teaser">
+    <div class="shell">
+      <div class="journal-row">
+        <div data-reveal>
+          <div class="sec-head">
+            <span class="sec-num">(III)</span>
+            <span class="sec-label">Blog</span>
+          </div>
+          <p class="journal-lede">Notizen und Gedanken.</p>
+        </div>
+        <a href="/blog" class="journal-cta" data-reveal style="--delay:120ms">
+          <span class="soon">Bald</span>
+          <span class="journal-link link">Zum Blog <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== KONTAKT ===================== -->
+  <section class="section contact" id="kontakt">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(IV)</span>
+        <span class="sec-label">Kontakt</span>
+      </div>
+      <h2 class="display contact-title" data-reveal style="--delay:80ms">
+        Sprechen wir.
+      </h2>
+      <p class="contact-sub" data-reveal style="--delay:160ms">
+        Für Mandate und Austausch.
+      </p>
+      <div class="contact-links" data-reveal style="--delay:240ms">
+        <a href="mailto:benjamin@benjaminbalde.com" class="contact-link">
+          <span class="cl-label">E-Mail</span>
+          <span class="cl-val">benjamin@benjaminbalde.com</span>
+        </a>
+        <a href="https://linkedin.com/in/amirbalde" target="_blank" rel="noopener" class="contact-link">
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-val">/in/amirbalde</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: clamp(86vh, 92svh, 100vh);
+    display: flex;
+    align-items: center;
+    padding-block: clamp(5rem, 12vw, 9rem);
+  }
+  .hero-shell { width: 100%; }
+  .avail {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--live);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 60%, transparent);
+    animation: pulse 2.6s infinite var(--ease);
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); }
+    70% { box-shadow: 0 0 0 8px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+  .hero-title { display: flex; flex-direction: column; }
+  .hero-title span { display: block; }
+  .hero-foot {
+    margin-top: clamp(2.25rem, 5vw, 3.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
+  }
+  .hero-line {
+    position: absolute;
+    left: var(--gutter); right: var(--gutter);
+    bottom: 0;
+    height: 1px;
+    background: var(--hair);
+  }
+
+  /* HALTUNG */
+  .statement { max-width: 56ch; }
+  .big {
+    font-family: var(--serif);
+    font-size: clamp(1.85rem, 4.6vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.75rem;
+  }
+  .big em { font-style: italic; }
+
+  .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
+
+  /* SCHWERPUNKTE */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5rem, 4vw, 3.25rem);
+  }
+  .focus-card { position: relative; padding-top: 1.75rem; border-top: 1px solid var(--hair-strong); }
+  .focus-n {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--faint);
+    font-variant-numeric: tabular-nums;
+  }
+  .focus-title { font-family: var(--serif); font-weight: 400; font-size: 1.85rem; margin: 0.75rem 0 0.85rem; }
+  .focus-body { font-size: 0.97rem; color: var(--muted); line-height: 1.65; }
+  @media (max-width: 760px) {
+    .focus-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  }
+
+  /* BLOG */
+  .journal-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .journal-lede {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+    line-height: 1.15;
+    max-width: 22ch;
+  }
+  .journal-cta { display: flex; align-items: center; gap: 1.25rem; text-decoration: none; }
+  .soon {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--hair-strong);
+    border-radius: 100px;
+    padding: 5px 12px;
+    white-space: nowrap;
+  }
+  .journal-link { white-space: nowrap; }
+
+  /* KONTAKT */
+  .contact-title { margin-bottom: 1.25rem; }
+  .contact-sub { font-size: 1.1rem; color: var(--muted); max-width: 40ch; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--hair); border: 1px solid var(--hair); }
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    background: var(--paper);
+    text-decoration: none;
+    transition: background 0.3s var(--ease);
+  }
+  .contact-link:hover { background: var(--paper-2); }
+  .cl-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); }
+  .cl-val { font-family: var(--serif); font-size: clamp(1.15rem, 2.6vw, 1.6rem); }
+  @media (max-width: 560px) {
+    .contact-links { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+import Base from '../layouts/Base.astro';
+
+const principles = [
+  { n: '01', title: 'Zuerst verstehen', body: 'Bevor etwas gebaut oder beschlossen wird.' },
+  { n: '02', title: 'Einfach halten', body: 'Komplexität ist kein Selbstzweck.' },
+  { n: '03', title: 'In Strukturen denken', body: 'Einzelne Lösungen verpuffen.' },
+  { n: '04', title: 'Langfristig handeln', body: 'Was in fünf Jahren noch trägt.' },
+];
+---
+
+<Base title="Ansatz" description="Wie Benjamin Balde arbeitet.">
+  <!-- HEADER -->
+  <section class="page-hero">
+    <div class="shell">
+      <p class="sec-label" data-reveal>Ansatz</p>
+      <h1 class="display page-title" data-reveal style="--delay:80ms">
+        Weniger Lärm.<br /><em>Mehr Substanz.</em>
+      </h1>
+      <p class="lede page-lede" data-reveal style="--delay:200ms">
+        Ein paar Prinzipien leiten jede Zusammenarbeit.
+      </p>
+    </div>
+    <div class="hero-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="section">
+    <div class="shell">
+      <div class="principles">
+        {principles.map((p, i) => (
+          <article class="principle" data-reveal style={`--delay:${i * 80}ms`}>
+            <span class="principle-n">{p.n}</span>
+            <div class="principle-body">
+              <h2 class="principle-title">{p.title}</h2>
+              <p>{p.body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- CLOSING -->
+  <section class="section closing">
+    <div class="shell">
+      <p class="big" data-reveal>Sprechen wir.</p>
+      <a href="/#kontakt" class="link" data-reveal style="--delay:120ms">
+        Kontakt <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(4.5rem, 11vw, 8rem) clamp(3rem, 7vw, 5rem);
+  }
+  .page-title { margin: 1.25rem 0 1.75rem; }
+  .page-title em { font-style: italic; }
+  .page-lede { max-width: 38ch; }
+  .hero-line {
+    position: absolute; left: var(--gutter); right: var(--gutter); bottom: 0;
+    height: 1px; background: var(--hair);
+  }
+  .sec-label { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+
+  .principles { display: flex; flex-direction: column; }
+  .principle {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: clamp(1rem, 4vw, 3rem);
+    padding-block: clamp(2rem, 4vw, 3rem);
+    border-top: 1px solid var(--hair);
+  }
+  .principle:last-child { border-bottom: 1px solid var(--hair); }
+  .principle-n {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    color: var(--faint);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .principle-title { font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
+  .principle-body p { color: var(--muted); max-width: 52ch; }
+
+  .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
+
+  .closing .big {
+    font-family: var(--serif);
+    font-size: clamp(1.85rem, 4.5vw, 3rem);
+    line-height: 1.12;
+    max-width: 24ch;
+    margin-bottom: 2rem;
+  }
+  .closing .big em { font-style: italic; }
+
+  @media (max-width: 640px) {
+    .principle { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+</style>
