@@ -4,17 +4,18 @@
    Design tokens
    ============================================================ */
 :root {
-  /* Paper & ink: warm, near-monochrome */
-  --paper: #f4f2ed;
-  --paper-2: #efece5;
-  --ink: #16150f;
-  --ink-soft: #2a2823;
-  --muted: #6f6c63;
-  --faint: #9a978d;
-  --hair: #ddd9d0;
-  --hair-strong: #c8c3b8;
-  --accent: #16150f; /* monochrome by default */
-  --live: #5b7a5b;
+  /* Black & white with bordeaux accent */
+  --paper: #f6f6f5;
+  --paper-2: #ededec;
+  --ink: #111111;
+  --ink-soft: #2b2b2b;
+  --muted: #6c6c6c;
+  --faint: #9b9b9b;
+  --hair: #e3e3e1;
+  --hair-strong: #c9c9c6;
+  --accent: #7a2231; /* bordeaux */
+  --accent-soft: #9a3a47;
+  --live: var(--accent);
 
   --sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --serif: var(--sans); /* grounded: no decorative serif */
@@ -50,7 +51,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 
-::selection { background: var(--ink); color: var(--paper); }
+::selection { background: var(--accent); color: var(--paper); }
 
 /* Film-grain texture overlay */
 .grain {
@@ -75,7 +76,7 @@ a { color: inherit; }
 .sec-num {
   font-family: var(--serif);
   font-size: 0.95rem;
-  color: var(--faint);
+  color: var(--accent);
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
 }
@@ -118,7 +119,7 @@ p { max-width: var(--measure); }
   padding-bottom: 2px;
   transition: border-color 0.3s var(--ease), gap 0.3s var(--ease);
 }
-.link:hover { border-color: var(--ink); gap: 0.85em; }
+.link:hover { border-color: var(--accent); color: var(--accent); gap: 0.85em; }
 .link .arrow { transition: transform 0.3s var(--ease); }
 .link:hover .arrow { transform: translateX(3px); }
 
