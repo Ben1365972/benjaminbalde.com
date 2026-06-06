@@ -1,7 +1,5 @@
 ---
 const links = [
-  { href: '/ansatz', label: 'Ansatz' },
-  { href: '/blog', label: 'Blog' },
   { href: '/#kontakt', label: 'Kontakt' },
 ];
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -41,9 +39,9 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
     height: 68px;
   }
   .brand {
-    font-family: var(--serif);
-    font-size: 1.3rem;
-    letter-spacing: 0.01em;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     text-decoration: none;
     color: var(--ink);
     white-space: nowrap;

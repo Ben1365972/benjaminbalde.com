@@ -17,7 +17,7 @@ const focus = [
       </p>
       <h1 class="display hero-title">
         <span data-reveal>Strategie</span>
-        <span data-reveal style="--delay:120ms">und <em>Klarheit.</em></span>
+        <span data-reveal style="--delay:120ms">und Klarheit.</span>
       </h1>
       <div class="hero-foot" data-reveal style="--delay:240ms">
         <p class="lede">Beratung für komplexe Entscheidungen.</p>
@@ -31,16 +31,13 @@ const focus = [
   </section>
 
   <!-- ===================== HALTUNG ===================== -->
-  <section class="section" id="ansatz-teaser">
+  <section class="section" id="haltung">
     <div class="shell">
       <div class="sec-head" data-reveal>
         <span class="sec-num">(I)</span>
         <span class="sec-label">Haltung</span>
       </div>
-      <div class="statement" data-reveal style="--delay:80ms">
-        <p class="big">Weniger Lärm. <em>Mehr Substanz.</em></p>
-        <a href="/ansatz" class="link">Ansatz <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
+      <p class="big" data-reveal style="--delay:80ms">Weniger Lärm. Mehr Substanz.</p>
     </div>
   </section>
 
@@ -67,32 +64,11 @@ const focus = [
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== BLOG TEASER ===================== -->
-  <section class="section" id="blog-teaser">
-    <div class="shell">
-      <div class="journal-row">
-        <div data-reveal>
-          <div class="sec-head">
-            <span class="sec-num">(III)</span>
-            <span class="sec-label">Blog</span>
-          </div>
-          <p class="journal-lede">Notizen und Gedanken.</p>
-        </div>
-        <a href="/blog" class="journal-cta" data-reveal style="--delay:120ms">
-          <span class="soon">Bald</span>
-          <span class="journal-link link">Zum Blog <span class="arrow" aria-hidden="true">→</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule shell-rule" />
-
   <!-- ===================== KONTAKT ===================== -->
   <section class="section contact" id="kontakt">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(IV)</span>
+        <span class="sec-num">(III)</span>
         <span class="sec-label">Kontakt</span>
       </div>
       <h2 class="display contact-title" data-reveal style="--delay:80ms">
@@ -165,15 +141,13 @@ const focus = [
   }
 
   /* HALTUNG */
-  .statement { max-width: 56ch; }
   .big {
-    font-family: var(--serif);
-    font-size: clamp(1.85rem, 4.6vw, 3.25rem);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.75rem;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 4.4vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    max-width: 18ch;
   }
-  .big em { font-style: italic; }
 
   .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
 
@@ -185,43 +159,16 @@ const focus = [
   }
   .focus-card { position: relative; padding-top: 1.75rem; border-top: 1px solid var(--hair-strong); }
   .focus-n {
-    font-family: var(--serif);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: var(--faint);
     font-variant-numeric: tabular-nums;
   }
-  .focus-title { font-family: var(--serif); font-weight: 400; font-size: 1.85rem; margin: 0.75rem 0 0.85rem; }
+  .focus-title { font-weight: 600; font-size: 1.5rem; letter-spacing: -0.02em; margin: 0.85rem 0 0.7rem; }
   .focus-body { font-size: 0.97rem; color: var(--muted); line-height: 1.65; }
   @media (max-width: 760px) {
     .focus-grid { grid-template-columns: 1fr; gap: 2.25rem; }
   }
-
-  /* BLOG */
-  .journal-row {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .journal-lede {
-    font-family: var(--serif);
-    font-size: clamp(1.5rem, 3.4vw, 2.4rem);
-    line-height: 1.15;
-    max-width: 22ch;
-  }
-  .journal-cta { display: flex; align-items: center; gap: 1.25rem; text-decoration: none; }
-  .soon {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border: 1px solid var(--hair-strong);
-    border-radius: 100px;
-    padding: 5px 12px;
-    white-space: nowrap;
-  }
-  .journal-link { white-space: nowrap; }
 
   /* KONTAKT */
   .contact-title { margin-bottom: 1.25rem; }
@@ -238,7 +185,7 @@ const focus = [
   }
   .contact-link:hover { background: var(--paper-2); }
   .cl-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); }
-  .cl-val { font-family: var(--serif); font-size: clamp(1.15rem, 2.6vw, 1.6rem); }
+  .cl-val { font-weight: 500; font-size: clamp(1.05rem, 2.4vw, 1.4rem); letter-spacing: -0.01em; }
   @media (max-width: 560px) {
     .contact-links { grid-template-columns: 1fr; }
   }
