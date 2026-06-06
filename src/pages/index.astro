@@ -2,9 +2,9 @@
 import Base from '../layouts/Base.astro';
 
 const focus = [
-  { n: '01', title: 'Strategie', body: 'Richtung vor Aktivität.' },
-  { n: '02', title: 'Transformation', body: 'Veränderung, die trägt.' },
-  { n: '03', title: 'Beratung', body: 'Ein verlässliches Gegenüber.' },
+  { n: '01', title: 'Strategie', body: 'Positionen schärfen, Optionen bewerten, Prioritäten setzen.' },
+  { n: '02', title: 'Transformation', body: 'Vorhaben strukturieren und über die ersten Schritte hinaus tragfähig machen.' },
+  { n: '03', title: 'Beratung', body: 'Sparring auf Augenhöhe für Führung und Gremien.' },
 ];
 ---
 
@@ -38,6 +38,14 @@ const focus = [
         <span class="sec-label">Haltung</span>
       </div>
       <p class="big" data-reveal style="--delay:80ms">Weniger Lärm. Mehr Substanz.</p>
+      <div class="haltung-text" data-reveal style="--delay:160ms">
+        <p>
+          Beratung für Menschen und Organisationen, die in einem unübersichtlichen Umfeld
+          tragfähige Entscheidungen treffen müssen. Unabhängig, diskret, auf das Wesentliche
+          reduziert.
+        </p>
+        <p>Statt fertiger Antworten steht am Anfang die richtige Frage.</p>
+      </div>
     </div>
   </section>
 
@@ -64,11 +72,27 @@ const focus = [
 
   <hr class="rule shell-rule" />
 
+  <!-- ===================== ARBEITSWEISE ===================== -->
+  <section class="section" id="arbeitsweise">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(III)</span>
+        <span class="sec-label">Arbeitsweise</span>
+      </div>
+      <p class="big statement-wide" data-reveal style="--delay:80ms">
+        Jede Zusammenarbeit beginnt mit Zuhören. Was danach folgt, richtet sich nach der Sache,
+        nicht nach einem Standardprozess.
+      </p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
   <!-- ===================== KONTAKT ===================== -->
   <section class="section contact" id="kontakt">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(III)</span>
+        <span class="sec-num">(IV)</span>
         <span class="sec-label">Kontakt</span>
       </div>
       <h2 class="display contact-title" data-reveal style="--delay:80ms">
@@ -148,6 +172,17 @@ const focus = [
     letter-spacing: -0.025em;
     max-width: 18ch;
   }
+  .big.statement-wide { max-width: 24ch; }
+  .haltung-text {
+    margin-top: clamp(1.75rem, 4vw, 2.5rem);
+    max-width: 46ch;
+  }
+  .haltung-text p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+  .haltung-text p + p { margin-top: 1rem; }
 
   .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
 
