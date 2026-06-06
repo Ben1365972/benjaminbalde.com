@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="404">
+  <section class="nf">
+    <div class="shell nf-shell">
+      <p class="nf-code">404</p>
+      <h1 class="display nf-title">Seite nicht gefunden.</h1>
+      <p class="nf-sub">Diese Seite gibt es nicht (mehr).</p>
+      <a href="/" class="link">Zur Startseite <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf {
+    min-height: calc(100svh - 68px);
+    display: flex;
+    align-items: center;
+    padding-block: clamp(4rem, 10vw, 7rem);
+  }
+  .nf-shell { width: 100%; }
+  .nf-code {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+  .nf-title { margin-bottom: 1.25rem; }
+  .nf-sub { font-size: 1.1rem; color: var(--muted); margin-bottom: clamp(2rem, 5vw, 3rem); }
+</style>

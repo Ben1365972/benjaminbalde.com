@@ -2,24 +2,49 @@
 import { ClientRouter } from 'astro:transitions';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { ui, defaultLang } from '../i18n.js';
 import '../styles/global.css';
 
 interface Props {
   title?: string;
   description?: string;
+  lang?: 'de' | 'en';
+  isHome?: boolean;
+  ogImage?: string;
 }
 
 const {
   title = 'Benjamin Balde',
-  description = 'Benjamin Balde. Strategische Beratung.',
+  lang = defaultLang,
+  isHome = false,
+  description = ui[lang]['meta.description'],
+  ogImage = lang === 'en' ? '/og-en.jpg' : '/og.jpg',
 } = Astro.props;
 
 const fullTitle = title === 'Benjamin Balde' ? title : `${title} · Benjamin Balde`;
-const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const site = Astro.site ?? new URL('https://benjaminbalde.com');
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImageUrl = new URL(ogImage, site).href;
+const locale = lang === 'en' ? 'en_US' : 'de_DE';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Benjamin Balde',
+  url: 'https://benjaminbalde.com',
+  image: ogImageUrl,
+  jobTitle: lang === 'en' ? 'Strategy Advisor' : 'Strategieberater',
+  description,
+  email: 'mailto:balde@geomesh.de',
+  sameAs: ['https://www.linkedin.com/in/amir-benjamin-balde/'],
+  worksFor: { '@type': 'Organization', name: 'GeoMesh GbR' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Oberhausen', addressCountry: 'DE' },
+  knowsLanguage: ['de', 'en'],
+};
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,23 +54,39 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{fullTitle}</title>
 
+    {isHome && (
+      <>
+        <link rel="alternate" hreflang="de" href="https://benjaminbalde.com/" />
+        <link rel="alternate" hreflang="en" href="https://benjaminbalde.com/en/" />
+        <link rel="alternate" hreflang="x-default" href="https://benjaminbalde.com/" />
+      </>
+    )}
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <ClientRouter />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
-    <Nav />
+    <Nav lang={lang} />
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
 
     <script>
       // Reveal-on-scroll. Re-runs on every view transition.

@@ -1,0 +1,291 @@
+---
+import Base from '../layouts/Base.astro';
+import { ui, focus, offerings, defaultLang } from '../i18n.js';
+
+interface Props {
+  lang?: 'de' | 'en';
+}
+const { lang = defaultLang } = Astro.props;
+const t = ui[lang];
+const focusList = focus[lang];
+const offeringList = offerings[lang];
+---
+
+<Base lang={lang} isHome={true}>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="shell hero-shell">
+      <p class="avail" data-reveal>
+        <span class="dot" aria-hidden="true"></span> {t['hero.avail']}
+      </p>
+      <h1 class="display hero-title">
+        <span data-reveal>{t['hero.title1']}</span>
+        <span data-reveal style="--delay:120ms">{t['hero.title2']}</span>
+      </h1>
+      <div class="hero-foot" data-reveal style="--delay:240ms">
+        <p class="lede">{t['hero.lede']}</p>
+        <a href="#kontakt" class="link">
+          {t['hero.cta']}
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== HALTUNG ===================== -->
+  <section class="section" id="haltung">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(I)</span>
+        <span class="sec-label">{t['haltung.label']}</span>
+      </div>
+      <div class="haltung-grid">
+        <div class="haltung-main">
+          <p class="big" data-reveal style="--delay:80ms">{t['haltung.big']}</p>
+          <div class="haltung-text" data-reveal style="--delay:160ms">
+            <p>{t['haltung.p1']}</p>
+            <p>{t['haltung.p2']}</p>
+          </div>
+        </div>
+        <figure class="portrait" data-reveal style="--delay:240ms">
+          <img src="/portrait.jpg" alt="Benjamin Balde" width="800" height="800" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== SCHWERPUNKTE / FOCUS ===================== -->
+  <section class="section" id="fokus">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(II)</span>
+        <span class="sec-label">{t['fokus.label']}</span>
+      </div>
+      <div class="focus-grid">
+        {focusList.map((f, i) => (
+          <article class="focus-card" data-reveal style={`--delay:${i * 100}ms`}>
+            <span class="focus-n">{f.n}</span>
+            <h3 class="focus-title">{f.title}</h3>
+            <p class="focus-body">{f.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== LEISTUNGEN / SERVICES ===================== -->
+  <section class="section" id="leistungen">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(III)</span>
+        <span class="sec-label">{t['leistungen.label']}</span>
+      </div>
+      <div class="offer">
+        {offeringList.map((o, i) => (
+          <div class="offer-row" data-reveal style={`--delay:${i * 70}ms`}>
+            <h3 class="offer-cat">{o.cat}</h3>
+            <ul class="offer-list">
+              {o.items.map((it) => <li>{it}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== ARBEITSWEISE ===================== -->
+  <section class="section" id="arbeitsweise">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(IV)</span>
+        <span class="sec-label">{t['arbeit.label']}</span>
+      </div>
+      <p class="big statement-wide" data-reveal style="--delay:80ms">{t['arbeit.big']}</p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== KONTAKT ===================== -->
+  <section class="section contact" id="kontakt">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(V)</span>
+        <span class="sec-label">{t['kontakt.label']}</span>
+      </div>
+      <h2 class="display contact-title" data-reveal style="--delay:80ms">{t['kontakt.title']}</h2>
+      <p class="contact-sub" data-reveal style="--delay:160ms">{t['kontakt.sub']}</p>
+      <div class="contact-links" data-reveal style="--delay:240ms">
+        <a href="mailto:balde@geomesh.de" class="contact-link">
+          <span class="cl-label">E-Mail</span>
+          <span class="cl-val">balde@geomesh.de</span>
+        </a>
+        <a href="https://www.linkedin.com/in/amir-benjamin-balde/" target="_blank" rel="noopener" class="contact-link">
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-val">/in/amir-benjamin-balde</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: clamp(86vh, 92svh, 100vh);
+    display: flex;
+    align-items: center;
+    padding-block: clamp(5rem, 12vw, 9rem);
+  }
+  .hero-shell { width: 100%; }
+  .avail {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--live);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 60%, transparent);
+    animation: pulse 2.6s infinite var(--ease);
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); }
+    70% { box-shadow: 0 0 0 8px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+  .hero-title { display: flex; flex-direction: column; }
+  .hero-title span { display: block; }
+  .hero-foot {
+    margin-top: clamp(2.25rem, 5vw, 3.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
+  }
+  .hero-line {
+    position: absolute;
+    left: var(--gutter); right: var(--gutter);
+    bottom: 0;
+    height: 1px;
+    background: var(--hair);
+  }
+
+  /* HALTUNG */
+  .big {
+    font-weight: 600;
+    font-size: clamp(1.7rem, 4.4vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    max-width: 18ch;
+  }
+  .big.statement-wide { max-width: 24ch; }
+  .haltung-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(240px, 320px);
+    gap: clamp(2rem, 6vw, 4.5rem);
+    align-items: start;
+  }
+  .haltung-text {
+    margin-top: clamp(1.75rem, 4vw, 2.5rem);
+    max-width: 46ch;
+  }
+  .haltung-text p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+  .haltung-text p + p { margin-top: 1rem; }
+  .portrait { margin: 0; }
+  .portrait img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--hair-strong);
+    transition: border-color 0.35s var(--ease);
+  }
+  .portrait:hover img { border-color: var(--accent); }
+  @media (max-width: 760px) {
+    .haltung-grid { grid-template-columns: 1fr; gap: clamp(1.75rem, 7vw, 2.75rem); }
+    .portrait { max-width: 300px; }
+  }
+
+  .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
+
+  /* LEISTUNGEN */
+  .offer { display: flex; flex-direction: column; }
+  .offer-row {
+    display: grid;
+    grid-template-columns: minmax(170px, 240px) 1fr;
+    gap: clamp(0.75rem, 4vw, 3rem);
+    padding-block: clamp(1.4rem, 3vw, 2.1rem);
+    border-top: 1px solid var(--hair);
+  }
+  .offer-row:last-child { border-bottom: 1px solid var(--hair); }
+  .offer-cat { font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em; padding-top: 2px; }
+  .offer-list { list-style: none; display: flex; flex-wrap: wrap; }
+  .offer-list li { color: var(--muted); font-size: 0.97rem; line-height: 1.5; }
+  .offer-list li:not(:last-child)::after {
+    content: '·';
+    color: var(--faint);
+    margin: 0 0.55rem;
+  }
+  @media (max-width: 640px) {
+    .offer-row { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+
+  /* SCHWERPUNKTE */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5rem, 4vw, 3.25rem);
+  }
+  .focus-card { position: relative; padding-top: 1.75rem; border-top: 1px solid var(--hair-strong); }
+  .focus-n {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--faint);
+    font-variant-numeric: tabular-nums;
+  }
+  .focus-title { font-weight: 600; font-size: 1.5rem; letter-spacing: -0.02em; margin: 0.85rem 0 0.7rem; }
+  .focus-body { font-size: 0.97rem; color: var(--muted); line-height: 1.65; }
+  @media (max-width: 760px) {
+    .focus-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  }
+
+  /* KONTAKT */
+  .contact-title { margin-bottom: 1.25rem; }
+  .contact-sub { font-size: 1.1rem; color: var(--muted); max-width: 40ch; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--hair); border: 1px solid var(--hair); }
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    background: var(--paper);
+    text-decoration: none;
+    transition: background 0.3s var(--ease);
+  }
+  .contact-link:hover { background: var(--paper-2); }
+  .cl-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); }
+  .cl-val { font-weight: 500; font-size: clamp(1.05rem, 2.4vw, 1.4rem); letter-spacing: -0.01em; }
+  @media (max-width: 560px) {
+    .contact-links { grid-template-columns: 1fr; }
+  }
+</style>
