@@ -157,6 +157,21 @@ p { max-width: var(--measure); }
   transition: border-color 0.25s var(--ease);
 }
 .prose a:hover { border-color: var(--ink); }
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.prose th, .prose td {
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--hair);
+  color: var(--muted);
+  vertical-align: top;
+}
+.prose thead th { color: var(--ink-soft); font-weight: 600; border-bottom-color: var(--hair-strong); }
+.prose table a { font-size: inherit; }
 
 /* ============================================================
    Reveal-on-scroll
