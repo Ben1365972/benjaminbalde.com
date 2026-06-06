@@ -1,5 +1,4 @@
 ---
-const year = 2026;
 ---
 
 <footer class="foot">
@@ -16,7 +15,6 @@ const year = 2026;
     <div class="foot-legal">
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
-      <span class="foot-c">© {year}</span>
     </div>
   </div>
 </footer>
@@ -55,12 +53,10 @@ const year = 2026;
   }
   .foot-legal a { color: var(--faint); text-decoration: none; transition: color 0.25s var(--ease); }
   .foot-legal a:hover { color: var(--ink); }
-  .foot-c { margin-left: auto; font-variant-numeric: tabular-nums; }
 
   @media (max-width: 540px) {
     .foot-inner { grid-template-columns: 1fr; }
     .foot-nav { flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 1rem; }
     .foot-legal { flex-wrap: wrap; gap: 1rem; }
-    .foot-c { margin-left: 0; width: 100%; }
   }
 </style>
