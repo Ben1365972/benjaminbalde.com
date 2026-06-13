@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "titel": "Unsichtbare Frauen",
+    "untertitel": "Wie ein Datenloch die Welt für die Hälfte der Menschheit verzerrt",
+    "buch": "Invisible Women: Data Bias in a World Designed for Men",
+    "autorin": "Caroline Criado Perez",
+    "jahr": 2019
+  },
+  "kategorien": [
+    { "id": "alltag",     "name": "Alltag & Mobilität", "farbe": "#2a9d8f" },
+    { "id": "arbeit",     "name": "Arbeitswelt",        "farbe": "#e9c46a" },
+    { "id": "design",     "name": "Design & Technik",   "farbe": "#f4a261" },
+    { "id": "medizin",    "name": "Medizin & Körper",   "farbe": "#e76f51" },
+    { "id": "sicherheit", "name": "Sicherheit",         "farbe": "#264653" }
+  ],
+  "statistiken": [
+    {
+      "id": "crashtest_schwer",
+      "kategorie": "sicherheit",
+      "headline": "Frauen werden bei Autounfällen 47 % häufiger schwer verletzt als Männer",
+      "kernzahl": 47,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Frauen", "wert": 147 },
+        "gruppe_b": { "label": "Männer (Referenz)", "wert": 100 }
+      },
+      "kontext": "Crashtest-Dummies basieren auf dem 50.-Perzentil-Mann: ca. 1,77 m groß und 76 kg schwer. Der weibliche Körper wird im Standardtest nicht abgebildet.",
+      "quelle": "IMF Finance & Development, Buchrezension Invisible Women",
+      "quelle_url": "https://www.imf.org/external/pubs/ft/fandd/2020/12/book-review-of-invisible-women-by-caroline-criado-perez.htm",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#264653"
+    },
+    {
+      "id": "crashtest_maessig",
+      "kategorie": "sicherheit",
+      "headline": "71 % höheres Risiko, bei einem Unfall mäßig verletzt zu werden",
+      "kernzahl": 71,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Frauen", "wert": 171 },
+        "gruppe_b": { "label": "Männer (Referenz)", "wert": 100 }
+      },
+      "kontext": "Sitzposition, Körpergröße und Muskelverteilung von Frauen werden in den Standard-Sicherheitstests nicht berücksichtigt.",
+      "quelle": "Society of Women Engineers / All Together",
+      "quelle_url": "https://alltogether.swe.org/2020/05/media-invisible-women-exposing-data-bias-in-a-world-designed-for-men/",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#264653"
+    },
+    {
+      "id": "crashtest_tod",
+      "kategorie": "sicherheit",
+      "headline": "17 % höhere Wahrscheinlichkeit, bei einem Autounfall zu sterben",
+      "kernzahl": 17,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Frauen", "wert": 117 },
+        "gruppe_b": { "label": "Männer (Referenz)", "wert": 100 }
+      },
+      "kontext": "Folge desselben Datenlochs: Sicherheitstechnik wie Kopfstützen, Gurte und Airbags ist auf den Durchschnittsmann ausgelegt.",
+      "quelle": "IMF Finance & Development",
+      "quelle_url": "https://www.imf.org/external/pubs/ft/fandd/2020/12/book-review-of-invisible-women-by-caroline-criado-perez.htm",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#264653"
+    },
+    {
+      "id": "herzinfarkt_fehldiagnose",
+      "kategorie": "medizin",
+      "headline": "Bei Frauen wird ein Herzinfarkt 50 % häufiger fehldiagnostiziert",
+      "kernzahl": 50,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Frauen", "wert": 150 },
+        "gruppe_b": { "label": "Männer (Referenz)", "wert": 100 }
+      },
+      "kontext": "Frauen zeigen oft nicht den „Hollywood-Herzinfarkt“ (Brust- und Armschmerz). Je nach Infarkt-Typ steigt die Fehldiagnose-Rate auf bis zu 59 % (STEMI) bzw. 41 % (NSTEMI).",
+      "quelle": "Universität Leeds / MINAP-Register, zitiert in Invisible Women; British Heart Foundation",
+      "quelle_url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/medical/women/misdiagnosis-of-heart-attacks-in-women",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "herzinfarkt_symptome",
+      "kategorie": "medizin",
+      "headline": "Rund zwei Drittel der Frauen zeigen „untypische“ Herzinfarkt-Symptome",
+      "kernzahl": 66,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 66, "label": "Frauen mit atypischen Symptomen" },
+      "kontext": "Statt starkem Brustschmerz oft Druckgefühl, Atemnot, Übelkeit oder Bauchschmerz – Symptome, die seltener als Herzinfarkt erkannt werden.",
+      "quelle": "All Together / Society of Women Engineers",
+      "quelle_url": "https://alltogether.swe.org/2020/05/media-invisible-women-exposing-data-bias-in-a-world-designed-for-men/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "medikamente_konsum",
+      "kategorie": "medizin",
+      "headline": "Frauen konsumieren 80 % der Medikamente in den USA – getestet wird überwiegend an Männern",
+      "kernzahl": 80,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 80, "label": "Anteil Frauen am Medikamentenkonsum (USA)" },
+      "kontext": "Gleichzeitig wurde weniger als die Hälfte der verschreibungspflichtigen Medikamente auf dem US-Markt auf geschlechtsspezifische Reaktionen untersucht.",
+      "quelle": "American University, Buchrezension Invisible Women",
+      "quelle_url": "https://www.american.edu/sis/centers/security-technology/book-review-invisible-women.cfm",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "klinische_studien",
+      "kategorie": "medizin",
+      "headline": "1977 schloss die US-Arzneimittelbehörde Frauen im gebärfähigen Alter aus Arzneimittelstudien aus",
+      "kernzahl": 43,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 43, "label": "Frauenanteil an klinischen Studien weltweit (2016)" },
+      "kontext": "Nach dem Contergan-Skandal wurden Frauen jahrzehntelang aus Studien ferngehalten. Bis 2016 lag ihr Anteil an klinischen Studien weltweit erst bei rund 43 %.",
+      "quelle": "British Journal of General Practice; Oxford Protein Informatics Group",
+      "quelle_url": "https://bjgp.org/content/70/694/250.1",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "pms_forschung",
+      "kategorie": "medizin",
+      "headline": "PMS betrifft rund 90 % der Frauen – zu erektiler Dysfunktion wird 5× mehr geforscht",
+      "kernzahl": 5,
+      "einheit": "x",
+      "multiplikator": {
+        "label_basis": "Forschung zu PMS",
+        "label_vergleich": "Forschung zu erektiler Dysfunktion",
+        "faktor": 5
+      },
+      "kontext": "PMS betrifft etwa 90 % der Frauen, bleibt aber unterforscht – obwohl deutlich mehr Studien zu erektiler Dysfunktion existieren.",
+      "quelle": "Invisible Women (S. 229), Lesenotizen",
+      "quelle_url": "https://harshp.com/blog/books/invisible-women",
+      "visualisierung_vorschlag": "multiplikator",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "unbezahlte_arbeit_anteil",
+      "kategorie": "arbeit",
+      "headline": "Frauen leisten rund 75 % der weltweit unbezahlten Arbeit",
+      "kernzahl": 75,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 75, "label": "Anteil Frauen an globaler unbezahlter Arbeit" },
+      "kontext": "Kinderbetreuung, Pflege, Haushalt und „Mental Load“ werden überwiegend von Frauen erledigt und tauchen in keiner Lohnstatistik auf.",
+      "quelle": "Invisible Women, Teil 2 „The Workplace“",
+      "quelle_url": "https://medium.com/@shruthimadhu/invisible-women-lessons-to-be-learnt-for-the-legal-industry-ddb2bfa01866",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "unbezahlte_arbeit_wert",
+      "kategorie": "arbeit",
+      "headline": "Unbezahlte Care-Arbeit von Frauen ist rund 10 Billionen US-Dollar jährlich wert",
+      "kernzahl": 10,
+      "einheit": "Billionen USD",
+      "counter": { "ziel": 10000000000000, "praefix": "$", "format": "kompakt" },
+      "kontext": "McKinsey beziffert den Beitrag unbezahlter Care-Arbeit zum jährlichen globalen BIP auf etwa 10 Billionen US-Dollar – wirtschaftlich unsichtbar, aber systemtragend.",
+      "quelle": "McKinsey, zitiert in Invisible Women",
+      "quelle_url": "https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419729071",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "buerotemperatur",
+      "kategorie": "arbeit",
+      "headline": "Büro-Klimaanlagen sind im Schnitt 5 Grad zu kalt für Frauen",
+      "kernzahl": 5,
+      "einheit": "Grad",
+      "kontext": "Die Standardformel orientiert sich am Stoffwechsel eines ca. 70 kg schweren, 40-jährigen Mannes und überschätzt den weiblichen Stoffwechsel um bis zu 35 %.",
+      "quelle": "Invisible Women (S. 113), Zitate-Sammlung",
+      "quelle_url": "https://www.goodreads.com/work/quotes/64218580-invisible-women-exposing-data-bias-in-a-world-designed-for-men",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "stoffwechsel_formel",
+      "kategorie": "arbeit",
+      "headline": "Die Temperatur-Norm überschätzt den weiblichen Stoffwechsel um bis zu 35 %",
+      "kernzahl": 35,
+      "einheit": "%",
+      "kontext": "Weil die Berechnungsgrundlage ein männlicher Referenzkörper ist, wird der Energieumsatz von Frauen deutlich zu hoch angesetzt.",
+      "quelle": "Invisible Women, Zitate-Sammlung",
+      "quelle_url": "https://www.goodreads.com/work/quotes/64218580-invisible-women-exposing-data-bias-in-a-world-designed-for-men",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "spracherkennung",
+      "kategorie": "design",
+      "headline": "Googles Spracherkennung versteht Männer 70 % zuverlässiger",
+      "kernzahl": 70,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Männerstimmen", "wert": 170 },
+        "gruppe_b": { "label": "Frauenstimmen (Referenz)", "wert": 100 }
+      },
+      "kontext": "Die Systeme wurden überwiegend mit männlichen Stimmdaten trainiert – ein klassisches Datenloch in der Technik.",
+      "quelle": "Oxford Protein Informatics Group, Buchrezension",
+      "quelle_url": "https://www.blopig.com/blog/2019/10/invisible-women-exposing-data-bias-in-a-world-designed-by-men/",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#f4a261"
+    },
+    {
+      "id": "smartphone_groesse",
+      "kategorie": "design",
+      "headline": "Standard-Smartphones sind für die durchschnittliche Frauenhand zu groß",
+      "kernzahl": 5.5,
+      "einheit": "Zoll",
+      "kontext": "Durchschnittliche Displaygrößen um 5,5 Zoll sind auf Männerhände und Zwei-Hand-Bedienung ausgelegt, obwohl Frauen häufiger Smartphones besitzen.",
+      "quelle": "Invisible Women (S. 159), Lesenotizen",
+      "quelle_url": "https://harshp.com/blog/books/invisible-women",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#f4a261"
+    },
+    {
+      "id": "schneeraeumung",
+      "kategorie": "alltag",
+      "headline": "In Schweden entfielen 69 % der winterlichen Fußgänger-Verletzungen auf Frauen",
+      "kernzahl": 69,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 69, "label": "Anteil Frauen an Fußgänger-Verletzungen im Winter" },
+      "kontext": "Hauptstraßen wurden zuerst geräumt (Pendler, meist Männer), Geh- und Radwege zuletzt. 79 % der Fußgänger-Verletzungen passieren im Winter – die Mehrheit der Betroffenen waren Frauen, die zu Fuß und mit Kinderwagen unterwegs waren.",
+      "quelle": "FSG / Karlskoga-Fallstudie, Invisible Women, Kapitel 1",
+      "quelle_url": "https://www.fsg.org/blog/can-snow-clearing-be-sexist/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#2a9d8f"
+    },
+    {
+      "id": "fussgaenger_winter",
+      "kategorie": "alltag",
+      "headline": "79 % aller Fußgänger-Verletzungen passieren im Winter",
+      "kernzahl": 79,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 79, "label": "Anteil Winter an Fußgänger-Verletzungen" },
+      "kontext": "Glätte auf zuletzt geräumten Gehwegen trifft besonders jene, die zu Fuß gehen – überproportional Frauen. Bessere Räumung sparte sogar Geld (weniger Klinikkosten).",
+      "quelle": "FSG, Karlskoga-Fallstudie",
+      "quelle_url": "https://www.fsg.org/blog/can-snow-clearing-be-sexist/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#2a9d8f"
+    }
+  ]
+}
