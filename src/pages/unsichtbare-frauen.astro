@@ -28,7 +28,59 @@ const catById: Record<string, Kategorie> = Object.fromEntries(
   kategorien.map((k) => [k.id, k])
 );
 
-const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} (${meta.jahr}), interaktiv visualisiert.`;
+const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} (${meta.jahr}) und weiteren Quellen, interaktiv visualisiert.`;
+
+// Schätz-Fragen (Werte stammen aus dem Datensatz)
+const guesses = [
+  { frage: 'Wie viel Prozent der weltweit unbezahlten Arbeit leisten Frauen?', antwort: 75 },
+  { frage: 'Wie hoch war der Frauenanteil an klinischen Studien weltweit (2016)?', antwort: 43 },
+  { frage: 'Wie viel Prozent der winterlichen Fußgänger-Verletzungen entfielen in der schwedischen Fallstudie auf Frauen?', antwort: 69 },
+];
+
+// Handlungs-Reiter
+const actions: { id: string; label: string; items: { text: string; url?: string }[] }[] = [
+  {
+    id: 'alltag',
+    label: 'Im Alltag',
+    items: [
+      { text: 'Sorge- und Hausarbeit sichtbar machen und fair aufteilen — Verantwortung übernehmen statt nur „helfen“.' },
+      { text: 'Mental Load benennen: Wer denkt an Termine, Geschenke, Vorräte? Auch die Planung teilen, nicht nur die Ausführung.' },
+      { text: 'Mädchen und Jungen die gleichen Erwartungen, Aufgaben und Komplimente zukommen lassen.' },
+      { text: 'Auf Sprache achten — wer mitgemeint, aber nie genannt wird, bleibt unsichtbar.' },
+    ],
+  },
+  {
+    id: 'arbeit',
+    label: 'Bei der Arbeit',
+    items: [
+      { text: 'Über Gehälter sprechen — Transparenz ist der erste Schritt gegen die Lohnlücke.' },
+      { text: 'In Meetings beobachten, wer unterbrochen wird und wessen Ideen zugeschrieben werden.' },
+      { text: 'Elternzeit und Teilzeit für alle Geschlechter normalisieren, nicht nur für Mütter.' },
+      { text: 'Einstellungs- und Beförderungskriterien auf unbewusste Verzerrungen prüfen.' },
+    ],
+  },
+  {
+    id: 'politik',
+    label: 'Daten & Politik',
+    items: [
+      { text: 'Nach geschlechtergetrennten Daten fragen — in Produkten, Studien, Statistiken und im eigenen Betrieb.' },
+      { text: 'Studien und Tests hinterfragen: Wer war die Stichprobe? Wurde an Frauen getestet?' },
+      { text: 'Wählen gehen und Gleichstellung zur Wahlfrage machen; lokale Gleichstellungsstellen ansprechen.' },
+      { text: 'Initiativen für bessere Gesundheits- und Datenforschung unterstützen.' },
+    ],
+  },
+  {
+    id: 'mehr',
+    label: 'Weiterlesen & Unterstützen',
+    items: [
+      { text: '„Unsichtbare Frauen“ von Caroline Criado Perez — das Buch hinter diesen Daten.' },
+      { text: 'UN Women Deutschland', url: 'https://www.unwomen.de/' },
+      { text: 'Deutscher Frauenrat', url: 'https://www.frauenrat.de/' },
+      { text: 'AllBright Stiftung — Frauen in Führung', url: 'https://www.allbright-stiftung.de/' },
+      { text: 'Pinkstinks — gegen Sexismus & Geschlechterklischees', url: 'https://pinkstinks.de/' },
+    ],
+  },
+];
 ---
 
 <Base title={meta.titel} description={description}>
@@ -43,19 +95,53 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
         <p class="lede">{meta.untertitel}</p>
         <p class="hero-cite">
           Nach <em>{meta.buch}</em><br />
-          {meta.autorin}, {meta.jahr}
+          {meta.autorin}, {meta.jahr} — u. a.
         </p>
       </div>
     </div>
     <div class="hero-line" aria-hidden="true"></div>
   </section>
 
-  <!-- ===================== FILTER + GRID ===================== -->
-  <section class="section" id="daten">
+  <!-- ===================== SCHÄTZEN ===================== -->
+  <section class="section" id="schaetzen">
     <div class="shell">
       <div class="sec-head" data-reveal>
         <span class="sec-num">(I)</span>
-        <span class="sec-label">{statistiken.length} Statistiken · {kategorien.length} Bereiche</span>
+        <span class="sec-label">Teste dein Gefühl</span>
+      </div>
+      <p class="lead-in" data-reveal style="--delay:60ms">
+        Schätze zuerst — dann sieh nach. Wie nah liegst du an der Realität?
+      </p>
+      <div class="guess-grid">
+        {guesses.map((g, i) => (
+          <div class="guess" data-answer={g.antwort} data-reveal style={`--delay:${i * 90}ms`}>
+            <p class="guess-q">{g.frage}</p>
+            <div class="guess-control">
+              <input type="range" min="0" max="100" value="50" class="slider" aria-label="Schätzung in Prozent" />
+              <output class="guess-out"><span class="guess-val">50</span> %</output>
+            </div>
+            <button class="guess-btn" type="button">Auflösen</button>
+            <div class="guess-result" hidden>
+              <div class="gr-bars">
+                <div class="gr-row"><span class="gr-l">Deine Schätzung</span><div class="gr-track"><div class="gr-fill gr-guess"></div></div><span class="gr-v gr-gv">0 %</span></div>
+                <div class="gr-row"><span class="gr-l">Tatsächlich</span><div class="gr-track"><div class="gr-fill gr-real"></div></div><span class="gr-v gr-rv">0 %</span></div>
+              </div>
+              <p class="gr-msg"></p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== DATEN ===================== -->
+  <section class="section" id="daten">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(II)</span>
+        <span class="sec-label">Die Daten · {statistiken.length} Statistiken</span>
       </div>
 
       <div class="filters" role="tablist" aria-label="Kategorie-Filter" data-reveal>
@@ -78,9 +164,9 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
               data-reveal
               style={`--delay:${(i % 3) * 80}ms; --acc:${acc}`}
             >
-              <div class="card-tag" style={`--cat:${cat.farbe}`}>
+              <button class="card-tag" type="button" data-jump={s.kategorie} style={`--cat:${cat.farbe}`}>
                 <span class="card-dot" aria-hidden="true"></span>{cat.name}
-              </div>
+              </button>
               <h3 class="card-head">{s.headline}</h3>
 
               <div class="viz">
@@ -120,7 +206,7 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
                       />
                     </svg>
                     <div class="donut-center">
-                      <span class="donut-num" data-count={s.anteil.anteil} data-suffix="%">0</span>
+                      <span class="donut-num" data-count={s.anteil.anteil} data-suffix="%" data-decimals={Number.isInteger(s.anteil.anteil) ? 0 : 1}>0</span>
                     </div>
                     <p class="anteil-label">{s.anteil.label}</p>
                   </div>
@@ -155,7 +241,9 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
                         class="counter-num"
                         data-count={s.counter.ziel}
                         data-prefix={s.counter.praefix ?? ''}
-                        data-format="kompakt"
+                        data-suffix={s.counter.praefix ? '' : ` ${s.einheit}`}
+                        data-format={s.counter.praefix ? 'kompakt' : ''}
+                        data-decimals={Number.isInteger(s.counter.ziel) ? 0 : 1}
                       >0</span>
                     ) : (
                       <span
@@ -185,19 +273,71 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
 
   <hr class="rule shell-rule" />
 
+  <!-- ===================== WAS KANN ICH TUN ===================== -->
+  <section class="section" id="tun">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(III)</span>
+        <span class="sec-label">Was kann ich tun?</span>
+      </div>
+      <h2 class="big" data-reveal style="--delay:60ms">
+        Datenlücken schließt man nicht allein — aber jeder Beitrag zählt.
+      </h2>
+
+      <div class="tabs" data-reveal style="--delay:140ms">
+        <div class="tablist" role="tablist" aria-label="Handlungsmöglichkeiten">
+          {actions.map((a, i) => (
+            <button
+              class={`tab${i === 0 ? ' is-active' : ''}`}
+              role="tab"
+              id={`tab-${a.id}`}
+              aria-controls={`panel-${a.id}`}
+              aria-selected={i === 0 ? 'true' : 'false'}
+              data-tab={a.id}
+            >{a.label}</button>
+          ))}
+        </div>
+        {actions.map((a, i) => (
+          <div
+            class={`panel${i === 0 ? ' is-active' : ''}`}
+            role="tabpanel"
+            id={`panel-${a.id}`}
+            aria-labelledby={`tab-${a.id}`}
+            hidden={i !== 0}
+          >
+            <ul class="action-list">
+              {a.items.map((it) => (
+                <li>
+                  {it.url ? (
+                    <a href={it.url} target="_blank" rel="noopener" class="action-link">
+                      {it.text} <span class="arrow" aria-hidden="true">↗</span>
+                    </a>
+                  ) : (
+                    <span>{it.text}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
   <!-- ===================== HINWEIS ===================== -->
   <section class="section note" id="hinweis">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(II)</span>
+        <span class="sec-num">(IV)</span>
         <span class="sec-label">Zum Datensatz</span>
       </div>
-      <p class="big" data-reveal style="--delay:80ms">
-        Daten, die nur den männlichen Körper als Norm kennen, sind keine neutralen Daten.
-      </p>
-      <p class="note-text" data-reveal style="--delay:160ms">
-        Die Zahlen stammen aus <em>{meta.buch}</em> von {meta.autorin} ({meta.jahr}) und den
-        jeweils verlinkten Quellen. Werte bitte vor weiterer Verwendung an der Originalquelle prüfen.
+      <p class="note-text" data-reveal style="--delay:80ms">
+        Die Zahlen stammen aus <em>{meta.buch}</em> von {meta.autorin} ({meta.jahr}) sowie aus
+        öffentlichen Quellen (u. a. WEF, Destatis, Eurostat, IPU, UN Women, WHO) — jeweils direkt
+        an der Statistik verlinkt. Ein Visualisierungs-Experiment; Werte bitte vor weiterer
+        Verwendung an der Originalquelle prüfen.
       </p>
     </div>
   </section>
@@ -241,6 +381,36 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
     bottom: 0; height: 1px; background: var(--hair);
   }
 
+  .lead-in { font-size: 1.1rem; color: var(--ink-soft); max-width: 46ch; margin-bottom: clamp(2rem, 4vw, 2.75rem); }
+
+  /* SCHÄTZEN */
+  .guess-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px; background: var(--hair); border: 1px solid var(--hair);
+  }
+  .guess { background: var(--paper); padding: clamp(1.4rem, 3vw, 2rem); display: flex; flex-direction: column; }
+  .guess-q { font-size: 1rem; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 1.4rem; min-height: 4.2em; }
+  .guess-control { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem; }
+  .slider { flex: 1; accent-color: var(--accent); cursor: pointer; }
+  .guess-out { font-weight: 700; font-size: 1.15rem; font-variant-numeric: tabular-nums; min-width: 3.5ch; text-align: right; }
+  .guess-btn {
+    align-self: flex-start; font: inherit; font-size: 13px; letter-spacing: 0.04em;
+    cursor: pointer; color: var(--paper); background: var(--ink); border: 1px solid var(--ink);
+    border-radius: 100px; padding: 0.5rem 1.3rem; transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
+  }
+  .guess-btn:hover { background: var(--accent); border-color: var(--accent); }
+  .guess-btn[disabled] { opacity: 0.5; cursor: default; }
+  .guess-result { margin-top: 1.3rem; }
+  .gr-bars { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 0.9rem; }
+  .gr-row { display: grid; grid-template-columns: 1fr; gap: 0.25rem; }
+  .gr-l { font-size: 11.5px; color: var(--muted); }
+  .gr-v { grid-row: 1; justify-self: end; font-size: 11.5px; font-variant-numeric: tabular-nums; color: var(--faint); }
+  .gr-track { grid-row: 2; height: 10px; background: var(--paper-2); border-radius: 100px; overflow: hidden; }
+  .gr-fill { height: 100%; width: 0; border-radius: 100px; transition: width 0.9s var(--ease); }
+  .gr-guess { background: var(--hair-strong); }
+  .gr-real { background: var(--accent); }
+  .gr-msg { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.5; }
+
   /* FILTERS */
   .filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
   .chip {
@@ -280,9 +450,12 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
   .card.is-hidden { display: none; }
   .card-tag {
     display: inline-flex; align-items: center; gap: 0.5em;
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--muted); margin-bottom: 0.9rem;
+    font: inherit; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.9rem; align-self: flex-start;
+    background: none; border: 0; padding: 0; cursor: pointer;
+    transition: color 0.2s var(--ease);
   }
+  .card-tag:hover { color: var(--cat); }
   .card-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cat); }
   .card-head {
     font-weight: 600; font-size: 1.18rem; line-height: 1.25;
@@ -292,9 +465,7 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
 
   /* VIZ: bars */
   .bars { display: flex; flex-direction: column; gap: 0.85rem; }
-  .bar-row {
-    display: grid; grid-template-columns: 1fr; gap: 0.3rem;
-  }
+  .bar-row { display: grid; grid-template-columns: 1fr; gap: 0.3rem; }
   .bar-label { font-size: 12px; color: var(--muted); }
   .bar-val {
     font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums;
@@ -314,7 +485,7 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
   .donut-track { fill: none; stroke: var(--paper-2); stroke-width: 12; }
   .donut-arc {
     fill: none; stroke: var(--acc); stroke-width: 12; stroke-linecap: round;
-    stroke-dasharray: 326.7; /* 2πr, r=52 */
+    stroke-dasharray: 326.7;
     stroke-dashoffset: calc(326.7 - 326.7 * var(--arc));
     transition: stroke-dashoffset 1.2s var(--ease);
   }
@@ -332,7 +503,7 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
   .mult-rows { display: flex; flex-direction: column; gap: 0.6rem; }
   .mult-row { display: flex; flex-direction: column; gap: 0.3rem; }
   .mult-rl { font-size: 12px; color: var(--muted); }
-  .mult-blocks { display: flex; gap: 4px; }
+  .mult-blocks { display: flex; gap: 4px; flex-wrap: wrap; }
   .blk {
     width: 16px; height: 16px; border-radius: 3px; background: var(--paper-2);
     opacity: 0; transform: scale(0.4); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
@@ -366,12 +537,38 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
 
   .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
 
-  /* NOTE */
+  /* TABS */
   .big {
     font-weight: 600; font-size: clamp(1.5rem, 3.8vw, 2.6rem);
     line-height: 1.15; letter-spacing: -0.025em; max-width: 22ch;
+    margin-bottom: clamp(2rem, 4vw, 2.75rem);
   }
-  .note-text { margin-top: 1.5rem; color: var(--muted); font-size: 1.02rem; line-height: 1.65; max-width: 60ch; }
+  .tablist { display: flex; flex-wrap: wrap; gap: 0.4rem; border-bottom: 1px solid var(--hair); margin-bottom: 1.75rem; }
+  .tab {
+    font: inherit; font-size: 0.95rem; cursor: pointer; color: var(--muted);
+    background: none; border: 0; border-bottom: 2px solid transparent;
+    padding: 0.6rem 0.9rem; margin-bottom: -1px;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+  }
+  .tab:hover { color: var(--ink); }
+  .tab.is-active { color: var(--ink); border-bottom-color: var(--accent); font-weight: 500; }
+  .panel { animation: fade 0.4s var(--ease); }
+  .panel[hidden] { display: none; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .action-list { list-style: none; display: grid; gap: 0.9rem; max-width: 62ch; }
+  .action-list li {
+    position: relative; padding-left: 1.4rem; color: var(--muted);
+    font-size: 1rem; line-height: 1.55;
+  }
+  .action-list li::before {
+    content: ''; position: absolute; left: 0; top: 0.62em;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+  }
+  .action-link { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hair-strong); transition: border-color 0.2s var(--ease); }
+  .action-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* NOTE */
+  .note-text { color: var(--muted); font-size: 1.02rem; line-height: 1.65; max-width: 62ch; }
   .note-text em { font-style: italic; color: var(--ink-soft); }
 
   @media (max-width: 540px) {
@@ -437,45 +634,95 @@ const description = `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} 
   }
 
   function setup() {
-    const grid = document.getElementById('grid');
-    if (!grid) return;
-
+    // Reveal-driven viz animation
     const vizNodes = Array.from(document.querySelectorAll<HTMLElement>('[data-viz]'));
-    if (!('IntersectionObserver' in window) || reduce()) {
-      vizNodes.forEach(runViz);
-    } else {
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              runViz(e.target as HTMLElement);
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.35 }
-      );
-      vizNodes.forEach((n) => io.observe(n));
+    if (vizNodes.length) {
+      if (!('IntersectionObserver' in window) || reduce()) {
+        vizNodes.forEach(runViz);
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) { runViz(e.target as HTMLElement); io.unobserve(e.target); }
+            });
+          },
+          { threshold: 0.35 }
+        );
+        vizNodes.forEach((n) => io.observe(n));
+      }
     }
 
+    // Category filter
     const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
     const cards = Array.from(document.querySelectorAll<HTMLElement>('.card'));
     const empty = document.getElementById('empty');
-    chips.forEach((chip) => {
-      chip.addEventListener('click', () => {
-        const f = chip.dataset.filter;
-        chips.forEach((c) => {
-          const active = c === chip;
-          c.classList.toggle('is-active', active);
-          c.setAttribute('aria-pressed', String(active));
+    const applyFilter = (f: string) => {
+      chips.forEach((c) => {
+        const active = c.dataset.filter === f;
+        c.classList.toggle('is-active', active);
+        c.setAttribute('aria-pressed', String(active));
+      });
+      let visible = 0;
+      cards.forEach((card) => {
+        const show = f === 'alle' || card.dataset.category === f;
+        card.classList.toggle('is-hidden', !show);
+        if (show) visible++;
+      });
+      if (empty) empty.hidden = visible !== 0;
+    };
+    chips.forEach((chip) => chip.addEventListener('click', () => applyFilter(chip.dataset.filter || 'alle')));
+    // Clickable category tags jump to that filter
+    document.querySelectorAll<HTMLElement>('.card-tag[data-jump]').forEach((tag) => {
+      tag.addEventListener('click', () => {
+        applyFilter(tag.dataset.jump || 'alle');
+        document.getElementById('daten')?.scrollIntoView({ behavior: reduce() ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+
+    // Schätz-Elemente
+    document.querySelectorAll<HTMLElement>('.guess').forEach((g) => {
+      const answer = parseFloat(g.dataset.answer || '0');
+      const slider = g.querySelector('.slider') as HTMLInputElement | null;
+      const valEl = g.querySelector('.guess-val') as HTMLElement | null;
+      const btn = g.querySelector('.guess-btn') as HTMLButtonElement | null;
+      const result = g.querySelector('.guess-result') as HTMLElement | null;
+      if (!slider || !valEl || !btn || !result) return;
+      slider.addEventListener('input', () => { valEl.textContent = slider.value; });
+      btn.addEventListener('click', () => {
+        const guess = parseInt(slider.value, 10);
+        const diff = Math.abs(guess - answer);
+        result.hidden = false;
+        (result.querySelector('.gr-gv') as HTMLElement).textContent = `${guess} %`;
+        (result.querySelector('.gr-rv') as HTMLElement).textContent = `${answer} %`;
+        const setW = () => {
+          (result.querySelector('.gr-guess') as HTMLElement).style.width = `${guess}%`;
+          (result.querySelector('.gr-real') as HTMLElement).style.width = `${answer}%`;
+        };
+        if (reduce()) setW(); else requestAnimationFrame(setW);
+        const msg = result.querySelector('.gr-msg') as HTMLElement;
+        const quality = diff <= 5 ? 'Sehr nah dran!' : diff <= 15 ? 'Gar nicht schlecht.' : 'Die Lücke überrascht viele.';
+        msg.textContent = `${quality} Du lagst ${diff} Prozentpunkte daneben.`;
+        slider.disabled = true;
+        btn.disabled = true;
+      });
+    });
+
+    // Tabs
+    const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.tab'));
+    const panels = Array.from(document.querySelectorAll<HTMLElement>('.panel'));
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const id = tab.dataset.tab;
+        tabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle('is-active', active);
+          t.setAttribute('aria-selected', String(active));
         });
-        let visible = 0;
-        cards.forEach((card) => {
-          const show = f === 'alle' || card.dataset.category === f;
-          card.classList.toggle('is-hidden', !show);
-          if (show) visible++;
+        panels.forEach((p) => {
+          const show = p.id === `panel-${id}`;
+          p.classList.toggle('is-active', show);
+          p.hidden = !show;
         });
-        if (empty) empty.hidden = visible !== 0;
       });
     });
   }

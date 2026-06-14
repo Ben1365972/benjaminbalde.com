@@ -11,7 +11,9 @@
     { "id": "arbeit",     "name": "Arbeitswelt",        "farbe": "#e9c46a" },
     { "id": "design",     "name": "Design & Technik",   "farbe": "#f4a261" },
     { "id": "medizin",    "name": "Medizin & Körper",   "farbe": "#e76f51" },
-    { "id": "sicherheit", "name": "Sicherheit",         "farbe": "#264653" }
+    { "id": "sicherheit", "name": "Sicherheit",         "farbe": "#264653" },
+    { "id": "politik",    "name": "Politik & Macht",    "farbe": "#6d597a" },
+    { "id": "geld",       "name": "Geld & Rente",       "farbe": "#1d3557" }
   ],
   "statistiken": [
     {
@@ -237,6 +239,103 @@
       "quelle_url": "https://www.fsg.org/blog/can-snow-clearing-be-sexist/",
       "visualisierung_vorschlag": "anteil",
       "farbakzent": "#2a9d8f"
+    },
+    {
+      "id": "gender_pay_gap_de",
+      "kategorie": "geld",
+      "headline": "Frauen in Deutschland verdienen pro Stunde 16 % weniger als Männer",
+      "kernzahl": 16,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Frauen (Bruttostundenlohn €)", "wert": 22.24 },
+        "gruppe_b": { "label": "Männer (Bruttostundenlohn €)", "wert": 26.34 }
+      },
+      "kontext": "Der unbereinigte Gender Pay Gap lag 2024 bei 16 %. Frauen verdienten im Schnitt 22,24 € brutto pro Stunde, Männer 26,34 €.",
+      "quelle": "Statistisches Bundesamt (Destatis), PM Nr. 056/2025",
+      "quelle_url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/02/PD25_056_621.html",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#1d3557"
+    },
+    {
+      "id": "gender_pension_gap_eu",
+      "kategorie": "geld",
+      "headline": "Die Renten von Frauen in der EU liegen 24,5 % unter denen der Männer",
+      "kernzahl": 24.5,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 24.5, "label": "niedrigere Rente von Frauen ggü. Männern (EU)" },
+      "kontext": "2024 erhielten Frauen ab 65 Jahren in der EU im Schnitt 24,5 % weniger Rente als Männer. Die Lücke reicht von 5,6 % (Estland) bis 40,3 % (Malta).",
+      "quelle": "Eurostat, Gender Pension Gap 2024",
+      "quelle_url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260225-1",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#1d3557"
+    },
+    {
+      "id": "gender_care_gap_de",
+      "kategorie": "arbeit",
+      "headline": "Frauen leisten rund 44 % mehr unbezahlte Sorgearbeit als Männer",
+      "kernzahl": 44.3,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Frauen", "wert": 144.3 },
+        "gruppe_b": { "label": "Männer (Referenz)", "wert": 100 }
+      },
+      "kontext": "Laut Zeitverwendungserhebung 2022 leisteten Frauen pro Woche rund 9 Stunden mehr unbezahlte Arbeit als Männer – der Gender Care Gap lag bei 44,3 %.",
+      "quelle": "Statistisches Bundesamt (Destatis), Zeitverwendungserhebung 2022 (PM Nr. 073/2024)",
+      "quelle_url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2024/02/PD24_073_63991.html",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "women_dax_boards",
+      "kategorie": "arbeit",
+      "headline": "Nur 24,7 % der DAX-Vorstandsposten sind von Frauen besetzt",
+      "kernzahl": 24.7,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 24.7, "label": "DAX-Vorstandsposten von Frauen besetzt" },
+      "kontext": "Stand 1. September 2024 lag der Frauenanteil in den Vorständen der 40 größten DAX-Unternehmen bei 24,7 % – im internationalen Vergleich nur der vorletzte Platz.",
+      "quelle": "AllBright Stiftung, Herbstbericht 2024",
+      "quelle_url": "https://www.innovative-frauen-im-fokus.de/news/allbright-herbstbericht-2024-mind-the-gap/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "endometriose_diagnose",
+      "kategorie": "medizin",
+      "headline": "Bis zur Endometriose-Diagnose vergehen im Schnitt 6,6 Jahre",
+      "kernzahl": 6.6,
+      "einheit": "Jahre",
+      "counter": { "ziel": 6.6 },
+      "kontext": "Eine Überblicksstudie der University of York (2024) fand eine durchschnittliche Diagnoseverzögerung von 6,6 Jahren – mit Spannen von wenigen Monaten bis zu 27 Jahren.",
+      "quelle": "University of York, Scoping Review zur Endometriose-Diagnose, 2024",
+      "quelle_url": "https://www.york.ac.uk/news-and-events/news/2024/research/diagnosis-endometriosis-delay/",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "women_in_parliaments",
+      "kategorie": "politik",
+      "headline": "Nur 27,5 % aller Parlamentssitze weltweit sind von Frauen besetzt",
+      "kernzahl": 27.5,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 27.5, "label": "Parlamentssitze weltweit von Frauen besetzt" },
+      "kontext": "Stand 1. Januar 2026 halten Frauen 27,5 % der nationalen Parlamentssitze weltweit – ein Plus von nur 0,3 Prozentpunkten gegenüber dem Vorjahr.",
+      "quelle": "Inter-Parliamentary Union (IPU), Women in Parliament 2026",
+      "quelle_url": "https://www.bgipu.org/activity-reports/ipu-report-concludes-that-womens-representation-in-parliament-sees-sluggish-gains/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#6d597a"
+    },
+    {
+      "id": "wef_jahre_bis_parität",
+      "kategorie": "politik",
+      "headline": "Bei aktuellem Tempo dauert es 123 Jahre bis zur globalen Geschlechtergleichheit",
+      "kernzahl": 123,
+      "einheit": "Jahre",
+      "counter": { "ziel": 123 },
+      "kontext": "Weltweit ist die Geschlechterlücke erst zu 68,8 % geschlossen. Beim heutigen Fortschrittstempo wäre volle Parität erst in 123 Jahren erreicht.",
+      "quelle": "World Economic Forum, Global Gender Gap Report 2025",
+      "quelle_url": "https://www.weforum.org/publications/global-gender-gap-report-2025/",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#6d597a"
     }
   ]
 }
