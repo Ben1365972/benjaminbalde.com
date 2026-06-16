@@ -1,0 +1,664 @@
+---
+import Base from '../layouts/Base.astro';
+import deData from '../data/invisible-women.de.json';
+import enData from '../data/invisible-women.en.json';
+
+interface Kategorie { id: string; name: string; farbe: string; }
+interface Gruppe { label: string; wert: number; }
+interface Stat {
+  id: string;
+  kategorie: string;
+  headline: string;
+  kernzahl: number;
+  einheit: string;
+  kontext: string;
+  quelle: string;
+  quelle_url: string;
+  visualisierung_vorschlag: 'vergleich' | 'anteil' | 'multiplikator' | 'counter';
+  farbakzent: string;
+  vergleich?: { gruppe_a: Gruppe; gruppe_b: Gruppe };
+  anteil?: { von: number; anteil: number; label: string };
+  multiplikator?: { label_basis: string; label_vergleich: string; faktor: number };
+  counter?: { ziel: number; praefix?: string; format?: string };
+}
+
+interface Props { lang?: 'de' | 'en'; }
+const { lang = 'de' } = Astro.props;
+
+const data = (lang === 'en' ? enData : deData) as unknown as {
+  meta: { titel: string; untertitel: string; buch: string; autorin: string; jahr: number };
+  kategorien: Kategorie[];
+  statistiken: Stat[];
+};
+const meta = data.meta;
+const kategorien = data.kategorien;
+const statistiken = data.statistiken;
+const catById: Record<string, Kategorie> = Object.fromEntries(kategorien.map((k) => [k.id, k]));
+
+type Action = { id: string; label: string; items: { text: string; url?: string }[] };
+type Strings = {
+  locale: string;
+  heroKicker: string; langLabel: string; langHref: string; langAria: string;
+  nach: string; citeSuffix: string;
+  storyKicker: string; story: string[]; storyFinal: string;
+  schaetzenLabel: string; schaetzenLead: string; auflösen: string;
+  deineSchätzung: string; tatsächlich: string;
+  datenLabel: string; statSuffix: string; alle: string; emptyMsg: string;
+  tunLabel: string; tunHeadline: string;
+  quelleLabel: string; quellenLabel: string; note: string;
+  guesses: { frage: string; antwort: number }[];
+  actions: Action[];
+  js: { near: string; ok: string; far: string; diff: string };
+};
+
+const T: Record<'de' | 'en', Strings> = {
+  de: {
+    locale: 'de-DE',
+    heroKicker: 'Datenvisualisierung',
+    langLabel: 'EN', langHref: '/en/unsichtbare-frauen', langAria: 'English version',
+    nach: 'Nach', citeSuffix: 'u. a.',
+    storyKicker: 'Wie es anfängt',
+    story: [
+      'Stell dir einen ganz gewöhnlichen Auffahrunfall vor.',
+      'Der Crashtest-Dummy, der diesen Aufprall absichert, ist 1,77 m groß und 76 kg schwer. Ein Durchschnittsmann.',
+      'Einen Dummy mit dem Körperbau einer durchschnittlichen Frau gab es im Standardtest jahrzehntelang nicht.',
+    ],
+    storyFinal: 'häufiger schwer verletzt als Männer.',
+    schaetzenLabel: 'Teste dein Gefühl',
+    schaetzenLead: 'Schätze zuerst, dann sieh nach. Wie nah liegst du an der Realität?',
+    auflösen: 'Auflösen',
+    deineSchätzung: 'Deine Schätzung', tatsächlich: 'Tatsächlich',
+    datenLabel: 'Die Daten', statSuffix: 'Statistiken', alle: 'Alle',
+    emptyMsg: 'Keine Statistiken in diesem Bereich.',
+    tunLabel: 'Was kann ich tun?',
+    tunHeadline: 'Datenlücken schließt man nicht allein, aber jeder Beitrag zählt.',
+    quelleLabel: 'Quelle:', quellenLabel: 'Zum Datensatz',
+    note: 'Die Zahlen stammen aus dem Buch „Invisible Women“ von Caroline Criado Perez (2019) sowie aus öffentlichen Quellen wie WEF, Destatis, Eurostat, IPU, UN Women und WHO. Jede Quelle ist direkt an der Statistik verlinkt. Dies ist ein Visualisierungs-Experiment. Bitte prüfe die Werte vor einer weiteren Verwendung an der Originalquelle.',
+    guesses: [
+      { frage: 'Wie viel Prozent der weltweit unbezahlten Arbeit leisten Frauen?', antwort: 75 },
+      { frage: 'Wie hoch war der Frauenanteil an klinischen Studien weltweit (2016)?', antwort: 43 },
+      { frage: 'Wie viel Prozent der winterlichen Verletzungen im Fußverkehr entfielen in der schwedischen Fallstudie auf Frauen?', antwort: 69 },
+    ],
+    actions: [
+      { id: 'alltag', label: 'Im Alltag', items: [
+        { text: 'Sorge- und Hausarbeit sichtbar machen und fair aufteilen. Verantwortung übernehmen, nicht nur „helfen“.' },
+        { text: 'Mental Load benennen: Wer denkt an Termine, Geschenke, Vorräte? Auch die Planung teilen, nicht nur die Ausführung.' },
+        { text: 'Mädchen und Jungen die gleichen Erwartungen, Aufgaben und Komplimente zukommen lassen.' },
+        { text: 'Auf Sprache achten: Wer nur mitgemeint ist, aber nie genannt wird, bleibt unsichtbar.' },
+      ]},
+      { id: 'arbeit', label: 'Bei der Arbeit', items: [
+        { text: 'Über Gehälter sprechen. Transparenz ist der erste Schritt gegen die Lohnlücke.' },
+        { text: 'In Meetings darauf achten, wer unterbrochen wird und wem Ideen zugeschrieben werden.' },
+        { text: 'Elternzeit und Teilzeit für alle Geschlechter normalisieren, nicht nur für Mütter.' },
+        { text: 'Kriterien für Einstellung und Beförderung auf unbewusste Verzerrungen prüfen.' },
+      ]},
+      { id: 'politik', label: 'Daten & Politik', items: [
+        { text: 'Nach geschlechtergetrennten Daten fragen: in Produkten, Studien, Statistiken und im eigenen Betrieb.' },
+        { text: 'Studien und Tests hinterfragen: Wer war die Stichprobe? Wurde an Frauen getestet?' },
+        { text: 'Wählen gehen und Gleichstellung zur Wahlfrage machen. Lokale Gleichstellungsstellen ansprechen.' },
+        { text: 'Initiativen für bessere Gesundheits- und Datenforschung unterstützen.' },
+      ]},
+      { id: 'mehr', label: 'Weiterlesen & Unterstützen', items: [
+        { text: '„Unsichtbare Frauen“ von Caroline Criado Perez, das Buch hinter diesen Daten.' },
+        { text: 'UN Women Deutschland', url: 'https://www.unwomen.de/' },
+        { text: 'Deutscher Frauenrat', url: 'https://www.frauenrat.de/' },
+        { text: 'AllBright Stiftung: Frauen in Führung', url: 'https://www.allbright-stiftung.de/' },
+        { text: 'Pinkstinks: gegen Sexismus und Geschlechterklischees', url: 'https://pinkstinks.de/' },
+      ]},
+    ],
+    js: { near: 'Sehr nah dran!', ok: 'Gar nicht schlecht.', far: 'Die Lücke überrascht viele.', diff: 'Du lagst {n} Prozentpunkte daneben.' },
+  },
+  en: {
+    locale: 'en-US',
+    heroKicker: 'Data visualisation',
+    langLabel: 'DE', langHref: '/unsichtbare-frauen', langAria: 'Deutsche Version',
+    nach: 'After', citeSuffix: 'and others',
+    storyKicker: 'Where it begins',
+    story: [
+      'Picture an ordinary rear-end collision.',
+      'The crash-test dummy used to certify that impact is 1.77 m tall and 76 kg. An average man.',
+      "A dummy with the build of an average woman simply wasn't part of the standard test for decades.",
+    ],
+    storyFinal: 'more likely to be seriously injured than men.',
+    schaetzenLabel: 'Test your instinct',
+    schaetzenLead: 'Guess first, then check. How close are you to reality?',
+    auflösen: 'Reveal',
+    deineSchätzung: 'Your guess', tatsächlich: 'Actual',
+    datenLabel: 'The data', statSuffix: 'statistics', alle: 'All',
+    emptyMsg: 'No statistics in this category.',
+    tunLabel: 'What can I do?',
+    tunHeadline: "You can't close data gaps alone, but every contribution counts.",
+    quelleLabel: 'Source:', quellenLabel: 'About the data',
+    note: 'The figures come from the book "Invisible Women" by Caroline Criado Perez (2019) and from public sources such as the WEF, Destatis, Eurostat, IPU, UN Women and the WHO. Every source is linked directly on each statistic. This is a visualisation experiment. Please check the values against the original source before reusing them.',
+    guesses: [
+      { frage: "What share of the world's unpaid work do women perform?", antwort: 75 },
+      { frage: "What was women's share of clinical trials worldwide in 2016?", antwort: 43 },
+      { frage: 'In the Swedish case study, what share of winter pedestrian injuries were sustained by women?', antwort: 69 },
+    ],
+    actions: [
+      { id: 'alltag', label: 'In everyday life', items: [
+        { text: 'Make care and housework visible and share it fairly. Take responsibility instead of just "helping".' },
+        { text: 'Name the mental load: who keeps track of appointments, gifts, supplies? Share the planning, not just the doing.' },
+        { text: 'Give girls and boys the same expectations, chores and compliments.' },
+        { text: 'Mind your language: whoever is only implied but never named stays invisible.' },
+      ]},
+      { id: 'arbeit', label: 'At work', items: [
+        { text: 'Talk about salaries. Transparency is the first step against the pay gap.' },
+        { text: 'In meetings, notice who gets interrupted and who gets credit for ideas.' },
+        { text: 'Normalise parental leave and part-time work for all genders, not just mothers.' },
+        { text: 'Check hiring and promotion criteria for unconscious bias.' },
+      ]},
+      { id: 'politik', label: 'Data & politics', items: [
+        { text: 'Ask for sex-disaggregated data: in products, studies, statistics and your own organisation.' },
+        { text: 'Question studies and tests: who was the sample? Were women tested?' },
+        { text: 'Vote, and make equality an election issue. Reach out to local equality offices.' },
+        { text: 'Support initiatives for better health and data research.' },
+      ]},
+      { id: 'mehr', label: 'Read more & support', items: [
+        { text: 'Invisible Women by Caroline Criado Perez, the book behind this data.' },
+        { text: 'UN Women', url: 'https://www.unwomen.org/' },
+        { text: 'German Women’s Council', url: 'https://www.frauenrat.de/' },
+        { text: 'AllBright Foundation: women in leadership', url: 'https://www.allbright-stiftung.de/' },
+        { text: 'Pinkstinks: against sexism and gender clichés', url: 'https://pinkstinks.de/' },
+      ]},
+    ],
+    js: { near: 'Very close!', ok: 'Not bad at all.', far: 'The gap surprises many.', diff: 'You were {n} percentage points off.' },
+  },
+};
+const t = T[lang];
+const description = lang === 'en'
+  ? `Key statistics from "${meta.buch}" by ${meta.autorin} (${meta.jahr}) and other sources, visualised interactively.`
+  : `Kernstatistiken aus „${meta.buch}“ von ${meta.autorin} (${meta.jahr}) und weiteren Quellen, interaktiv visualisiert.`;
+const jsI18n = JSON.stringify({ locale: t.locale, ...t.js });
+---
+
+<Base title={meta.titel} description={description} lang={lang}>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="shell hero-shell">
+      <div class="hero-top">
+        <p class="avail" data-reveal>
+          <span class="dot" aria-hidden="true"></span> {t.heroKicker}
+        </p>
+        <a class="langswitch" href={t.langHref} data-reveal aria-label={t.langAria}>{t.langLabel}</a>
+      </div>
+      <h1 class="display hero-title" data-reveal>{meta.titel}</h1>
+      <div class="hero-foot" data-reveal style="--delay:200ms">
+        <p class="lede">{meta.untertitel}</p>
+        <p class="hero-cite">
+          {t.nach} <em>{meta.buch}</em><br />
+          {meta.autorin}, {meta.jahr}
+        </p>
+      </div>
+    </div>
+    <div class="hero-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== SCROLLYTELLING ===================== -->
+  <section class="story" id="story" aria-label={t.storyKicker}>
+    <div class="shell">
+      <p class="story-kicker" data-reveal>{t.storyKicker}</p>
+      {t.story.map((line) => (
+        <p class="story-step" data-step>{line}</p>
+      ))}
+      <div class="story-final" data-step>
+        <div class="counter" data-viz="counter">
+          <span class="counter-num" data-count="47" data-suffix=" %" data-decimals="0">0</span>
+        </div>
+        <p class="story-caption">{t.storyFinal}</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== SCHÄTZEN ===================== -->
+  <section class="section" id="schaetzen">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(I)</span>
+        <span class="sec-label">{t.schaetzenLabel}</span>
+      </div>
+      <p class="lead-in" data-reveal style="--delay:60ms">{t.schaetzenLead}</p>
+      <div class="guess-grid">
+        {t.guesses.map((g, i) => (
+          <div class="guess" data-answer={g.antwort} data-reveal style={`--delay:${i * 90}ms`}>
+            <p class="guess-q">{g.frage}</p>
+            <div class="guess-control">
+              <input type="range" min="0" max="100" value="50" class="slider" aria-label={t.deineSchätzung} />
+              <output class="guess-out"><span class="guess-val">50</span> %</output>
+            </div>
+            <button class="guess-btn" type="button">{t.auflösen}</button>
+            <div class="guess-result" hidden>
+              <div class="gr-bars">
+                <div class="gr-row"><span class="gr-l">{t.deineSchätzung}</span><div class="gr-track"><div class="gr-fill gr-guess"></div></div><span class="gr-v gr-gv">0 %</span></div>
+                <div class="gr-row"><span class="gr-l">{t.tatsächlich}</span><div class="gr-track"><div class="gr-fill gr-real"></div></div><span class="gr-v gr-rv">0 %</span></div>
+              </div>
+              <p class="gr-msg"></p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== DATEN ===================== -->
+  <section class="section" id="daten">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(II)</span>
+        <span class="sec-label">{t.datenLabel} · {statistiken.length} {t.statSuffix}</span>
+      </div>
+
+      <div class="filters" role="tablist" aria-label={t.datenLabel} data-reveal>
+        <button class="chip is-active" data-filter="alle" aria-pressed="true">{t.alle}</button>
+        {kategorien.map((k) => (
+          <button class="chip" data-filter={k.id} aria-pressed="false" style={`--cat:${k.farbe}`}>
+            <span class="chip-dot" aria-hidden="true"></span>{k.name}
+          </button>
+        ))}
+      </div>
+
+      <div class="grid" id="grid">
+        {statistiken.map((s, i) => {
+          const cat = catById[s.kategorie];
+          const acc = s.farbakzent;
+          return (
+            <article class="card" data-category={s.kategorie} data-reveal style={`--delay:${(i % 3) * 80}ms; --acc:${acc}`}>
+              <button class="card-tag" type="button" data-jump={s.kategorie} style={`--cat:${cat.farbe}`}>
+                <span class="card-dot" aria-hidden="true"></span>{cat.name}
+              </button>
+              <h3 class="card-head">{s.headline}</h3>
+
+              <div class="viz">
+                {s.visualisierung_vorschlag === 'vergleich' && s.vergleich && (
+                  (() => {
+                    const a = s.vergleich.gruppe_a;
+                    const b = s.vergleich.gruppe_b;
+                    const max = Math.max(a.wert, b.wert);
+                    return (
+                      <div class="bars" data-viz="bars">
+                        {[{ g: a, primary: true }, { g: b, primary: false }].map(({ g, primary }) => (
+                          <div class="bar-row">
+                            <span class="bar-label">{g.label}</span>
+                            <div class="bar-track">
+                              <div class={`bar-fill${primary ? ' is-primary' : ''}`} style={`--w:${(g.wert / max) * 100}%`}></div>
+                            </div>
+                            <span class="bar-val">{g.wert}</span>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })()
+                )}
+
+                {s.visualisierung_vorschlag === 'anteil' && s.anteil && (
+                  <div class="anteil" data-viz="donut">
+                    <svg viewBox="0 0 120 120" class="donut" role="img" aria-label={`${s.anteil.anteil} %`}>
+                      <circle class="donut-track" cx="60" cy="60" r="52" />
+                      <circle class="donut-arc" cx="60" cy="60" r="52" data-pct={s.anteil.anteil} style="--arc:0" />
+                    </svg>
+                    <div class="donut-center">
+                      <span class="donut-num" data-count={s.anteil.anteil} data-suffix="%" data-decimals={Number.isInteger(s.anteil.anteil) ? 0 : 1}>0</span>
+                    </div>
+                    <p class="anteil-label">{s.anteil.label}</p>
+                  </div>
+                )}
+
+                {s.visualisierung_vorschlag === 'multiplikator' && s.multiplikator && (
+                  <div class="mult" data-viz="mult">
+                    <div class="mult-big">
+                      <span class="mult-num" data-count={s.multiplikator.faktor} data-suffix="×">0</span>
+                    </div>
+                    <div class="mult-rows">
+                      <div class="mult-row">
+                        <span class="mult-rl">{s.multiplikator.label_basis}</span>
+                        <span class="mult-blocks"><i class="blk on" style="--bd:0ms"></i></span>
+                      </div>
+                      <div class="mult-row">
+                        <span class="mult-rl">{s.multiplikator.label_vergleich}</span>
+                        <span class="mult-blocks">
+                          {Array.from({ length: s.multiplikator.faktor }).map((_, bi) => (
+                            <i class="blk" style={`--bd:${bi * 90}ms`}></i>
+                          ))}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {s.visualisierung_vorschlag === 'counter' && (
+                  <div class="counter" data-viz="counter">
+                    {s.counter ? (
+                      <span class="counter-num" data-count={s.counter.ziel} data-prefix={s.counter.praefix ?? ''} data-suffix={s.counter.praefix ? '' : ` ${s.einheit}`} data-format={s.counter.praefix ? 'kompakt' : ''} data-decimals={Number.isInteger(s.counter.ziel) ? 0 : 1}>0</span>
+                    ) : (
+                      <span class="counter-num" data-count={s.kernzahl} data-suffix={` ${s.einheit}`} data-decimals={Number.isInteger(s.kernzahl) ? 0 : 1}>0</span>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <p class="card-context">{s.kontext}</p>
+              <a class="card-source" href={s.quelle_url} target="_blank" rel="noopener">
+                <span class="src-q">{t.quelleLabel}</span> {s.quelle}
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </article>
+          );
+        })}
+      </div>
+
+      <p class="empty" id="empty" hidden>{t.emptyMsg}</p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== WAS KANN ICH TUN ===================== -->
+  <section class="section" id="tun">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(III)</span>
+        <span class="sec-label">{t.tunLabel}</span>
+      </div>
+      <h2 class="big" data-reveal style="--delay:60ms">{t.tunHeadline}</h2>
+
+      <div class="tabs" data-reveal style="--delay:140ms">
+        <div class="tablist" role="tablist" aria-label={t.tunLabel}>
+          {t.actions.map((a, i) => (
+            <button class={`tab${i === 0 ? ' is-active' : ''}`} role="tab" id={`tab-${a.id}`} aria-controls={`panel-${a.id}`} aria-selected={i === 0 ? 'true' : 'false'} data-tab={a.id}>{a.label}</button>
+          ))}
+        </div>
+        {t.actions.map((a, i) => (
+          <div class={`panel${i === 0 ? ' is-active' : ''}`} role="tabpanel" id={`panel-${a.id}`} aria-labelledby={`tab-${a.id}`} hidden={i !== 0}>
+            <ul class="action-list">
+              {a.items.map((it) => (
+                <li>
+                  {it.url ? (
+                    <a href={it.url} target="_blank" rel="noopener" class="action-link">{it.text} <span class="arrow" aria-hidden="true">↗</span></a>
+                  ) : (
+                    <span>{it.text}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== HINWEIS ===================== -->
+  <section class="section note" id="hinweis">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(IV)</span>
+        <span class="sec-label">{t.quellenLabel}</span>
+      </div>
+      <p class="note-text" data-reveal style="--delay:80ms">{t.note}</p>
+    </div>
+  </section>
+
+  <script type="application/json" id="iw-i18n" set:html={jsI18n}></script>
+</Base>
+
+<style>
+  .hero { position: relative; min-height: clamp(58vh, 70svh, 80vh); display: flex; align-items: center; padding-block: clamp(4rem, 10vw, 8rem); }
+  .hero-shell { width: 100%; }
+  .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: clamp(1.25rem, 4vw, 2.25rem); }
+  .avail { display: inline-flex; align-items: center; gap: 0.6em; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 60%, transparent); animation: pulse 2.6s infinite var(--ease); }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); } 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+  .langswitch { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; padding: 4px 10px; border: 1px solid var(--hair-strong); border-radius: 100px; transition: color 0.25s var(--ease), border-color 0.25s var(--ease); }
+  .langswitch:hover { color: var(--accent); border-color: var(--accent); }
+  .hero-title { max-width: 16ch; }
+  .hero-foot { margin-top: clamp(2rem, 5vw, 3.25rem); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.5rem 2.5rem; }
+  .hero-cite { font-size: 0.9rem; color: var(--muted); line-height: 1.5; text-align: right; }
+  .hero-cite em { font-style: italic; color: var(--ink-soft); }
+  .hero-line { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 0; height: 1px; background: var(--hair); }
+
+  /* SCROLLYTELLING */
+  .story { padding-block: clamp(3rem, 8vw, 6rem); }
+  .story-kicker { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .story-step { font-weight: 600; font-size: clamp(1.45rem, 3.8vw, 2.5rem); line-height: 1.2; letter-spacing: -0.02em; max-width: 22ch; margin-block: clamp(2.5rem, 9vh, 5.5rem); color: var(--faint); opacity: 0.3; transition: opacity 0.6s var(--ease), color 0.6s var(--ease); }
+  .story-step.is-on { opacity: 1; color: var(--ink); }
+  .story-final { margin-top: clamp(2rem, 7vh, 4.5rem); opacity: 0.3; transition: opacity 0.6s var(--ease); }
+  .story-final.is-on { opacity: 1; }
+  .story-final .counter-num { font-size: clamp(4rem, 17vw, 9.5rem); font-weight: 800; letter-spacing: -0.04em; color: var(--accent); line-height: 1; font-variant-numeric: tabular-nums; }
+  .story-caption { font-weight: 600; font-size: clamp(1.2rem, 3.2vw, 2rem); letter-spacing: -0.02em; max-width: 18ch; margin-top: 0.5rem; }
+
+  .lead-in { font-size: 1.1rem; color: var(--ink-soft); max-width: 46ch; margin-bottom: clamp(2rem, 4vw, 2.75rem); }
+
+  /* SCHÄTZEN */
+  .guess-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); }
+  .guess { background: var(--paper); padding: clamp(1.4rem, 3vw, 2rem); display: flex; flex-direction: column; }
+  .guess-q { font-size: 1rem; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 1.4rem; min-height: 4.2em; }
+  .guess-control { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem; }
+  .slider { flex: 1; accent-color: var(--accent); cursor: pointer; }
+  .guess-out { font-weight: 700; font-size: 1.15rem; font-variant-numeric: tabular-nums; min-width: 3.5ch; text-align: right; }
+  .guess-btn { align-self: flex-start; font: inherit; font-size: 13px; letter-spacing: 0.04em; cursor: pointer; color: var(--paper); background: var(--ink); border: 1px solid var(--ink); border-radius: 100px; padding: 0.5rem 1.3rem; transition: background 0.25s var(--ease), border-color 0.25s var(--ease); }
+  .guess-btn:hover { background: var(--accent); border-color: var(--accent); }
+  .guess-btn[disabled] { opacity: 0.5; cursor: default; }
+  .guess-result { margin-top: 1.3rem; }
+  .gr-bars { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 0.9rem; }
+  .gr-row { display: grid; grid-template-columns: 1fr; gap: 0.25rem; }
+  .gr-l { font-size: 11.5px; color: var(--muted); }
+  .gr-v { grid-row: 1; justify-self: end; font-size: 11.5px; font-variant-numeric: tabular-nums; color: var(--faint); }
+  .gr-track { grid-row: 2; height: 10px; background: var(--paper-2); border-radius: 100px; overflow: hidden; }
+  .gr-fill { height: 100%; width: 0; border-radius: 100px; transition: width 0.9s var(--ease); }
+  .gr-guess { background: var(--hair-strong); }
+  .gr-real { background: var(--accent); }
+  .gr-msg { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.5; }
+
+  /* FILTERS */
+  .filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .chip { display: inline-flex; align-items: center; gap: 0.5em; font: inherit; font-size: 13px; letter-spacing: 0.01em; color: var(--muted); background: transparent; cursor: pointer; border: 1px solid var(--hair-strong); border-radius: 100px; padding: 0.45rem 0.95rem; transition: color 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease); }
+  .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cat, var(--ink)); flex: 0 0 auto; }
+  .chip:hover { color: var(--ink); border-color: var(--ink); }
+  .chip.is-active { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+  .chip[data-filter]:not([data-filter='alle']).is-active { background: var(--cat); border-color: var(--cat); color: #fff; }
+  .chip.is-active .chip-dot { background: rgba(255, 255, 255, 0.85); }
+
+  /* GRID */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); }
+  .card { display: flex; flex-direction: column; background: var(--paper); padding: clamp(1.5rem, 3vw, 2.1rem); border-top: 3px solid var(--acc, var(--accent)); }
+  .card.is-hidden { display: none; }
+  .card-tag { display: inline-flex; align-items: center; gap: 0.5em; font: inherit; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.9rem; align-self: flex-start; background: none; border: 0; padding: 0; cursor: pointer; transition: color 0.2s var(--ease); }
+  .card-tag:hover { color: var(--cat); }
+  .card-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cat); }
+  .card-head { font-weight: 600; font-size: 1.18rem; line-height: 1.25; letter-spacing: -0.015em; color: var(--ink); margin-bottom: 1.4rem; }
+  .viz { margin-top: auto; margin-bottom: 1.4rem; }
+
+  .bars { display: flex; flex-direction: column; gap: 0.85rem; }
+  .bar-row { display: grid; grid-template-columns: 1fr; gap: 0.3rem; }
+  .bar-label { font-size: 12px; color: var(--muted); }
+  .bar-val { font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; grid-row: 1; justify-self: end; }
+  .bar-track { grid-row: 2; height: 12px; background: var(--paper-2); border-radius: 100px; overflow: hidden; }
+  .bar-fill { height: 100%; width: 0; border-radius: 100px; background: var(--hair-strong); transition: width 1.1s var(--ease); }
+  .bar-fill.is-primary { background: var(--acc); }
+  [data-viz='bars'].run .bar-fill { width: var(--w); }
+
+  .anteil { display: grid; grid-template-columns: 96px 1fr; align-items: center; gap: 1.1rem; }
+  .donut { width: 96px; height: 96px; transform: rotate(-90deg); grid-row: 1; }
+  .donut-track { fill: none; stroke: var(--paper-2); stroke-width: 12; }
+  .donut-arc { fill: none; stroke: var(--acc); stroke-width: 12; stroke-linecap: round; stroke-dasharray: 326.7; stroke-dashoffset: calc(326.7 - 326.7 * var(--arc)); transition: stroke-dashoffset 1.2s var(--ease); }
+  .donut-center { grid-column: 1; grid-row: 1; align-self: center; justify-self: center; pointer-events: none; }
+  .donut-num { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .anteil-label { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+
+  .mult { display: flex; flex-direction: column; gap: 1rem; }
+  .mult-big { line-height: 1; }
+  .mult-num { font-size: clamp(2.6rem, 7vw, 3.4rem); font-weight: 800; letter-spacing: -0.04em; color: var(--acc); }
+  .mult-rows { display: flex; flex-direction: column; gap: 0.6rem; }
+  .mult-row { display: flex; flex-direction: column; gap: 0.3rem; }
+  .mult-rl { font-size: 12px; color: var(--muted); }
+  .mult-blocks { display: flex; gap: 4px; flex-wrap: wrap; }
+  .blk { width: 16px; height: 16px; border-radius: 3px; background: var(--paper-2); opacity: 0; transform: scale(0.4); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); transition-delay: var(--bd); }
+  .blk.on { background: color-mix(in srgb, var(--acc) 30%, var(--paper-2)); }
+  [data-viz='mult'].run .blk { opacity: 1; transform: none; }
+  [data-viz='mult'].run .blk:not(.on) { background: var(--acc); }
+
+  .counter { line-height: 1; }
+  .counter-num { font-size: clamp(2.4rem, 6.5vw, 3.2rem); font-weight: 800; letter-spacing: -0.04em; color: var(--acc); font-variant-numeric: tabular-nums; }
+
+  .card-context { font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.1rem; }
+  .card-source { margin-top: auto; font-size: 11.5px; color: var(--faint); text-decoration: none; line-height: 1.45; display: inline-flex; align-items: baseline; gap: 0.35em; flex-wrap: wrap; transition: color 0.25s var(--ease); }
+  .card-source .src-q { color: var(--muted); font-weight: 500; }
+  .card-source:hover { color: var(--ink); }
+  .card-source .arrow { transition: transform 0.25s var(--ease); }
+  .card-source:hover .arrow { transform: translate(2px, -2px); }
+  .empty { padding: 3rem 0; color: var(--muted); text-align: center; }
+
+  .shell-rule { width: 100%; max-width: var(--maxw); margin-inline: auto; }
+
+  /* TABS */
+  .big { font-weight: 600; font-size: clamp(1.5rem, 3.8vw, 2.6rem); line-height: 1.15; letter-spacing: -0.025em; max-width: 24ch; margin-bottom: clamp(2rem, 4vw, 2.75rem); }
+  .tablist { display: flex; flex-wrap: wrap; gap: 0.4rem; border-bottom: 1px solid var(--hair); margin-bottom: 1.75rem; }
+  .tab { font: inherit; font-size: 0.95rem; cursor: pointer; color: var(--muted); background: none; border: 0; border-bottom: 2px solid transparent; padding: 0.6rem 0.9rem; margin-bottom: -1px; transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+  .tab:hover { color: var(--ink); }
+  .tab.is-active { color: var(--ink); border-bottom-color: var(--accent); font-weight: 500; }
+  .panel { animation: fade 0.4s var(--ease); }
+  .panel[hidden] { display: none; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .action-list { list-style: none; display: grid; gap: 0.9rem; max-width: 62ch; }
+  .action-list li { position: relative; padding-left: 1.4rem; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+  .action-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .action-link { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hair-strong); transition: border-color 0.2s var(--ease); }
+  .action-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  .note-text { color: var(--muted); font-size: 1.02rem; line-height: 1.65; max-width: 62ch; }
+  .note-text em { font-style: italic; color: var(--ink-soft); }
+
+  @media (max-width: 540px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero-cite { text-align: left; }
+  }
+</style>
+
+<script>
+  function setup() {
+    const i18nEl = document.getElementById('iw-i18n');
+    const cfg = i18nEl ? JSON.parse(i18nEl.textContent || '{}') : {};
+    const locale = cfg.locale || 'de-DE';
+    const fmtCompact = new Intl.NumberFormat(locale, { notation: 'compact', maximumFractionDigits: 1 });
+    const fmtNum = (v: number, dec: number) => new Intl.NumberFormat(locale, { minimumFractionDigits: dec, maximumFractionDigits: dec }).format(v);
+    const reduce = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function animateCount(el: HTMLElement) {
+      const target = parseFloat(el.dataset.count || '0');
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const kompakt = el.dataset.format === 'kompakt';
+      const dec = parseInt(el.dataset.decimals || '0', 10);
+      const render = (v: number) => { el.textContent = `${prefix}${kompakt ? fmtCompact.format(v) : fmtNum(v, dec)}${suffix}`; };
+      if (reduce()) { render(target); return; }
+      const dur = 1400; let start: number | null = null;
+      const step = (ts: number) => {
+        if (start === null) start = ts;
+        const p = Math.min((ts - start) / dur, 1);
+        render(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step); else render(target);
+      };
+      requestAnimationFrame(step);
+    }
+
+    function runViz(node: HTMLElement) {
+      const kind = node.dataset.viz;
+      if (kind === 'bars' || kind === 'mult') node.classList.add('run');
+      if (kind === 'donut') {
+        const arc = node.querySelector('.donut-arc') as HTMLElement | null;
+        const num = node.querySelector('.donut-num') as HTMLElement | null;
+        if (arc) {
+          const pct = parseFloat(arc.dataset.pct || '0') / 100;
+          arc.style.setProperty('--arc', reduce() ? String(pct) : '0');
+          if (!reduce()) requestAnimationFrame(() => arc.style.setProperty('--arc', String(pct)));
+        }
+        if (num) animateCount(num);
+      } else if (kind === 'counter') {
+        const num = node.querySelector('.counter-num') as HTMLElement | null;
+        if (num) animateCount(num);
+      } else if (kind === 'mult') {
+        const num = node.querySelector('.mult-num') as HTMLElement | null;
+        if (num) animateCount(num);
+      }
+    }
+
+    const vizNodes = Array.from(document.querySelectorAll<HTMLElement>('[data-viz]'));
+    if (!('IntersectionObserver' in window) || reduce()) {
+      vizNodes.forEach(runViz);
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { runViz(e.target as HTMLElement); io.unobserve(e.target); } });
+      }, { threshold: 0.35 });
+      vizNodes.forEach((n) => io.observe(n));
+    }
+
+    // Scrollytelling steps
+    const steps = Array.from(document.querySelectorAll<HTMLElement>('[data-step]'));
+    if (steps.length) {
+      if (!('IntersectionObserver' in window) || reduce()) {
+        steps.forEach((s) => s.classList.add('is-on'));
+      } else {
+        const so = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('is-on'); });
+        }, { threshold: 0.6 });
+        steps.forEach((s) => so.observe(s));
+      }
+    }
+
+    // Category filter
+    const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('.card'));
+    const empty = document.getElementById('empty');
+    const applyFilter = (f: string) => {
+      chips.forEach((c) => { const active = c.dataset.filter === f; c.classList.toggle('is-active', active); c.setAttribute('aria-pressed', String(active)); });
+      let visible = 0;
+      cards.forEach((card) => { const show = f === 'alle' || card.dataset.category === f; card.classList.toggle('is-hidden', !show); if (show) visible++; });
+      if (empty) empty.hidden = visible !== 0;
+    };
+    chips.forEach((chip) => chip.addEventListener('click', () => applyFilter(chip.dataset.filter || 'alle')));
+    document.querySelectorAll<HTMLElement>('.card-tag[data-jump]').forEach((tag) => {
+      tag.addEventListener('click', () => { applyFilter(tag.dataset.jump || 'alle'); document.getElementById('daten')?.scrollIntoView({ behavior: reduce() ? 'auto' : 'smooth', block: 'start' }); });
+    });
+
+    // Schätz-Elemente
+    document.querySelectorAll<HTMLElement>('.guess').forEach((g) => {
+      const answer = parseFloat(g.dataset.answer || '0');
+      const slider = g.querySelector('.slider') as HTMLInputElement | null;
+      const valEl = g.querySelector('.guess-val') as HTMLElement | null;
+      const btn = g.querySelector('.guess-btn') as HTMLButtonElement | null;
+      const result = g.querySelector('.guess-result') as HTMLElement | null;
+      if (!slider || !valEl || !btn || !result) return;
+      slider.addEventListener('input', () => { valEl.textContent = slider.value; });
+      btn.addEventListener('click', () => {
+        const guess = parseInt(slider.value, 10);
+        const diff = Math.abs(guess - answer);
+        result.hidden = false;
+        (result.querySelector('.gr-gv') as HTMLElement).textContent = `${guess} %`;
+        (result.querySelector('.gr-rv') as HTMLElement).textContent = `${answer} %`;
+        const setW = () => { (result.querySelector('.gr-guess') as HTMLElement).style.width = `${guess}%`; (result.querySelector('.gr-real') as HTMLElement).style.width = `${answer}%`; };
+        if (reduce()) setW(); else requestAnimationFrame(setW);
+        const quality = diff <= 5 ? cfg.near : diff <= 15 ? cfg.ok : cfg.far;
+        (result.querySelector('.gr-msg') as HTMLElement).textContent = `${quality} ${(cfg.diff || '').replace('{n}', String(diff))}`;
+        slider.disabled = true; btn.disabled = true;
+      });
+    });
+
+    // Tabs
+    const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.tab'));
+    const panels = Array.from(document.querySelectorAll<HTMLElement>('.panel'));
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const id = tab.dataset.tab;
+        tabs.forEach((tt) => { const active = tt === tab; tt.classList.toggle('is-active', active); tt.setAttribute('aria-selected', String(active)); });
+        panels.forEach((p) => { const show = p.id === `panel-${id}`; p.classList.toggle('is-active', show); p.hidden = !show; });
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', setup);
+</script>

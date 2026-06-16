@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "titel": "Invisible Women",
+    "untertitel": "How a data gap skews the world for half of humanity",
+    "buch": "Invisible Women: Data Bias in a World Designed for Men",
+    "autorin": "Caroline Criado Perez",
+    "jahr": 2019
+  },
+  "kategorien": [
+    { "id": "alltag",     "name": "Everyday & Mobility", "farbe": "#2a9d8f" },
+    { "id": "arbeit",     "name": "The Workplace",       "farbe": "#e9c46a" },
+    { "id": "design",     "name": "Design & Tech",       "farbe": "#f4a261" },
+    { "id": "medizin",    "name": "Medicine & Body",     "farbe": "#e76f51" },
+    { "id": "sicherheit", "name": "Safety",              "farbe": "#264653" },
+    { "id": "politik",    "name": "Politics & Power",    "farbe": "#6d597a" },
+    { "id": "geld",       "name": "Money & Pensions",    "farbe": "#1d3557" }
+  ],
+  "statistiken": [
+    {
+      "id": "crashtest_schwer",
+      "kategorie": "sicherheit",
+      "headline": "In car crashes, women are 47 % more likely to be seriously injured than men",
+      "kernzahl": 47,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Women", "wert": 147 },
+        "gruppe_b": { "label": "Men (reference)", "wert": 100 }
+      },
+      "kontext": "Crash-test dummies are based on the 50th-percentile man: about 1.77 m tall and 76 kg. A female body is not represented in the standard test.",
+      "quelle": "IMF Finance & Development, review of Invisible Women",
+      "quelle_url": "https://www.imf.org/external/pubs/ft/fandd/2020/12/book-review-of-invisible-women-by-caroline-criado-perez.htm",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#264653"
+    },
+    {
+      "id": "crashtest_maessig",
+      "kategorie": "sicherheit",
+      "headline": "71 % higher risk of moderate injury in a crash",
+      "kernzahl": 71,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Women", "wert": 171 },
+        "gruppe_b": { "label": "Men (reference)", "wert": 100 }
+      },
+      "kontext": "Women's seating position, height and muscle distribution are not accounted for in standard safety tests.",
+      "quelle": "Society of Women Engineers / All Together",
+      "quelle_url": "https://alltogether.swe.org/2020/05/media-invisible-women-exposing-data-bias-in-a-world-designed-for-men/",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#264653"
+    },
+    {
+      "id": "crashtest_tod",
+      "kategorie": "sicherheit",
+      "headline": "17 % higher chance of dying in a car crash",
+      "kernzahl": 17,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Women", "wert": 117 },
+        "gruppe_b": { "label": "Men (reference)", "wert": 100 }
+      },
+      "kontext": "This is the result of the same data gap: safety technology such as head restraints, belts and airbags is designed around the average man.",
+      "quelle": "IMF Finance & Development",
+      "quelle_url": "https://www.imf.org/external/pubs/ft/fandd/2020/12/book-review-of-invisible-women-by-caroline-criado-perez.htm",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#264653"
+    },
+    {
+      "id": "herzinfarkt_fehldiagnose",
+      "kategorie": "medizin",
+      "headline": "Women's heart attacks are misdiagnosed 50 % more often",
+      "kernzahl": 50,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Women", "wert": 150 },
+        "gruppe_b": { "label": "Men (reference)", "wert": 100 }
+      },
+      "kontext": "Women often don't present the \"Hollywood heart attack\" with chest and arm pain. Depending on the type, misdiagnosis rises to as much as 59 % (STEMI) or 41 % (NSTEMI).",
+      "quelle": "University of Leeds / MINAP registry, cited in Invisible Women; British Heart Foundation",
+      "quelle_url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/medical/women/misdiagnosis-of-heart-attacks-in-women",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "herzinfarkt_symptome",
+      "kategorie": "medizin",
+      "headline": "About two thirds of women show \"atypical\" heart-attack symptoms",
+      "kernzahl": 66,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 66, "label": "Women with atypical symptoms" },
+      "kontext": "Instead of strong chest pain, women often feel pressure, shortness of breath, nausea or abdominal pain. These signs are recognised as a heart attack less often.",
+      "quelle": "All Together / Society of Women Engineers",
+      "quelle_url": "https://alltogether.swe.org/2020/05/media-invisible-women-exposing-data-bias-in-a-world-designed-for-men/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "medikamente_konsum",
+      "kategorie": "medizin",
+      "headline": "Women take 80 % of medication in the US, yet most testing is done on men",
+      "kernzahl": 80,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 80, "label": "Women's share of medication use (US)" },
+      "kontext": "At the same time, fewer than half of the prescription drugs on the US market were studied for sex-specific reactions.",
+      "quelle": "American University, review of Invisible Women",
+      "quelle_url": "https://www.american.edu/sis/centers/security-technology/book-review-invisible-women.cfm",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "klinische_studien",
+      "kategorie": "medizin",
+      "headline": "In 1977, the US drug regulator excluded women of childbearing age from drug trials",
+      "kernzahl": 43,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 43, "label": "Women's share of clinical trials worldwide (2016)" },
+      "kontext": "After the thalidomide scandal, women were kept out of trials for decades. By 2016, their share of clinical trials worldwide was still only around 43 %.",
+      "quelle": "British Journal of General Practice; Oxford Protein Informatics Group",
+      "quelle_url": "https://bjgp.org/content/70/694/250.1",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "pms_forschung",
+      "kategorie": "medizin",
+      "headline": "PMS affects about 90 % of women, yet erectile dysfunction gets 5× more research",
+      "kernzahl": 5,
+      "einheit": "x",
+      "multiplikator": {
+        "label_basis": "Research on PMS",
+        "label_vergleich": "Research on erectile dysfunction",
+        "faktor": 5
+      },
+      "kontext": "PMS affects roughly 90 % of women but remains under-researched. There are far more studies on erectile dysfunction.",
+      "quelle": "Invisible Women (p. 229), reading notes",
+      "quelle_url": "https://harshp.com/blog/books/invisible-women",
+      "visualisierung_vorschlag": "multiplikator",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "unbezahlte_arbeit_anteil",
+      "kategorie": "arbeit",
+      "headline": "Women perform about 75 % of the world's unpaid work",
+      "kernzahl": 75,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 75, "label": "Women's share of global unpaid work" },
+      "kontext": "Childcare, care work, housework and \"mental load\" fall mostly to women and appear in no wage statistic.",
+      "quelle": "Invisible Women, Part 2 \"The Workplace\"",
+      "quelle_url": "https://medium.com/@shruthimadhu/invisible-women-lessons-to-be-learnt-for-the-legal-industry-ddb2bfa01866",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "unbezahlte_arbeit_wert",
+      "kategorie": "arbeit",
+      "headline": "Women's unpaid care work is worth about 10 trillion US dollars a year",
+      "kernzahl": 10,
+      "einheit": "trillion USD",
+      "counter": { "ziel": 10000000000000, "praefix": "$", "format": "kompakt" },
+      "kontext": "McKinsey puts the contribution of unpaid care work to annual global GDP at about 10 trillion US dollars. Economically invisible, yet it holds the system together.",
+      "quelle": "McKinsey, cited in Invisible Women",
+      "quelle_url": "https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419729071",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "buerotemperatur",
+      "kategorie": "arbeit",
+      "headline": "Office air conditioning is on average 5 degrees too cold for women",
+      "kernzahl": 5,
+      "einheit": "degrees",
+      "kontext": "The standard formula is based on the metabolism of a roughly 70 kg, 40-year-old man and overestimates the female metabolic rate by up to 35 %.",
+      "quelle": "Invisible Women (p. 113), quote collection",
+      "quelle_url": "https://www.goodreads.com/work/quotes/64218580-invisible-women-exposing-data-bias-in-a-world-designed-for-men",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "stoffwechsel_formel",
+      "kategorie": "arbeit",
+      "headline": "The temperature standard overestimates the female metabolism by up to 35 %",
+      "kernzahl": 35,
+      "einheit": "%",
+      "kontext": "Because the formula is built on a male reference body, women's energy expenditure is set far too high.",
+      "quelle": "Invisible Women, quote collection",
+      "quelle_url": "https://www.goodreads.com/work/quotes/64218580-invisible-women-exposing-data-bias-in-a-world-designed-for-men",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "spracherkennung",
+      "kategorie": "design",
+      "headline": "Google's speech recognition understands men 70 % more reliably",
+      "kernzahl": 70,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Male voices", "wert": 170 },
+        "gruppe_b": { "label": "Female voices (reference)", "wert": 100 }
+      },
+      "kontext": "The systems were trained mostly on male voice data, a classic data gap in technology.",
+      "quelle": "Oxford Protein Informatics Group, book review",
+      "quelle_url": "https://www.blopig.com/blog/2019/10/invisible-women-exposing-data-bias-in-a-world-designed-by-men/",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#f4a261"
+    },
+    {
+      "id": "smartphone_groesse",
+      "kategorie": "design",
+      "headline": "Standard smartphones are too big for the average woman's hand",
+      "kernzahl": 5.5,
+      "einheit": "inches",
+      "kontext": "Display sizes around 5.5 inches are built for men's hands and two-handed use, even though women own smartphones more often.",
+      "quelle": "Invisible Women (p. 159), reading notes",
+      "quelle_url": "https://harshp.com/blog/books/invisible-women",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#f4a261"
+    },
+    {
+      "id": "schneeraeumung",
+      "kategorie": "alltag",
+      "headline": "In Sweden, 69 % of winter pedestrian injuries were sustained by women",
+      "kernzahl": 69,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 69, "label": "Women's share of winter pedestrian injuries" },
+      "kontext": "Main roads, used mainly by commuters (mostly men), were cleared first; footpaths and cycle paths last. Most of the injured were women, often on foot and with a pram.",
+      "quelle": "FSG, Karlskoga case study, Invisible Women, Chapter 1",
+      "quelle_url": "https://www.fsg.org/blog/can-snow-clearing-be-sexist/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#2a9d8f"
+    },
+    {
+      "id": "fussgaenger_winter",
+      "kategorie": "alltag",
+      "headline": "79 % of all pedestrian injuries happen in winter",
+      "kernzahl": 79,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 79, "label": "Winter's share of pedestrian injuries" },
+      "kontext": "Ice on the footpaths cleared last hits people on foot the hardest, women disproportionately. Better clearing even saved money, because hospital costs dropped.",
+      "quelle": "FSG, Karlskoga case study",
+      "quelle_url": "https://www.fsg.org/blog/can-snow-clearing-be-sexist/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#2a9d8f"
+    },
+    {
+      "id": "gender_pay_gap_de",
+      "kategorie": "geld",
+      "headline": "Women in Germany earn 16 % less per hour than men",
+      "kernzahl": 16,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Women (gross hourly €)", "wert": 22.24 },
+        "gruppe_b": { "label": "Men (gross hourly €)", "wert": 26.34 }
+      },
+      "kontext": "The unadjusted gender pay gap was 16 % in 2024. Women earned 22.24 € gross per hour on average, men 26.34 €.",
+      "quelle": "Federal Statistical Office (Destatis), press release no. 056/2025",
+      "quelle_url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/02/PD25_056_621.html",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#1d3557"
+    },
+    {
+      "id": "gender_pension_gap_eu",
+      "kategorie": "geld",
+      "headline": "Women's pensions in the EU are 24.5 % lower than men's",
+      "kernzahl": 24.5,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 24.5, "label": "Women's pensions below men's (EU)" },
+      "kontext": "In 2024, women aged 65 and over in the EU received on average 24.5 % less pension than men. The gap ranges from 5.6 % in Estonia to 40.3 % in Malta.",
+      "quelle": "Eurostat, Gender Pension Gap 2024",
+      "quelle_url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260225-1",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#1d3557"
+    },
+    {
+      "id": "gender_care_gap_de",
+      "kategorie": "arbeit",
+      "headline": "Women do about 44 % more unpaid care work than men",
+      "kernzahl": 44.3,
+      "einheit": "%",
+      "vergleich": {
+        "gruppe_a": { "label": "Women", "wert": 144.3 },
+        "gruppe_b": { "label": "Men (reference)", "wert": 100 }
+      },
+      "kontext": "According to the 2022 time-use survey, women did about 9 hours more unpaid work per week than men. The gender care gap was 44.3 %.",
+      "quelle": "Federal Statistical Office (Destatis), Time Use Survey 2022 (PR no. 073/2024)",
+      "quelle_url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2024/02/PD24_073_63991.html",
+      "visualisierung_vorschlag": "vergleich",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "women_dax_boards",
+      "kategorie": "arbeit",
+      "headline": "Only 24.7 % of DAX executive board seats are held by women",
+      "kernzahl": 24.7,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 24.7, "label": "DAX board seats held by women" },
+      "kontext": "As of 1 September 2024, women held 24.7 % of executive board seats at the 40 largest DAX companies, second to last by international comparison.",
+      "quelle": "AllBright Foundation, Autumn Report 2024",
+      "quelle_url": "https://www.innovative-frauen-im-fokus.de/news/allbright-herbstbericht-2024-mind-the-gap/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#e9c46a"
+    },
+    {
+      "id": "endometriose_diagnose",
+      "kategorie": "medizin",
+      "headline": "On average it takes 6.6 years to diagnose endometriosis",
+      "kernzahl": 6.6,
+      "einheit": "years",
+      "counter": { "ziel": 6.6 },
+      "kontext": "A 2024 scoping review by the University of York found an average diagnostic delay of 6.6 years, ranging from a few months to 27 years.",
+      "quelle": "University of York, scoping review on endometriosis diagnosis, 2024",
+      "quelle_url": "https://www.york.ac.uk/news-and-events/news/2024/research/diagnosis-endometriosis-delay/",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#e76f51"
+    },
+    {
+      "id": "women_in_parliaments",
+      "kategorie": "politik",
+      "headline": "Only 27.5 % of all parliamentary seats worldwide are held by women",
+      "kernzahl": 27.5,
+      "einheit": "%",
+      "anteil": { "von": 100, "anteil": 27.5, "label": "Parliamentary seats worldwide held by women" },
+      "kontext": "As of 1 January 2026, women hold 27.5 % of national parliamentary seats worldwide, up just 0.3 percentage points from the year before.",
+      "quelle": "Inter-Parliamentary Union (IPU), Women in Parliament 2026",
+      "quelle_url": "https://www.bgipu.org/activity-reports/ipu-report-concludes-that-womens-representation-in-parliament-sees-sluggish-gains/",
+      "visualisierung_vorschlag": "anteil",
+      "farbakzent": "#6d597a"
+    },
+    {
+      "id": "wef_jahre_bis_paritaet",
+      "kategorie": "politik",
+      "headline": "At the current pace it will take 123 years to reach global gender parity",
+      "kernzahl": 123,
+      "einheit": "years",
+      "counter": { "ziel": 123 },
+      "kontext": "Worldwide, the gender gap is only 68.8 % closed. At today's rate of progress, full parity would not be reached for another 123 years.",
+      "quelle": "World Economic Forum, Global Gender Gap Report 2025",
+      "quelle_url": "https://www.weforum.org/publications/global-gender-gap-report-2025/",
+      "visualisierung_vorschlag": "counter",
+      "farbakzent": "#6d597a"
+    }
+  ]
+}
