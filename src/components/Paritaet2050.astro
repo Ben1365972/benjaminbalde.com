@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import daten from '../data/paritaet-2050.de.json';
 
-const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, quellen } = daten;
+const { meta, kurzfassung, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, quellen } = daten;
 
 // Abschnitte nummerieren sich selbst, damit neue Abschnitte keine Handarbeit erzwingen
 const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
@@ -28,10 +28,49 @@ const tempoCfg = {
       <h1 class="display hero-title" data-reveal>{meta.titel}</h1>
       <div class="hero-foot" data-reveal style="--delay:180ms">
         <p class="lede">{meta.untertitel}</p>
-        <p class="hero-cite">{meta.stand}</p>
+        <div class="hero-side">
+          <a class="dl-btn" href={meta.pdf} download>
+            <span>{meta.pdfLabel}</span>
+            <span class="dl-arrow" aria-hidden="true">&#8595;</span>
+          </a>
+          <p class="hero-cite">{meta.stand}</p>
+        </div>
       </div>
     </div>
     <div class="hero-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== KURZFASSUNG ===================== -->
+  <section class="section kurz" id="kurzfassung">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">&#167;</span>
+        <span class="sec-label">{kurzfassung.label}</span>
+      </div>
+      <p class="lead-in" data-reveal>{kurzfassung.lead}</p>
+
+      <div class="kurz-grid">
+        <div class="kurz-these" data-reveal>
+          <h3 class="mini-h">Die These</h3>
+          <ul class="ticks">
+            {kurzfassung.these.map((t) => <li>{t}</li>)}
+          </ul>
+          <a class="dl-btn kurz-dl" href={meta.pdf} download>
+            <span>{meta.pdfLabel}</span>
+            <span class="dl-arrow" aria-hidden="true">&#8595;</span>
+          </a>
+        </div>
+        <div class="kurz-phasen" data-reveal style="--delay:80ms">
+          <h3 class="mini-h">Der Fahrplan bis 2050</h3>
+          <ol class="kurz-ph">
+            {kurzfassung.phasen.map((ph) => (
+              <li><span class="kurz-num">{ph.num}</span><span class="kurz-b"><span class="kurz-t">{ph.titel}</span><span class="kurz-z">{ph.zeile}</span></span></li>
+            ))}
+          </ol>
+        </div>
+      </div>
+      <p class="kurz-fazit" data-reveal>{kurzfassung.fazit}</p>
+    </div>
   </section>
 
   <!-- ===================== I. AUSGANGSLAGE ===================== -->
@@ -837,6 +876,37 @@ const tempoCfg = {
   .hero-line { height: 1px; background: var(--hair); margin-top: clamp(2rem, 5vw, 3.5rem); }
 
   .shell-rule { max-width: var(--maxw); margin-inline: auto; }
+
+  /* ---------- Download-Knopf ---------- */
+  .dl-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 13px; letter-spacing: 0.02em; font-weight: 500;
+    color: var(--paper); background: var(--ink);
+    padding: 0.6rem 1.05rem; border-radius: 100px; text-decoration: none;
+    transition: background 0.25s var(--ease), gap 0.25s var(--ease);
+  }
+  .dl-btn:hover { background: var(--accent); gap: 0.85rem; }
+  .dl-arrow { font-size: 1rem; line-height: 1; }
+  .hero-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.9rem; }
+  @media (max-width: 620px) { .hero-side { align-items: flex-start; } }
+
+  /* ---------- Kurzfassung ---------- */
+  .kurz { background: var(--paper-2); }
+  .kurz .sec-num { font-size: 1.1rem; }
+  .kurz-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 3.5rem); margin-top: 0.5rem; }
+  @media (min-width: 820px) { .kurz-grid { grid-template-columns: 1fr 1fr; } }
+  .kurz-dl { margin-top: 1.75rem; }
+  .kurz-ph { list-style: none; margin-top: 1.25rem; display: flex; flex-direction: column; }
+  .kurz-ph li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0.9rem; align-items: baseline; padding: 0.85rem 0; border-top: 1px solid var(--hair); }
+  .kurz-ph li:first-child { border-top: 0; }
+  .kurz-num { font-size: 0.9rem; color: var(--accent); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  .kurz-b { display: flex; flex-direction: column; gap: 0.2rem; }
+  .kurz-t { font-size: 0.98rem; font-weight: 600; letter-spacing: -0.01em; }
+  .kurz-z { font-size: 0.88rem; color: var(--muted); }
+  .kurz-fazit {
+    font-size: clamp(1rem, 1.9vw, 1.15rem); color: var(--ink-soft); max-width: 66ch;
+    margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--hair-strong);
+  }
 
   .lead-in { font-size: clamp(1.05rem, 1.9vw, 1.2rem); color: var(--ink-soft); max-width: 60ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
 

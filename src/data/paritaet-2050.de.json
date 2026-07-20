@@ -5,7 +5,41 @@
     "untertitel": "Die Rechnung sagt 2148. Dieser Plan sagt 2050. Ein europäischer Fahrplan, durchgerechnet und mit allen Bruchstellen.",
     "stand": "Stand Juli 2026",
     "description": "Parität 2050. Ein europäischer Fahrplan zur globalen Geschlechterparität: Machthebel, Zeitplan, Vetopunkte, Kulturstrategie und die Frage, woran er scheitert.",
-    "einordnung": "Dies ist ein Gedankenexperiment in Form eines Regierungsdokuments. Kein Programm einer Partei, keiner Institution und keiner Regierung. Alle Zahlen, Rechtsgrundlagen und Verfahrensangaben sind belegt und unten nachprüfbar. Die Strategie darauf ist eine Behauptung, die man bestreiten kann und bestreiten soll."
+    "einordnung": "Dies ist ein Gedankenexperiment in Form eines Regierungsdokuments. Kein Programm einer Partei, keiner Institution und keiner Regierung. Alle Zahlen, Rechtsgrundlagen und Verfahrensangaben sind belegt und unten nachprüfbar. Die Strategie darauf ist eine Behauptung, die man bestreiten kann und bestreiten soll.",
+    "pdf": "/Paritaet-2050-Kurzfassung.pdf",
+    "pdfLabel": "Kurzfassung als PDF"
+  },
+  "kurzfassung": {
+    "label": "Kurzfassung",
+    "lead": "Für den schnellen Überblick, und zum Weitergeben. Die Langfassung mit allen Belegen steht darunter.",
+    "these": [
+      "Parität ist kein Überzeugungsproblem, sondern ein Tempoproblem. Fast jeder Staat hat sich verpflichtet und tut nichts.",
+      "Normen setzen sich über Marktzugang durch, nicht über Werte. Der Hebel liegt im Binnenmarkt, nicht in der Außenpolitik.",
+      "Die erste Blockade sitzt nicht im Ausland, sondern in Europa selbst."
+    ],
+    "phasen": [
+      {
+        "num": "I",
+        "titel": "Das eigene Haus",
+        "zeile": "Vetostruktur aufbrechen, Recht durchsetzen, einen Index bauen, der Wirkung misst."
+      },
+      {
+        "num": "II",
+        "titel": "Preisbildung",
+        "zeile": "Ungleichheit zum Kostenfaktor machen, mit positiver Konditionalität statt Entzug."
+      },
+      {
+        "num": "III",
+        "titel": "Kaskade",
+        "zeile": "Den Punkt erreichen, an dem Dritte den Standard von selbst übernehmen."
+      },
+      {
+        "num": "IV",
+        "titel": "Verankerung",
+        "zeile": "Das Erreichte in Verträge gießen und die Sonderprogramme abschaffen."
+      }
+    ],
+    "fazit": "Sechs Rollen genügen, um den Prozess zu eröffnen, plus acht, damit er hält. Der Plan ist nicht robust, bestenfalls trägt auch der Teilerfolg. Der tiefste offene Punkt bleibt: Er braucht vierundzwanzig Jahre lang unterstützende Mehrheiten, während Rat und Parlament nach rechts kippen."
   },
   "ausgangslage": {
     "label": "Ausgangslage",
