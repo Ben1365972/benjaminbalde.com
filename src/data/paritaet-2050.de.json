@@ -735,62 +735,90 @@
       "kern": [
         {
           "rolle": "Ein Kommissionsmitglied mit dem Handelsressort",
-          "warum": "Ohne die politische Ebene gibt es keinen delegierten Rechtsakt und damit kein scharfes Instrument."
+          "warum": "Ohne die politische Ebene gibt es keinen delegierten Rechtsakt und damit kein scharfes Instrument.",
+          "profil": "Fachlicher Hintergrund in Handelspolitik oder Wettbewerbsrecht, Erfahrung in einer nationalen Regierung. Diese Position wird nicht angestrebt, sie wird von einem Mitgliedstaat nominiert.",
+          "weg": "Nominierung durch eine nationale Regierung, Anhörung im Parlament, Ernennung durch den Europäischen Rat."
         },
         {
           "rolle": "Ein Kabinettsmitglied bei dieser Person",
-          "warum": "Trägt das Dossier durch die Vorbereitungskette. Von sechs Stellen sind bis zu drei ohne Auswahlverfahren von außen zu besetzen."
+          "warum": "Trägt das Dossier durch die Vorbereitungskette. Von sechs Stellen sind bis zu drei ohne Auswahlverfahren von außen zu besetzen.",
+          "profil": "Referentenerfahrung in einem Ministerium oder einer Generaldirektion, Belastbarkeit im Wochentakt der Vorbereitungsgremien, Diskretion. Fachliche Tiefe ist weniger wichtig als Verfahrenssicherheit und Zugang zum Kalender.",
+          "weg": "Direkte Einstellung als Bedienstete auf Zeit. Bis zu drei der sechs Stellen eines normalen Kabinetts stehen Externen offen, ohne Auswahlverfahren."
         },
         {
           "rolle": "Eine Leitungsperson in der Generaldirektion Handel",
-          "warum": "Entscheidet über die Sensibilitätskennzeichnung und verantwortet den Bericht, auf dem jeder Präferenzentzug aufbaut."
+          "warum": "Entscheidet über die Sensibilitätskennzeichnung und verantwortet den Bericht, auf dem jeder Präferenzentzug aufbaut.",
+          "profil": "Zehn bis fünfzehn Jahre in der Handelsverwaltung, Kenntnis der Präferenzsystematik, Erfahrung mit delegierten Rechtsakten. Diese Person schreibt die Berichte, auf denen alles Weitere aufbaut.",
+          "weg": "Beamtenlaufbahn über das Auswahlverfahren, in der Regel nach Stationen in einer Fachgeneraldirektion. Beschleunigung über eine Kabinettsstation."
         },
         {
           "rolle": "Eine Person im Juristischen Dienst",
-          "warum": "Die Verlagerung auf die Entgeltnorm steht und fällt mit der Rechtsgrundlagenkonstruktion. Hält sie nicht, verliert man vor Gericht."
+          "warum": "Die Verlagerung auf die Entgeltnorm steht und fällt mit der Rechtsgrundlagenkonstruktion. Hält sie nicht, verliert man vor Gericht.",
+          "profil": "Volljuristin mit europarechtlichem Schwerpunkt, idealerweise mit Erfahrung in Verfahren vor dem Gerichtshof. Die Rechtsgrundlagenkonstruktion auf Artikel 157 ist die anspruchsvollste juristische Aufgabe des Plans.",
+          "weg": "Auswahlverfahren für Juristinnen. Alternativ über einen nationalen juristischen Dienst und Entsendung."
         },
         {
           "rolle": "Ein Fraktionskoordinator im Handelsausschuss",
-          "warum": "Dort wird entschieden, wer Berichterstatter wird. Wer die Berichterstattung hat, leitet später das Verhandlungsteam im Trilog."
+          "warum": "Dort wird entschieden, wer Berichterstatter wird. Wer die Berichterstattung hat, leitet später das Verhandlungsteam im Trilog.",
+          "profil": "Abgeordnetenmandat und Sitz im Handelsausschuss, dazu Rückhalt in der eigenen Fraktion. Die Koordinatorenrolle setzt Erfahrung und interne Stellung voraus, nicht Fachwissen.",
+          "weg": "Wahl ins Parlament über eine nationale Liste, danach Benennung durch die Fraktion."
         },
         {
           "rolle": "Eine Regierung mit einer Ratspräsidentschaft",
-          "warum": "Sechs Monate Kontrolle über Tagesordnung und Kompromisstexte. Das ist das einzige planbare Zeitfenster im ganzen System."
+          "warum": "Sechs Monate Kontrolle über Tagesordnung und Kompromisstexte. Das ist das einzige planbare Zeitfenster im ganzen System.",
+          "profil": "Eine Regierung, die bereit ist, ein Vorsitzhalbjahr für ein einzelnes Dossier zu verwenden, statt es auf zwanzig zu verteilen. Das ist eine politische Entscheidung, keine personelle.",
+          "weg": "Die Reihenfolge steht bis 2030 fest. Wer den Plan will, muss sich an ein bestimmtes Halbjahr binden und Jahre vorher anfangen."
         }
       ],
       "erweiterungTitel": "Acht, ohne die es nicht hält",
       "erweiterung": [
         {
           "rolle": "Eine Ständige Vertreterin in einem blockierenden Mitgliedstaat",
-          "warum": "Dossiers sterben im Ausschuss der Ständigen Vertreter, nicht im Rat."
+          "warum": "Dossiers sterben im Ausschuss der Ständigen Vertreter, nicht im Rat.",
+          "profil": "Diplomatische Laufbahn, Botschafterrang oder Stellvertretung. Weisungsgebunden, deshalb zählt weniger die Person als ihr Draht in die Hauptstadt.",
+          "weg": "Nationaler auswärtiger Dienst."
         },
         {
           "rolle": "Eine Referatsleitung im federführenden Ressort in Berlin",
-          "warum": "Die deutsche Position entsteht in der Ressortabstimmung, lange bevor sie in Brüssel vorgetragen wird."
+          "warum": "Die deutsche Position entsteht in der Ressortabstimmung, lange bevor sie in Brüssel vorgetragen wird.",
+          "profil": "Referatsleitung im federführenden Ressort, Erfahrung in der Ressortabstimmung. Hier entsteht die deutsche Position, lange bevor sie in Brüssel vorgetragen wird.",
+          "weg": "Nationale Beamtenlaufbahn."
         },
         {
           "rolle": "Eine Berichterstatterin im Gleichstellungsausschuss",
-          "warum": "Der Ausschuss ist formal weder für Handel noch für Normung zuständig. Genau deshalb braucht es jemanden, der die Verbindung herstellt."
+          "warum": "Der Ausschuss ist formal weder für Handel noch für Normung zuständig. Genau deshalb braucht es jemanden, der die Verbindung herstellt.",
+          "profil": "Abgeordnetenmandat mit Sitz im Gleichstellungsausschuss und Interesse an Handelsfragen. Diese Kombination ist selten, genau darin liegt der Bedarf.",
+          "weg": "Wahl ins Parlament, Ausschusszuweisung über die Fraktion."
         },
         {
           "rolle": "Eine Delegierte im zuständigen Normungsausschuss",
-          "warum": "Der niedrigste Widerstand und die längste Haltbarkeit im gesamten Katalog."
+          "warum": "Der niedrigste Widerstand und die längste Haltbarkeit im gesamten Katalog.",
+          "profil": "Technischer oder betriebswirtschaftlicher Hintergrund, Bereitschaft zu jahrelanger Gremienarbeit ohne Öffentlichkeit. Die zugänglichste Position des ganzen Plans.",
+          "weg": "Entsendung durch die nationale Normungsorganisation in den zuständigen Arbeitsausschuss."
         },
         {
           "rolle": "Eine Person im Verwaltungsrat einer Entwicklungsbank",
-          "warum": "Vergaberichtlinien binden Infrastrukturvorhaben über Jahrzehnte und überstehen jede Regierung."
+          "warum": "Vergaberichtlinien binden Infrastrukturvorhaben über Jahrzehnte und überstehen jede Regierung.",
+          "profil": "Finanzministerium, Entwicklungsbank oder Aufsicht. Vergaberichtlinien binden Vorhaben über Jahrzehnte und überstehen jede Regierung.",
+          "weg": "Benennung durch ein nationales Finanzministerium in den Verwaltungsrat."
         },
         {
           "rolle": "Eine Statistikerin, die den Index verantwortet",
-          "warum": "Konditionalität braucht eine Zahl, die vor Gericht hält und die niemand nachträglich anpassen kann."
+          "warum": "Konditionalität braucht eine Zahl, die vor Gericht hält und die niemand nachträglich anpassen kann.",
+          "profil": "Statistik oder empirische Sozialforschung, Erfahrung mit amtlicher Datenproduktion. Wer die Methodik verantwortet, verantwortet die Konditionalität.",
+          "weg": "Anstellung bei einer statistischen Behörde oder einer EU-Agentur."
         },
         {
           "rolle": "Eine Finanzierung, die über Legislaturperioden trägt",
-          "warum": "Die Messinfrastruktur muss die erste Sparrunde überleben, sonst ist alles Übrige gegenstandslos."
+          "warum": "Die Messinfrastruktur muss die erste Sparrunde überleben, sonst ist alles Übrige gegenstandslos.",
+          "profil": "Stiftung oder Vermögensverwaltung mit einem Anlagehorizont von mindestens fünfzehn Jahren. Kurzfristige Förderlogik zerstört hier mehr, als sie aufbaut.",
+          "weg": "Keine Laufbahn, eine Entscheidung."
         },
         {
           "rolle": "Eine Trägerorganisation im globalen Süden",
-          "warum": "Ohne Ko-Autorenschaft von außerhalb Europas bleibt das Vorhaben als europäisches angreifbar."
+          "warum": "Ohne Ko-Autorenschaft von außerhalb Europas bleibt das Vorhaben als europäisches angreifbar.",
+          "profil": "Eine etablierte Organisation aus dem globalen Süden mit eigener Legitimität und eigener Agenda. Nicht als Empfängerin, sondern als Miturheberin.",
+          "weg": "Partnerschaft, keine Rekrutierung. Das ist der Unterschied, an dem der ganze Abschnitt hängt."
         }
       ],
       "schluss": [
@@ -798,7 +826,8 @@
         "Er täuscht nach unten, weil keine dieser Stellen ein Ergebnis befehlen kann. Sie entscheiden nur darüber, ob ein Vorschlag überhaupt bis zu einem Entscheidungspunkt gelangt. Das ist notwendig und nicht hinreichend. Vierzehn gut platzierte Menschen können einen Prozess eröffnen. Beenden können sie ihn nicht.",
         "Und er täuscht nach oben, denn dieselbe Zahl gilt für jede andere Agenda auch. Wenn vierzehn Personen genügen, um diesen Plan anzuschieben, dann genügen vierzehn andere, um ihn anzuhalten. Genau das ist seit 2008 bei der Antidiskriminierungsrichtlinie zu beobachten, und dort waren es weniger.",
         "Die eigentliche Erkenntnis dieser Karte ist deshalb keine strategische, sondern eine demokratische. Ein politisches System, in dem die wirksamsten Stellen die kleinsten Gremien und die niedrigsten Eintrittshürden haben, ist nicht schwer zu beeinflussen. Es ist nur schwer zu beobachten."
-      ]
+      ],
+      "profilHinweis": "Die Profile beschreiben Positionen, nicht Personen. Wer diese Rollen besetzen will, sucht nach Laufbahn und Verfahrenszugang, nicht nach Namen."
     },
     "irrtum": {
       "titel": "Ein verbreiteter Irrtum, der die Karte verzerrt",
@@ -1271,6 +1300,187 @@
       "folgerung": "Ein Plan, der auf zivilgesellschaftliche Netzwerke als Träger setzt, setzt auf eine Infrastruktur, die chronisch unterfinanziert ist. Deshalb steht in der Minimalbesetzung eine Finanzierung, die über Legislaturperioden trägt, und nicht ein weiteres Netzwerk."
     },
     "vorbehalt": "Zu mehreren Organisationen ließen sich Gründungsjahr, Mitgliederzahl oder Wirkung nicht aus der eigenen Website belegen, teils weil die Server automatisierte Zugriffe blockieren. Diese Lücken sind einzeln ausgewiesen und nicht mit Schätzungen gefüllt. Vier weitere Organisationen, darunter der Verband deutscher Unternehmerinnen, sind hier gar nicht aufgeführt, weil keine einzige Angabe belegbar war."
+  },
+  "organisationen": {
+    "label": "Organisationen",
+    "lead": "Sechs internationale Organisationen, durch die diese Agenda laufen müsste. Entscheidend ist nicht ihr Mandat, sondern ihre Abstimmungsregel. Sie bestimmt, was dort überhaupt möglich ist.",
+    "kernsatz": "Die Organisation mit dem schärfsten Durchgriff hat keinen Vertrag und keine Mehrheitsregel. Die mit dem verbindlichsten Recht ist die langsamste. Die mit dem meisten Geld ist von einem einzigen Mitglied blockierbar.",
+    "items": [
+      {
+        "name": "Internationale Arbeitsorganisation",
+        "kurz": "ILO",
+        "hebel": 80,
+        "mandat": "Setzt internationale Arbeitsnormen als völkerrechtliche Übereinkommen, die einzeln von Staaten ratifiziert werden.",
+        "entscheidung": "Ratifikation Staat für Staat. Wer nicht ratifiziert, ist nicht gebunden.",
+        "euRolle": "Die EU selbst ist nicht Mitglied, die Mitgliedstaaten sind es einzeln.",
+        "bestand": "Fünf einschlägige Übereinkommen, siehe die Tabelle darunter. Zwei davon sind mit 175 Ratifikationen nahezu universell, drei sind es überhaupt nicht.",
+        "ansatz": "Das einzige Instrument in dieser Liste, das echtes Recht erzeugt. Der Preis dafür ist Langsamkeit: Das Übereinkommen zur Entgeltgleichheit ist von 1951 und die Lücke ist immer noch offen. Der realistische Ansatz ist nicht ein neues Übereinkommen, sondern die Schließung der Ratifikationslücken bei den bestehenden.",
+        "notiz": "Und die beginnt zu Hause. Von 27 EU-Staaten haben erst 15 das Übereinkommen gegen Gewalt und Belästigung in der Arbeitswelt ratifiziert. Deutschland hat das Übereinkommen zu Arbeitnehmern mit Familienpflichten nie ratifiziert."
+      },
+      {
+        "name": "Financial Action Task Force",
+        "kurz": "FATF",
+        "hebel": 88,
+        "mandat": "Setzt Standards gegen Geldwäsche und Terrorismusfinanzierung und veröffentlicht Listen von Staaten mit strategischen Mängeln.",
+        "entscheidung": "Das Plenum entscheidet im Konsens. Es gibt keine Prozentschwelle. Vorbereitet werden Listungen von einer Prüfgruppe, entschieden wird im Plenum, das dreimal jährlich tagt, üblicherweise im Februar, Juni und Oktober.",
+        "euRolle": "Die Europäische Kommission ist selbst Mitglied, neben 38 Jurisdiktionen und dem Golf-Kooperationsrat. Russlands Mitgliedschaft ist seit Februar 2023 suspendiert.",
+        "bestand": "Keine Gleichstellungsdimension. 40 Mitglieder, über das Netz der Regionalgremien aber mehr als 200 Länder und Jurisdiktionen, die sich zu den Standards bekannt haben.",
+        "ansatz": "Nicht Beitritt, sondern Nachbau. Die FATF ist kein völkerrechtlicher Vertrag, hat keine Sanktionsgewalt und erreicht dennoch die stärkste dokumentierte Wirkung im ganzen Katalog dieses Plans: Eine Listung senkt die Kapitalzuflüsse eines Landes im Schnitt um 7,6 Prozent der Wirtschaftsleistung.",
+        "notiz": "Der Befund ist unbequem. Das wirksamste Durchsetzungsinstrument der internationalen Ordnung ist eine Liste, die von einem Gremium ohne Vertrag und ohne demokratische Legitimation im Konsens beschlossen wird. Wer diese Mechanik für Gleichstellung nachbaut, erbt beides."
+      },
+      {
+        "name": "Welthandelsorganisation",
+        "kurz": "WTO",
+        "hebel": 55,
+        "mandat": "Regelt den Welthandel.",
+        "entscheidung": "Konsensprinzip. Ein einziges Mitglied kann jede Regeländerung verhindern.",
+        "euRolle": "Die EU tritt als eigenes Mitglied auf, ihre Mitgliedstaaten zusätzlich einzeln.",
+        "bestand": "Die Gemeinsame Erklärung von Buenos Aires zu Handel und wirtschaftlicher Selbstbestimmung von Frauen wurde 2017 von 118 Mitgliedern unterstützt. Die daraus hervorgegangene informelle Arbeitsgruppe zu Handel und Gleichstellung wurde am 23. September 2020 förmlich errichtet und zählte 2024 bereits 130 Mitglieder plus fünf Beobachter.",
+        "ansatz": "Der plurilaterale Weg, den die Mitglieder faktisch schon gehen. Nicht der Versuch, Konsens zu erzwingen.",
+        "notiz": "Der strukturelle Befund ist aufschlussreich: Alles, was in der WTO zu Gleichstellung existiert, wurde bewusst außerhalb des konsenspflichtigen Regelwerks organisiert, als Erklärung und als informelle Gruppe. Von 118 auf 130 in sieben Jahren. Der Umweg trägt, der Hauptweg nicht."
+      },
+      {
+        "name": "Internationaler Währungsfonds",
+        "kurz": "IWF",
+        "hebel": 70,
+        "mandat": "Überwacht die Wirtschaftspolitik der Mitglieder und vergibt Kredite.",
+        "entscheidung": "Stimmgewicht nach Quote. Grundsatzentscheidungen brauchen 85 Prozent der Stimmrechte, verankert an rund zwanzig Stellen des Übereinkommens, darunter jede Quotenänderung und jede Vertragsänderung.",
+        "euRolle": "Die 27 EU-Staaten halten zusammen 25,52 Prozent der Stimmrechte, mehr als jedes andere Gebilde. Sie stimmen aber nicht als Block ab und sind auf mehrere Stimmrechtsgruppen verteilt.",
+        "bestand": "Seit Juli 2022 gibt es eine Gleichstellungsstrategie, die erste überhaupt. Maßstab ist die Makrokritikalität: Ist ein Thema makrokritisch und liegt Fondsexpertise vor, sind Analyse und Politikberatung verpflichtend. Bis 2022 war Gleichstellung in über 80 Länderberichten seit 2015 behandelt worden, für über 40 Länder.",
+        "ansatz": "Der Fonds ist der einzige Akteur, der Wirtschaftspolitik jährlich und flächendeckend prüft. Wenn Gleichstellung dort verlässlich als makrokritisch eingestuft wird, entsteht ein Prüfrhythmus, den kein Gleichstellungsabkommen der Welt erzeugen kann.",
+        "notiz": "Die Sperrminorität liegt bei über 15 Prozent. Die Vereinigten Staaten halten 16,49 Prozent und sind damit das einzige Mitglied, das allein blockieren kann. Das nächstgrößte, Japan, kommt auf 6,14. Die Quotenerhöhung von 2023 hat daran bewusst nichts geändert, sie wurde streng proportional verteilt, eine Neugewichtung wurde vertagt. Sie ist bis heute nicht in Kraft."
+      },
+      {
+        "name": "Organisation für wirtschaftliche Zusammenarbeit und Entwicklung",
+        "kurz": "OECD",
+        "hebel": 50,
+        "mandat": "Koordiniert Wirtschafts- und Entwicklungspolitik der Industriestaaten und führt die Statistik der Entwicklungsfinanzierung.",
+        "entscheidung": "Empfehlungen des Rates sind ausdrücklich nicht rechtsverbindlich. Sie sind laut OECD eine politische Selbstverpflichtung mit der Erwartung, dass die Beitretenden ihr Bestes zur Umsetzung tun.",
+        "euRolle": "38 Mitgliedstaaten, davon 22 EU-Staaten. Die EU selbst ist kein Mitglied, nimmt aber an der Arbeit teil. Bulgarien, Kroatien, Malta, Rumänien und Zypern sind nicht dabei.",
+        "bestand": "Drei einschlägige Rechtsinstrumente: die Empfehlung zu Gleichstellung im öffentlichen Leben von 2015, die zu Bildung, Beschäftigung und Unternehmertum von 2013, und eine Empfehlung des Entwicklungsausschusses von 2024. Dazu der Gleichstellungsmarker, mit dem jedes gemeldete Entwicklungsvorhaben eingestuft wird.",
+        "ansatz": "Nicht die Empfehlungen, sondern der Marker. Er ist das einzige Instrument, das weltweit Entwicklungsgeld nach Gleichstellungsrelevanz zählt, und damit die Grundlage jeder Konditionalität, die auf Zahlen aufbauen will.",
+        "notiz": "Der Marker misst allerdings die Absicht im Projektentwurf, nicht das Ergebnis. Für einen Plan, der Wirkung statt Erfüllung messen will, ist das genau die falsche Konstruktion und zugleich der naheliegendste Ansatzpunkt für eine Reform."
+      },
+      {
+        "name": "Bank für Internationalen Zahlungsausgleich",
+        "kurz": "BIZ",
+        "hebel": 12,
+        "mandat": "Bank der Zentralbanken, Zusammenarbeit bei Geld- und Finanzstabilität.",
+        "entscheidung": "nicht belegbar, die Selbstdarstellung weist die Governance nicht aus.",
+        "euRolle": "nicht gesondert ausgewiesen.",
+        "bestand": "63 Mitgliedszentralbanken, die Länder mit rund 95 Prozent der weltweiten Wirtschaftsleistung vertreten. Auf der zentralen Selbstdarstellungsseite finden sich keinerlei Kennzahlen, Politiken oder Zielwerte zu Gleichstellung. Der Begriff Diversität erscheint dort ausschließlich als Aussage über die BIZ als Arbeitgeberin.",
+        "ansatz": "Derzeit keiner. Aufgenommen, weil ein ehrlicher Katalog auch die Stellen benennen muss, an denen es nichts gibt.",
+        "notiz": "Der Negativbefund gilt belastbar für die geprüfte Selbstdarstellung, nicht für die gesamte Institution. Ob es im Basler Ausschuss oder in der Forschung Anknüpfungspunkte gibt, wurde nicht geprüft."
+      }
+    ],
+    "ilo": {
+      "titel": "Die Ratifikationslücke",
+      "lead": "Fünf Übereinkommen der Arbeitsorganisation, die für diese Agenda zählen. Die letzten beiden Spalten sind der eigentliche Befund.",
+      "spalten": {
+        "jahr": "Jahr",
+        "rat": "Ratifikationen",
+        "eu": "EU-27",
+        "de": "Deutschland"
+      },
+      "items": [
+        {
+          "name": "Entgeltgleichheit",
+          "nr": "C100",
+          "jahr": 1951,
+          "rat": 175,
+          "eu": 27,
+          "de": true,
+          "fehlen": "USA, Vereinigtes Königreich"
+        },
+        {
+          "name": "Diskriminierung in Beschäftigung und Beruf",
+          "nr": "C111",
+          "jahr": 1958,
+          "rat": 175,
+          "eu": 27,
+          "de": true,
+          "fehlen": "USA, Japan, Vereinigtes Königreich"
+        },
+        {
+          "name": "Mutterschutz",
+          "nr": "C183",
+          "jahr": 2000,
+          "rat": 46,
+          "eu": 16,
+          "de": true,
+          "fehlen": "USA, China, Japan, Indien, Brasilien, Russland und weitere"
+        },
+        {
+          "name": "Gewalt und Belästigung in der Arbeitswelt",
+          "nr": "C190",
+          "jahr": 2019,
+          "rat": 56,
+          "eu": 15,
+          "de": true,
+          "fehlen": "USA, China, Japan, Indien, Brasilien, Russland, Vereinigtes Königreich, Südkorea, Schweiz und weitere"
+        },
+        {
+          "name": "Arbeitnehmer mit Familienpflichten",
+          "nr": "C156",
+          "jahr": 1981,
+          "rat": 49,
+          "eu": 13,
+          "de": false,
+          "fehlen": "USA, China, Indien, Brasilien, Vereinigtes Königreich, Kanada und weitere"
+        }
+      ],
+      "befund": [
+        "Die beiden alten Übereinkommen von 1951 und 1958 sind mit je 175 Ratifikationen nahezu universell. Sie haben die Lücke nicht geschlossen. Das ist der stärkste Einzelbeleg dafür, dass Ratifikation und Wirkung zwei verschiedene Dinge sind.",
+        "Beim Übereinkommen gegen Gewalt und Belästigung in der Arbeitswelt liegt die EU bei 15 von 27. Es fehlen unter anderem die Niederlande und Schweden, also zwei Staaten, die sich sonst als Vorreiter verstehen.",
+        "Beim Übereinkommen zu Arbeitnehmern mit Familienpflichten hat Deutschland nie ratifiziert. Es ist das einzige der fünf, bei dem das so ist.",
+        "Daraus folgt eine konkrete, überprüfbare und national adressierbare Forderung, die nichts kostet außer politischem Willen. Das ist selten."
+      ],
+      "quelle": "Internationale Arbeitsorganisation, Ratifikationsdatenbank NORMLEX, Stand Juli 2026"
+    },
+    "geld": {
+      "titel": "Und das Geld läuft in die andere Richtung",
+      "lead": "Die OECD zählt, welcher Anteil der Entwicklungshilfe Gleichstellungsziele verfolgt. Die Reihe ist eindeutig.",
+      "zahlen": [
+        {
+          "wert": "43 %",
+          "was": "der bilateralen zuweisbaren Entwicklungshilfe hatten 2021 und 2022 Gleichstellung als Ziel, das sind 64,1 Milliarden Dollar",
+          "richtung": "neutral"
+        },
+        {
+          "wert": "4 %",
+          "was": "davon als Hauptziel. Die übrigen 39 Prozent nur als Nebenziel",
+          "richtung": "schlecht"
+        },
+        {
+          "wert": "45 %",
+          "was": "waren es noch 2019 und 2020. Der Anteil sinkt, obwohl das Volumen stieg",
+          "richtung": "schlecht"
+        },
+        {
+          "wert": "minus 13 %",
+          "was": "Rückgang der Gleichstellungsmittel von 2023 auf 2024, der niedrigste Wert seit 2021",
+          "richtung": "schlecht"
+        },
+        {
+          "wert": "578 Mio.",
+          "was": "Dollar gingen 2024 an Frauenrechtsorganisationen, nach 799 Millionen im Vorjahr. Ein Minus von 28 Prozent, und stets unter einem Prozent der Gleichstellungsmittel",
+          "richtung": "schlecht"
+        },
+        {
+          "wert": "21 %",
+          "was": "der humanitären Hilfe enthielten 2024 überhaupt Gleichstellungsziele",
+          "richtung": "schlecht"
+        },
+        {
+          "wert": "49 %",
+          "was": "im Energiesektor, nach 4 Prozent im Jahr 2014. Der einzige Bereich mit einer echten Trendwende",
+          "richtung": "gut"
+        }
+      ],
+      "schluss": "Der Energiesektor zeigt, dass es geht. Er ist von 4 auf 49 Prozent gestiegen, während das Gesamtbild fällt. Der Unterschied ist, dass dort große Infrastrukturvorhaben finanziert werden, in deren Verträgen Bedingungen stehen, und nicht Programme, deren Förderung jährlich neu entschieden wird. Genau das ist die Bauweise, die dieser Plan überall verlangt.",
+      "quelle": "OECD, Entwicklungsausschuss, Daten 2021 bis 2024"
+    },
+    "schluss": "Keine dieser sechs Organisationen wird diese Agenda tragen. Die eine kann, will aber nicht, die andere will, kann aber nicht, und die dritte ist von einem einzigen Mitglied blockiert. Der Wert dieses Abschnitts liegt nicht in einer Empfehlung, welcher man beitreten soll, sondern in einer Formregel: Wirksam ist, was regelmäßig prüft und veröffentlicht, nicht was feierlich beschlossen wird."
   },
   "beweislage": {
     "label": "Beweislage",
@@ -1931,6 +2141,71 @@
             "org": "Websites der jeweiligen Organisationen, im Verzeichnis einzeln verlinkt",
             "jahr": "2026",
             "url": "https://womenlobby.org/"
+          }
+        ]
+      },
+      {
+        "name": "Internationale Organisationen",
+        "items": [
+          {
+            "titel": "Ratifikationsstände der Übereinkommen C100, C111, C156, C183 und C190",
+            "org": "Internationale Arbeitsorganisation, NORMLEX",
+            "jahr": "2026",
+            "url": "https://normlex.ilo.org/"
+          },
+          {
+            "titel": "Informelle Arbeitsgruppe zu Handel und Gleichstellung, Errichtung und Teilnehmerzahl",
+            "org": "Welthandelsorganisation",
+            "jahr": "2024",
+            "url": "https://www.wto.org/english/tratop_e/womenandtrade_e/iwg_trade_gender_e.htm"
+          },
+          {
+            "titel": "Quoten und Stimmrechte der Mitglieder",
+            "org": "Internationaler Währungsfonds",
+            "jahr": "2026",
+            "url": "https://www.imf.org/en/About/executive-board/members-quotas"
+          },
+          {
+            "titel": "Übereinkommen über den IWF, 85-Prozent-Erfordernisse",
+            "org": "Internationaler Währungsfonds",
+            "jahr": "2025",
+            "url": "https://www.imf.org/external/pubs/ft/aa/pdf/aa.pdf"
+          },
+          {
+            "titel": "IMF Strategy Toward Mainstreaming Gender, Policy Paper 2022/037",
+            "org": "Internationaler Währungsfonds",
+            "jahr": "2022",
+            "url": "https://www.imf.org/en/Publications/Policy-Papers/Issues/2022/07/28/IMF-Strategy-Toward-Mainstreaming-Gender-521344"
+          },
+          {
+            "titel": "Handbuch zum Gleichstellungsmarker des Entwicklungsausschusses",
+            "org": "OECD, DCD/DAC/GEN(2025)2",
+            "jahr": "2025",
+            "url": "https://one.oecd.org/document/DCD/DAC/GEN(2025)2/en/pdf"
+          },
+          {
+            "titel": "Entwicklungshilfe mit Gleichstellungszielen, Rückgang 2024",
+            "org": "OECD",
+            "jahr": "2026",
+            "url": "https://www.oecd.org/en/blogs/2026/03/oda-for-gender-equality-is-plummeting--How-can-we-protect-it.html"
+          },
+          {
+            "titel": "Empfehlung zu Gleichstellung im öffentlichen Leben, OECD/LEGAL/0418",
+            "org": "OECD",
+            "jahr": "2015",
+            "url": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0418"
+          },
+          {
+            "titel": "Mandat der Financial Action Task Force, Konsensprinzip und Plenarrhythmus",
+            "org": "FATF",
+            "jahr": "2019",
+            "url": "https://www.fatf-gafi.org/content/dam/fatf-gafi/images/brochures-other/FATF-Ministerial-Declaration-Mandate.pdf.coredownload.pdf"
+          },
+          {
+            "titel": "Mitgliedszentralbanken und Selbstdarstellung",
+            "org": "Bank für Internationalen Zahlungsausgleich",
+            "jahr": "2026",
+            "url": "https://www.bis.org/about/index.htm"
           }
         ]
       }

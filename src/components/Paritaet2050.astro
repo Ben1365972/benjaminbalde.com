@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import daten from '../data/paritaet-2050.de.json';
 
-const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, beweislage, softpower, huerden, scheitern, quellen } = daten;
+const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, quellen } = daten;
 
 // Abschnitte nummerieren sich selbst, damit neue Abschnitte keine Handarbeit erzwingen
 const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
@@ -385,7 +385,7 @@ const tempoCfg = {
             </div>
             <ol class="crew-list">
               {machtkarte.minimum.kern.map((r) => (
-                <li><span class="crew-r">{r.rolle}</span><span class="crew-w">{r.warum}</span></li>
+                <li><span class="crew-r">{r.rolle}</span><span class="crew-w">{r.warum}</span><span class="crew-p">{r.profil}</span><span class="crew-way">{r.weg}</span></li>
               ))}
             </ol>
           </div>
@@ -396,11 +396,12 @@ const tempoCfg = {
             </div>
             <ol class="crew-list">
               {machtkarte.minimum.erweiterung.map((r) => (
-                <li><span class="crew-r">{r.rolle}</span><span class="crew-w">{r.warum}</span></li>
+                <li><span class="crew-r">{r.rolle}</span><span class="crew-w">{r.warum}</span><span class="crew-p">{r.profil}</span><span class="crew-way">{r.weg}</span></li>
               ))}
             </ol>
           </div>
         </div>
+        <p class="vorbem">{machtkarte.minimum.profilHinweis}</p>
 
         <div class="crew-schluss">
           {machtkarte.minimum.schluss.map((s) => <p>{s}</p>)}
@@ -553,6 +554,87 @@ const tempoCfg = {
       </div>
 
       <p class="vorbem" data-reveal>{netzwerke.vorbehalt}</p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== ORGANISATIONEN ===================== -->
+  <section class="section" id="organisationen">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">{sec()}</span>
+        <span class="sec-label">{organisationen.label}</span>
+      </div>
+      <p class="lead-in" data-reveal>{organisationen.lead}</p>
+      <p class="kernsatz" data-reveal>{organisationen.kernsatz}</p>
+
+      <div class="org-list">
+        {organisationen.items.map((o, i) => (
+          <details class="org" data-reveal style={`--delay:${(i % 3) * 50}ms`} open={i === 0}>
+            <summary>
+              <span class="org-kurz">{o.kurz}</span>
+              <span class="org-main">
+                <span class="org-name">{o.name}</span>
+                <span class="org-rule">{o.entscheidung}</span>
+              </span>
+              <span class="org-meter" aria-hidden="true"><span class="org-fill" style={`--w:${o.hebel}%`}></span></span>
+            </summary>
+            <div class="org-body">
+              <div class="org-cols">
+                <div class="org-col"><span class="mini-lab">Mandat</span><p>{o.mandat}</p></div>
+                <div class="org-col"><span class="mini-lab">Rolle der EU</span><p>{o.euRolle}</p></div>
+              </div>
+              <div class="org-col"><span class="mini-lab">Was dort besteht</span><p>{o.bestand}</p></div>
+              <div class="org-ansatz"><span class="mini-lab">Ansatzpunkt</span><p>{o.ansatz}</p></div>
+              <p class="org-note">{o.notiz}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+      <p class="legend" data-reveal><span>Balken: geschätzte Hebelwirkung für diese Agenda</span></p>
+
+      <!-- ILO-Ratifikationstabelle -->
+      <div class="block" data-reveal>
+        <h3 class="block-title">{organisationen.ilo.titel}</h3>
+        <p class="block-note">{organisationen.ilo.lead}</p>
+        <div class="ratif">
+          <div class="ratif-head">
+            <span>Übereinkommen</span><span>Jahr</span><span>Weltweit</span><span>EU-27</span><span>Deutschland</span>
+          </div>
+          {organisationen.ilo.items.map((k) => (
+            <div class={`ratif-row${k.de ? '' : ' is-gap'}`}>
+              <span class="ratif-n"><strong>{k.name}</strong><em>{k.nr} · fehlen unter anderem {k.fehlen}</em></span>
+              <span class="ratif-j">{k.jahr}</span>
+              <span class="ratif-r">{k.rat}</span>
+              <span class={`ratif-eu${k.eu < 20 ? ' is-low' : ''}`}>{k.eu} von 27</span>
+              <span class={`ratif-de${k.de ? '' : ' is-no'}`}>{k.de ? 'ja' : 'nein'}</span>
+            </div>
+          ))}
+        </div>
+        <ul class="ticks">
+          {organisationen.ilo.befund.map((b) => <li>{b}</li>)}
+        </ul>
+        <p class="block-src">{organisationen.ilo.quelle}</p>
+      </div>
+
+      <!-- Geldrichtung -->
+      <div class="block warn" data-reveal>
+        <h3 class="block-title">{organisationen.geld.titel}</h3>
+        <p class="block-note">{organisationen.geld.lead}</p>
+        <div class="geld">
+          {organisationen.geld.zahlen.map((z) => (
+            <div class={`geld-row is-${z.richtung}`}>
+              <span class="geld-w">{z.wert}</span>
+              <span class="geld-t">{z.was}</span>
+            </div>
+          ))}
+        </div>
+        <p class="block-schluss">{organisationen.geld.schluss}</p>
+        <p class="block-src">{organisationen.geld.quelle}</p>
+      </div>
+
+      <p class="kernsatz" data-reveal>{organisationen.schluss}</p>
     </div>
   </section>
 
@@ -944,6 +1026,59 @@ const tempoCfg = {
   .crew-schluss { margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--hair); display: flex; flex-direction: column; gap: 1rem; }
   .crew-schluss p { font-size: 0.97rem; color: var(--ink-soft); max-width: 68ch; }
   .crew-schluss p:last-child { font-weight: 500; color: var(--ink); }
+
+  /* ---------- Organisationen ---------- */
+  .org-list { border-top: 1px solid var(--hair-strong); }
+  .org { border-bottom: 1px solid var(--hair); }
+  .org summary {
+    list-style: none; cursor: pointer; padding: 1.15rem 0;
+    display: grid; grid-template-columns: 4rem 1fr; gap: 0.4rem 1rem; align-items: center;
+  }
+  .org summary::-webkit-details-marker { display: none; }
+  @media (min-width: 860px) { .org summary { grid-template-columns: 4rem minmax(0, 1fr) 8rem; } }
+  .org-kurz { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; color: var(--accent); }
+  .org-main { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+  .org-name { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.018em; }
+  .org-rule { font-size: 0.85rem; color: var(--muted); }
+  .org-meter { display: none; height: 5px; background: var(--hair); position: relative; overflow: hidden; }
+  @media (min-width: 860px) { .org-meter { display: block; } }
+  .org-fill { position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--accent); }
+  .org-body { padding-bottom: 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; }
+  .org-cols { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width: 780px) { .org-cols { grid-template-columns: 1fr 1fr; } }
+  .org-col p { font-size: 0.92rem; color: var(--muted); max-width: 62ch; }
+  .org-ansatz { border-left: 2px solid var(--accent); padding-left: 1.1rem; }
+  .org-ansatz p { font-size: 0.95rem; color: var(--ink-soft); max-width: 68ch; }
+  .org-note { font-size: 0.9rem; color: var(--ink); max-width: 70ch; border-top: 1px solid var(--hair); padding-top: 0.85rem; }
+
+  .ratif { margin-top: 1.75rem; border-top: 1px solid var(--hair-strong); }
+  .ratif-head { display: none; }
+  @media (min-width: 820px) {
+    .ratif-head { display: grid; grid-template-columns: 1fr 4rem 5.5rem 6rem 6rem; gap: 0.9rem; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+    .ratif-head span { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); }
+  }
+  .ratif-row { display: grid; grid-template-columns: 1fr; gap: 0.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  @media (min-width: 820px) { .ratif-row { grid-template-columns: 1fr 4rem 5.5rem 6rem 6rem; gap: 0.9rem; align-items: baseline; } }
+  .ratif-row.is-gap { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+  .ratif-n { display: flex; flex-direction: column; gap: 0.25rem; }
+  .ratif-n strong { font-size: 0.97rem; font-weight: 600; letter-spacing: -0.01em; }
+  .ratif-n em { font-style: normal; font-size: 11.5px; color: var(--faint); }
+  .ratif-j, .ratif-r, .ratif-eu, .ratif-de { font-size: 0.9rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .ratif-r { font-weight: 600; color: var(--ink); }
+  .ratif-eu.is-low { color: var(--accent); font-weight: 600; }
+  .ratif-de.is-no { color: var(--accent); font-weight: 700; }
+
+  .geld { margin-top: 1.75rem; display: flex; flex-direction: column; }
+  .geld-row { display: grid; grid-template-columns: 1fr; gap: 0.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--hair); }
+  @media (min-width: 700px) { .geld-row { grid-template-columns: 8rem 1fr; gap: 1.25rem; align-items: baseline; } }
+  .geld-w { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .geld-row.is-schlecht .geld-w { color: var(--accent); }
+  .geld-row.is-gut .geld-w { color: var(--ink); }
+  .geld-row.is-neutral .geld-w { color: var(--muted); }
+  .geld-t { font-size: 0.9rem; color: var(--muted); max-width: 62ch; }
+
+  .crew-p { display: block; font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.5rem; }
+  .crew-way { display: block; font-size: 11.5px; color: var(--faint); margin-top: 0.35rem; }
 
   /* ---------- Regionen ---------- */
   .rtempo { margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
