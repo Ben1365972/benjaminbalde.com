@@ -9,5 +9,10 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Nicht gelistete Seiten aus dem Sitemap ausschliessen
+      filter: (page) => !page.includes('/p2050-godmtztq3lmi3n'),
+    }),
+  ],
 });

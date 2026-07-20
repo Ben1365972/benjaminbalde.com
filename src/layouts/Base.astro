@@ -11,12 +11,14 @@ interface Props {
   lang?: 'de' | 'en';
   isHome?: boolean;
   ogImage?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'Benjamin Balde',
   lang = defaultLang,
   isHome = false,
+  noindex = false,
   description = ui[lang]['meta.description'],
   ogImage = lang === 'en' ? '/og-en.jpg' : '/og.jpg',
 } = Astro.props;
@@ -51,6 +53,7 @@ const jsonLd = {
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f6f6f5" />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{fullTitle}</title>
 
