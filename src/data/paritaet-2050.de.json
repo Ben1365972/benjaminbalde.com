@@ -1,0 +1,1030 @@
+{
+  "meta": {
+    "kicker": "Entwurf, nicht beschlossen",
+    "titel": "Parität 2050",
+    "untertitel": "Die Rechnung sagt 2148. Dieser Plan sagt 2050. Ein europäischer Fahrplan, durchgerechnet und mit allen Bruchstellen.",
+    "stand": "Stand Juli 2026",
+    "description": "Parität 2050. Ein europäischer Fahrplan zur globalen Geschlechterparität: Machthebel, Zeitplan, Vetopunkte, Kulturstrategie und die Frage, woran er scheitert.",
+    "einordnung": "Dies ist ein Gedankenexperiment in Form eines Regierungsdokuments. Kein Programm einer Partei, keiner Institution und keiner Regierung. Alle Zahlen, Rechtsgrundlagen und Verfahrensangaben sind belegt und unten nachprüfbar. Die Strategie darauf ist eine Behauptung, die man bestreiten kann und bestreiten soll."
+  },
+  "ausgangslage": {
+    "label": "Ausgangslage",
+    "lead": "Der Ausgangspunkt ist nicht, dass die Welt Gleichstellung ablehnt. Der Ausgangspunkt ist, dass sie ihr zustimmt und dabei bleibt.",
+    "kernsatz": "Parität ist kein Überzeugungsproblem. Sie ist ein Tempoproblem.",
+    "kennzahlen": [
+      {
+        "wert": 68.8,
+        "suffix": " %",
+        "dezimalen": 1,
+        "label": "der globalen Geschlechterlücke sind geschlossen",
+        "fussnote": "Weltwirtschaftsforum, Global Gender Gap Report 2025, 148 Volkswirtschaften"
+      },
+      {
+        "wert": 123,
+        "suffix": " Jahre",
+        "dezimalen": 0,
+        "label": "bis zur Parität, bei aktuellem Tempo. Das ist das Jahr 2148",
+        "fussnote": "Weltwirtschaftsforum, Global Gender Gap Report 2025"
+      },
+      {
+        "wert": 0,
+        "suffix": "",
+        "dezimalen": 0,
+        "prefix": "",
+        "label": "von 190 untersuchten Volkswirtschaften gewähren Frauen volle rechtliche Gleichstellung",
+        "fussnote": "Weltbank, Women, Business and the Law 2026, Datenstand Oktober 2025"
+      },
+      {
+        "wert": 27.5,
+        "suffix": " %",
+        "dezimalen": 1,
+        "label": "der Sitze in nationalen Parlamenten weltweit halten Frauen. Der langsamste Zuwachs seit 2017",
+        "fussnote": "Interparlamentarische Union, Stand 1. Januar 2026"
+      }
+    ],
+    "subindizes": {
+      "titel": "Wo die Lücke sitzt",
+      "hinweis": "Vier Teilbereiche, vier völlig verschiedene Geschwindigkeiten. Der Durchschnitt verdeckt genau das, worauf es ankommt.",
+      "quelle": "Weltwirtschaftsforum, Global Gender Gap Report 2025",
+      "items": [
+        {
+          "name": "Gesundheit",
+          "wert": 96.2,
+          "jahre": null,
+          "notiz": "nahezu geschlossen"
+        },
+        {
+          "name": "Bildung",
+          "wert": 95.1,
+          "jahre": 17,
+          "notiz": "17 Jahre"
+        },
+        {
+          "name": "Wirtschaftliche Teilhabe",
+          "wert": 61.0,
+          "jahre": 135,
+          "notiz": "135 Jahre"
+        },
+        {
+          "name": "Politische Teilhabe",
+          "wert": 22.9,
+          "jahre": 162,
+          "notiz": "162 Jahre"
+        }
+      ],
+      "schluss": "Bildung ist fast erledigt. Die Frage ist längst nicht mehr, ob Frauen qualifiziert sind. Die Frage ist, ob sie an Geld und an Macht kommen. Genau dort bewegt sich am wenigsten."
+    },
+    "tempo": {
+      "titel": "Was 2050 tatsächlich bedeutet",
+      "lead": "Ziehen Sie das Zieljahr. Die Zahl darunter ist der Faktor, um den sich das globale Tempo gegenüber heute erhöhen müsste.",
+      "basisWert": 68.8,
+      "basisJahr": 2026,
+      "jahreBisParitaet": 123,
+      "minJahr": 2040,
+      "maxJahr": 2150,
+      "startJahr": 2050,
+      "fussnote": "Lineare Fortschreibung des WEF-Gesamtindex. Vereinfachend, weil die letzten Prozentpunkte am schwersten sind. Die Größenordnung stimmt.",
+      "schluss": "Es gibt keinen Präzedenzfall dafür, dass eine globale Verteilungsfrage sich um den Faktor fünf beschleunigt hat, weil man sie für richtig hielt. Es gibt Präzedenzfälle dafür, dass sie sich beschleunigt hat, weil Nichtstun teuer wurde."
+    },
+    "rueckschritt": {
+      "titel": "Und die Richtung stimmt nicht überall",
+      "punkte": [
+        "Fast ein Viertel aller Regierungen meldete 2024 einen Rückschritt bei Frauenrechten. Grundlage sind die Berichte von 159 Regierungen an die Vereinten Nationen.",
+        "Bei der Frauenrechtskommission der UN wurde im März 2026 erstmals abgestimmt statt konsentiert. Die Schlussfolgerungen kamen mit 37 zu 1 Stimmen bei 6 Enthaltungen zustande, acht Änderungsanträge der Vereinigten Staaten wurden mit 26 zu 1 abgewiesen.",
+        "In der politischen Erklärung zum dreißigsten Jahrestag der Pekinger Aktionsplattform kommt das Wort reproduktiv kein einziges Mal vor.",
+        "Der Anteil der Parlamentspräsidentinnen ist 2026 erstmals seit einundzwanzig Jahren gesunken."
+      ]
+    }
+  },
+  "doktrin": {
+    "label": "Doktrin",
+    "lead": "Sechs Sätze, aus denen sich der gesamte Fahrplan ableitet. Wer einen davon streicht, bekommt einen anderen Plan.",
+    "punkte": [
+      {
+        "n": "01",
+        "titel": "Werte allein exportieren nichts",
+        "satz": "Normen setzen sich durch, wenn sie an Marktzugang hängen, nicht wenn sie überzeugen.",
+        "body": "Es gibt dafür einen empirischen Befund und nicht nur eine Meinung. Die Forschung zu Handelsabkommen zeigt, dass harte Standards, die materielle Vorteile an die Einhaltung von Menschenrechten knüpfen, repressives Verhalten wirksamer verändern als weiche Menschenrechtsabkommen ohne Sanktionsmechanik. Wer eine Gleichstellungsaußenpolitik als Wertekommunikation führt, erreicht Konferenzsäle. Wer sie als Marktbedingung führt, erreicht Produktionsstätten."
+      },
+      {
+        "n": "02",
+        "titel": "Der Hebel liegt längst bereit",
+        "satz": "Die Frauenrechtskonvention ist seit Jahren Bedingung für europäischen Präferenzhandel. Sie wurde nie durchgesetzt.",
+        "body": "Im Allgemeinen Präferenzsystem der EU steht CEDAW an fünfter Stelle der Konventionen, die ein Land ratifiziert und einhalten muss, um vergünstigten Marktzugang zu erhalten. Daneben stehen die Übereinkommen zur Entgeltgleichheit und zur Diskriminierung im Beruf. Ihre schwerwiegende und systematische Verletzung kann rechtlich den Entzug der Präferenzen auslösen. In der neuen Verordnung, die ab 2027 für zehn Jahre gilt, steht CEDAW wieder an derselben Stelle. Und im Bericht der Kommission zum Präferenzsystem von 2026 kommen die Wörter Gender und Women jeweils genau einmal vor. Kein Entzugsverfahren wurde je auf CEDAW gestützt. Die Lücke liegt nicht im Recht. Sie liegt in der Anwendung."
+      },
+      {
+        "n": "03",
+        "titel": "Der Hebel liegt im Binnenmarkt",
+        "satz": "Europa ist außenpolitisch schwach und marktpolitisch stark. Der Plan folgt der Stärke.",
+        "body": "Die EU kann keine Regierung stürzen und keine Resolution erzwingen. Sie kann festlegen, unter welchen Bedingungen etwas auf ihrem Markt verkauft, finanziert und beschafft werden darf. Wie weit das trägt, zeigt der Datenschutz: Heute haben 137 Staaten Datenschutzgesetzgebung, große Volkswirtschaften von Brasilien bis China haben Regelwerke nach europäischem Muster gebaut. Nicht aus Überzeugung, sondern weil zwei Regelwerke teurer sind als eines."
+      },
+      {
+        "n": "04",
+        "titel": "Die Blockade sitzt innen",
+        "satz": "Der erste Gegner ist nicht Riad. Der erste Gegner ist Berlin.",
+        "body": "Seit 2008 liegt eine Richtlinie im Rat, die Diskriminierungsschutz über die Arbeitswelt hinaus ausdehnen würde. Sie ist seither blockiert, durchgehend auch von Deutschland. Achtzehn Jahre. Und die dokumentierte Finanzierung der europäischen Anti-Gender-Bewegung stammt in ihrer Mehrheit nicht aus Moskau oder Washington, sondern aus Europa selbst. Solange das so ist, ist jede Forderung nach außen eine Behauptung ohne Deckung."
+      },
+      {
+        "n": "05",
+        "titel": "Verfahren schlägt Inhalt",
+        "satz": "Wer die Abstimmungsregel ändert, hat mehr erreicht als wer den besten Vorschlag schreibt.",
+        "body": "Die entscheidende Bruchlinie des europäischen Gleichstellungsrechts ist keine inhaltliche, sondern eine verfahrensrechtliche. Was als Beschäftigungsfrage gilt, entscheidet das ordentliche Gesetzgebungsverfahren. Was darüber hinausgeht, braucht Einstimmigkeit. Der gesamte strategische Aufwand dieses Plans richtet sich darauf, so viel wie möglich auf die erste Seite dieser Linie zu verschieben."
+      },
+      {
+        "n": "06",
+        "titel": "Recht und Kultur laufen parallel",
+        "satz": "Recht ändert, was Menschen dürfen. Kultur ändert, was sie sich vorstellen können. Man braucht beides und startet beides sofort.",
+        "body": "Es gibt saubere Belege dafür, dass Medien und Sichtbarkeit Geschlechternormen tatsächlich verschieben, nicht nur Meinungen über sie. In Indien senkte die Einführung von Kabelfernsehen die berichtete Akzeptanz häuslicher Gewalt und die Sohnpräferenz messbar. In Indien schloss sich nach zwei Wahlperioden mit vorgeschriebener weiblicher Dorfratsführung die Lücke in den Bildungsaspirationen der Eltern um ein Viertel, die Lücke im Bildungsstand der Jugendlichen verschwand ganz. Nur wirkt das über Jahrzehnte, nicht über Legislaturperioden."
+      },
+      {
+        "n": "07",
+        "titel": "Was reversibel ist, zählt nicht",
+        "satz": "Jede Maßnahme wird danach bewertet, ob eine feindliche Regierung sie in einer Wahlperiode zurücknehmen kann.",
+        "body": "Drei Vorgänge aus jüngster Zeit genügen als Beleg. Die Millennium Challenge Corporation, das ambitionierteste Konditionalitätsmodell der westlichen Entwicklungspolitik, mit 45 Verträgen in 32 Ländern und über 17 Milliarden Dollar Volumen, wurde 2025 binnen Monaten zusammengestrichen. Aus dem Landminenverbot, einem der erfolgreichsten Abrüstungsverträge überhaupt, sind 2025 und 2026 fünf europäische Staaten ausgetreten. Und die europäische Nachhaltigkeitsberichterstattung wurde 2026 von rund fünfzigtausend auf etwa sechstausendsiebenhundert Unternehmen zusammengestrichen, ein Rückbau von etwa 85 Prozent. Was daran für diesen Plan zählt, steht im nächsten Absatz."
+      },
+      {
+        "n": "08",
+        "titel": "Überlebt hat, was verkabelt war",
+        "satz": "Der wichtigste Konstruktionshinweis des ganzen Plans stammt aus einem Deregulierungspaket.",
+        "body": "Als die EU 2026 ihre Nachhaltigkeitsberichterstattung radikal zurückbaute und die verpflichtenden Datenpunkte um rund 61 Prozent kürzte, verschwanden die geschlechterbezogenen Angaben zu Elternzeit, Weiterbildung und Altersstruktur. Die Kennzahl zur Entgeltlücke blieb. Nicht weil sie politisch verteidigt wurde, sondern weil sie zugleich ein verpflichtender Indikator einer anderen Verordnung ist und deren Streichung mit erledigt hätte werden müssen. Die Geschlechterverteilung in der obersten Führungsebene wurde sogar zu einer eigenen Angabepflicht aufgewertet. Daraus folgt die gesamte Bauweise dieses Plans: Eine Kennzahl überlebt, wenn andere Prozesse auf ihr aufsetzen. Alles andere ist Beiwerk und wird in der nächsten Sparrunde gestrichen."
+      }
+    ]
+  },
+  "fahrplan": {
+    "label": "Fahrplan",
+    "lead": "Vier Phasen, vierundzwanzig Jahre. Jede Phase hat einen Meilenstein, an dem sie messbar gelingt oder scheitert. Wird er verfehlt, beginnt die nächste Phase trotzdem, aber schwächer.",
+    "phasen": [
+      {
+        "id": "p1",
+        "num": "I",
+        "zeitraum": "2026 bis 2029",
+        "titel": "Das eigene Haus",
+        "these": "Bevor Europa nach außen etwas verlangt, muss es nach innen handlungsfähig werden. Diese Phase produziert keine sichtbaren Ergebnisse und ist die einzige, ohne die nichts weiter geht.",
+        "ziele": [
+          "Die eigene Vetostruktur an den Stellen aufbrechen, an denen sie Gleichstellungspolitik lähmt.",
+          "Die bestehenden Richtlinien tatsächlich durchsetzen, statt neue zu beschließen.",
+          "Eine Messinfrastruktur bauen, die später Marktzugang steuern kann."
+        ],
+        "instrumente": [
+          {
+            "name": "Passerelle für Menschenrechtspositionen",
+            "was": "Der Europäische Rat kann nach Artikel 31 Absatz 3 EUV einstimmig beschließen, in Teilen der Außenpolitik zur qualifizierten Mehrheit überzugehen. Das Europäische Parlament hat 2023 ausdrücklich gefordert, das für Unionsstandpunkte zu Menschenrechten in multilateralen Foren zu tun. Dieser eine Beschluss ist der Angelpunkt des gesamten Plans."
+          },
+          {
+            "name": "Verlagerung auf Artikel 157 AEUV",
+            "was": "Alles, was sich rechtlich als Frage von Beschäftigung, Chancengleichheit und Entgelt konstruieren lässt, wird dorthin verlagert, weil dort kein einzelner Staat blockieren kann. Juristische Feinarbeit, kein großer Wurf, und genau deshalb umsetzbar."
+          },
+          {
+            "name": "Vollzug statt Neuerlass",
+            "was": "Die Aufsichtsratsrichtlinie zeigt die Lücke exemplarisch. Sie brauchte zehn Jahre bis zur Verabschiedung, und im April 2026 richtete die Kommission an neun Mitgliedstaaten begründete Stellungnahmen, weil sie die Umsetzung nicht vollständig mitgeteilt hatten. Vertragsverletzungsverfahren sind in dieser Phase wichtiger als Gesetzgebung."
+          },
+          {
+            "name": "Sanktionen an das Ergebnis knüpfen",
+            "was": "Die Aufsichtsratsrichtlinie verlangt Sanktionen für Verstöße gegen Verfahrens- und Berichtspflichten, nicht für das Verfehlen der Quote selbst. Genau daran scheitert Regulierung regelmäßig: Sie bestraft schlechte Berichte statt schlechter Ergebnisse."
+          },
+          {
+            "name": "Ein einziger Index",
+            "was": "Konditionalität braucht eine Zahl, die vor Gericht hält: jährlich erhoben, methodisch eingefroren, extern geprüft. Wer die Methodik nachträglich anpassen kann, hat kein Instrument, sondern ein Argument."
+          }
+        ],
+        "meilenstein": "Ende 2029 liegt entweder ein Ratsbeschluss zur Passerelle vor oder ein dokumentiertes Scheitern mit namentlicher Zuordnung.",
+        "risiko": "Die Passerelle selbst erfordert Einstimmigkeit. Der Schlüssel liegt hinter dem Schloss, das er öffnen soll."
+      },
+      {
+        "id": "p2",
+        "num": "II",
+        "zeitraum": "2029 bis 2036",
+        "titel": "Preisbildung",
+        "these": "Ungleichheit wird von einem moralischen Defizit in einen betriebswirtschaftlichen Kostenfaktor überführt. Ab hier entscheidet nicht mehr ein Ministerium, sondern ein Finanzvorstand.",
+        "ziele": [
+          "Gleichstellungsdaten in Entscheidungen einbauen, die ohnehin getroffen werden: Einkauf, Finanzierung, Zulassung.",
+          "Konditionalität von Absichtserklärungen auf nachprüfbare Rechtsänderungen umstellen.",
+          "Den Kreis der Adressaten von Regierungen auf Unternehmen erweitern, weil Unternehmen schneller reagieren."
+        ],
+        "instrumente": [
+          {
+            "name": "Öffentliche Beschaffung",
+            "was": "Der am meisten unterschätzte Hebel, weil er keine Verhandlung mit irgendeinem Drittstaat erfordert. Zuschlagskriterien wirken sofort, und Lieferanten geben die Anforderung an Unterlieferanten weiter, weil sie sonst den Auftrag verlieren."
+          },
+          {
+            "name": "Lieferkettenpflichten mit Geschlechterdimension",
+            "was": "Sorgfaltspflichten wirken nur, wenn die Daten nach Geschlecht aufgeschlüsselt erhoben werden müssen. Eine Prüfung, die Löhne im Durchschnitt erhebt, findet keine Lohnlücke. Der Unterschied zwischen wirksam und symbolisch liegt in einer Zeile der Berichtspflicht."
+          },
+          {
+            "name": "Kapitalmarkt und Offenlegung",
+            "was": "Wenn Gleichstellungskennzahlen berichtspflichtig sind, fließen sie in Bewertungsmodelle ein und wirken über Finanzierungskosten. Das Ziel ist nicht Überzeugung, sondern dass ein Finanzvorstand die eigene Zahl kennt, weil sie den Zinssatz bewegt."
+          },
+          {
+            "name": "Harte Entwicklungskonditionalität",
+            "was": "Auszahlung gegen nachgewiesene Rechtsänderung statt gegen Absichtserklärung, mit vorher festgelegten Schwellen. Voraussetzung ist, dass die Nichtauszahlung tatsächlich stattfindet. Genau daran scheitert das Modell in der Praxis fast immer."
+          },
+          {
+            "name": "Infrastruktur als Regelvehikel",
+            "was": "Wer Häfen, Netze und Kraftwerke finanziert, schreibt die Betriebsbedingungen. Beschäftigungs- und Sicherheitsstandards lassen sich in Finanzierungsverträge schreiben, die dreißig Jahre laufen und keiner Wahl unterliegen."
+          }
+        ],
+        "meilenstein": "Bis 2036 hat mindestens die Hälfte der großen Handelspartner mindestens eine Rechtsänderung vorgenommen, die ohne diesen Druck nachweislich nicht stattgefunden hätte.",
+        "risiko": "Handelskonditionalität trifft zuerst die Beschäftigten, nicht die Regierungen. Als die EU 2020 Kambodscha einen Teil der Zollpräferenzen entzog, betraf das Waren im Wert von rund einer Milliarde Euro in einem Land, das etwa die Hälfte seiner Exporte in die EU liefert. Getroffen wurden zuerst Näherinnen."
+      },
+      {
+        "id": "p3",
+        "num": "III",
+        "zeitraum": "2036 bis 2044",
+        "titel": "Kaskade",
+        "these": "Ab einem Schwellenwert übernehmen Dritte die Regel von selbst, weil zwei Regelwerke teurer sind als eines. Ab hier ist der Plan nicht mehr auf europäische Durchsetzungskraft angewiesen.",
+        "ziele": [
+          "Den Punkt erreichen, an dem multinationale Unternehmen den strengsten Standard weltweit anwenden.",
+          "Die Kriterien aus europäischem Recht in Regelwerke überführen, die nicht als europäisch gelten.",
+          "Verbündete nicht als Wertegemeinschaft organisieren, sondern als Standardallianz."
+        ],
+        "instrumente": [
+          {
+            "name": "Standardallianz statt Wertebündnis",
+            "was": "Eine Koalition, die sich nicht über gemeinsame Werte definiert, sondern über gemeinsame Zulassungskriterien. Wertebündnisse zerbrechen an Regierungswechseln. Standardallianzen überstehen sie, weil die Umstellungskosten den Austritt verteuern."
+          },
+          {
+            "name": "Verlagerung in technische Gremien",
+            "was": "Der wirksamste Ort für eine dauerhafte Regel ist ein Normungsausschuss, über den nie berichtet wird. Stehen die Kennzahlen in Auditstandards, Ratingmethodiken und Kreditvergaberichtlinien der Entwicklungsbanken, sind sie kein politisches Projekt mehr, sondern Fachpraxis."
+          },
+          {
+            "name": "Listungsmechanik statt Vertrag",
+            "was": "Die Financial Action Task Force ist kein völkerrechtlicher Vertrag und erreicht dennoch über zweihundert Jurisdiktionen. Ihre Listung senkt die Kapitalzuflüsse eines Landes im Schnitt um 7,6 Prozent des Bruttoinlandsprodukts. Kein Gleichstellungsabkommen der Welt hat jemals eine vergleichbare Wirkung entfaltet."
+          },
+          {
+            "name": "Entnationalisierung der Urheberschaft",
+            "was": "Ab dieser Phase steht auf den Instrumenten möglichst wenig Europa. Eine Regel, die als europäische Regel erkennbar bleibt, bleibt als europäische Regel angreifbar. Ko-Trägerschaft aus dem globalen Süden ist hier keine Höflichkeit, sondern Härtung."
+          }
+        ],
+        "meilenstein": "Bis 2044 sind die Kriterien in mindestens einem großen nicht-europäischen Regelwerk verankert, über das Europa keine Kontrolle hat.",
+        "risiko": "Übernahme als Formalie. Die Kriterien werden erfüllt, geprüft, testiert und ändern in der Sache nichts. Compliance ist die eleganteste Form des Widerstands."
+      },
+      {
+        "id": "p4",
+        "num": "IV",
+        "zeitraum": "2044 bis 2050",
+        "titel": "Verankerung",
+        "these": "Die letzte Phase erzeugt keine neuen Instrumente. Sie macht die bestehenden unumkehrbar und schafft anschließend die Sonderprogramme ab.",
+        "ziele": [
+          "Vertragliche Fixierung überall dort, wo sie erreichbar ist.",
+          "Rückbau der Sonderstrukturen, weil sie signalisieren, dass die Sache noch nicht normal ist.",
+          "Übergabe an eine Generation, die den Ausgangszustand nicht mehr kennt."
+        ],
+        "instrumente": [
+          {
+            "name": "Von der Strategie in den Vertrag",
+            "was": "Was in einer Mitteilung steht, überlebt eine Kommission. Was in einem Abkommen steht, überlebt eine Regierung. Der gesamte Bestand wird daraufhin geprüft, was sich in bindendes Recht überführen lässt."
+          },
+          {
+            "name": "Abschaffung der Sonderwege",
+            "was": "Gleichstellungsbeauftragte, Sonderfonds und Aktionspläne sind Übergangsarchitektur. Wer sie dauerhaft macht, hat die Aufgabe institutionalisiert statt gelöst. Ihr geplantes Ende gehört zu ihrem Erfolg."
+          }
+        ],
+        "meilenstein": "2050 ist die Parität nicht erreicht. Der Pfad dorthin erfordert aber keine politische Entscheidung mehr.",
+        "risiko": "Dieser Satz klingt nach Ausrede und ist einer. Er ist trotzdem das ehrlichste erreichbare Ziel."
+      }
+    ]
+  },
+  "hebel": {
+    "label": "Hebel",
+    "lead": "Siebzehn Instrumente, bewertet nach drei Größen: wie viele Menschen sie erreichen, wie hart sie durchsetzbar sind, wie viel Widerstand sie erzeugen. Die interessantesten stehen nicht oben, sondern dort, wo Reichweite hoch und Widerstand niedrig ist.",
+    "kategorien": [
+      {
+        "id": "markt",
+        "name": "Markt",
+        "farbe": "#7a2231"
+      },
+      {
+        "id": "kapital",
+        "name": "Kapital",
+        "farbe": "#3d5a6c"
+      },
+      {
+        "id": "geld",
+        "name": "Geld",
+        "farbe": "#6b5b45"
+      },
+      {
+        "id": "recht",
+        "name": "Recht",
+        "farbe": "#4a4a52"
+      },
+      {
+        "id": "norm",
+        "name": "Norm",
+        "farbe": "#7d6a86"
+      }
+    ],
+    "skalen": {
+      "reichweite": "Reichweite",
+      "kraft": "Durchsetzungskraft",
+      "widerstand": "Widerstand"
+    },
+    "items": [
+      {
+        "kategorie": "markt",
+        "name": "Zugang zum Binnenmarkt",
+        "grundlage": "Marktzulassung und Produktanforderungen",
+        "reichweite": 95,
+        "kraft": 90,
+        "widerstand": 60,
+        "mechanik": "Wer auf einem der größten Konsummärkte der Welt verkaufen will, akzeptiert dessen Bedingungen, auch wenn er sie ablehnt. Die Bedingung wirkt dort, wo produziert wird, nicht dort, wo verkauft wird.",
+        "notiz": "Das stärkste Instrument, das Europa besitzt, und dasjenige, dessen Wirkung am direktesten von der eigenen Wirtschaftsgröße abhängt."
+      },
+      {
+        "kategorie": "markt",
+        "name": "Öffentliche Beschaffung",
+        "grundlage": "Vergaberecht",
+        "reichweite": 70,
+        "kraft": 85,
+        "widerstand": 25,
+        "mechanik": "Zuschlagskriterien wirken sofort, ohne Abkommen, ohne Ratifikation, ohne Drittstaat am Tisch. Lieferanten geben die Anforderung nach unten weiter, weil sie sonst den Auftrag verlieren.",
+        "notiz": "Der unterschätzteste Hebel des Katalogs. Niedriger Widerstand, weil er als Verwaltungsdetail erscheint und nicht als Außenpolitik."
+      },
+      {
+        "kategorie": "markt",
+        "name": "Lieferkettensorgfalt",
+        "grundlage": "Unternehmerische Sorgfaltspflichten",
+        "reichweite": 80,
+        "kraft": 70,
+        "widerstand": 90,
+        "mechanik": "Verpflichtet Unternehmen, Bedingungen entlang der gesamten Kette zu prüfen und offenzulegen. Wirkt nur, wenn die Daten nach Geschlecht aufgeschlüsselt erhoben werden müssen.",
+        "notiz": "Höchster Widerstand im Katalog. Sorgfaltspflichten sind das erste, was in Deregulierungsphasen zurückgebaut wird."
+      },
+      {
+        "kategorie": "markt",
+        "name": "Zoll- und Handelspräferenzen",
+        "grundlage": "Präferenzsysteme und Handelsabkommen",
+        "reichweite": 60,
+        "kraft": 55,
+        "widerstand": 75,
+        "mechanik": "Vergünstigter Marktzugang gegen Einhaltung von Standards, Entzug bei Verstoß. Der Entzug ist die eigentliche Drohung, seine Anwendung der Beweis der Ernsthaftigkeit.",
+        "notiz": "Es funktioniert gelegentlich: Sri Lanka verlor 2010 die Sonderpräferenzen und erhielt sie 2017 nach Reformzusagen zurück. Und es ist moralisch das heikelste Instrument, weil der Entzug die Beschäftigten trifft."
+      },
+      {
+        "kategorie": "kapital",
+        "name": "Offenlegungspflichten für Investoren",
+        "grundlage": "Kapitalmarktregulierung",
+        "reichweite": 75,
+        "kraft": 65,
+        "widerstand": 55,
+        "mechanik": "Wenn Gleichstellungskennzahlen berichtspflichtig sind, fließen sie in Bewertungsmodelle ein. Ab dort wirken sie über Finanzierungskosten, also täglich und ohne politische Beteiligung.",
+        "notiz": "Wirkt langsam, aber vollständig unpolitisch, und ist deshalb schwer angreifbar."
+      },
+      {
+        "kategorie": "kapital",
+        "name": "Listung und Kapitalkosten",
+        "grundlage": "Modell der Financial Action Task Force",
+        "reichweite": 85,
+        "kraft": 80,
+        "widerstand": 65,
+        "mechanik": "Eine nicht-vertragliche Institution bewertet Staaten nach überprüfbaren Kriterien und veröffentlicht das Ergebnis. Banken und Investoren ziehen daraus ihre Schlüsse, ohne dass jemand sanktionieren muss.",
+        "notiz": "Der stärkste dokumentierte Effekt im ganzen Katalog: Eine Graue-Liste-Aufnahme senkt die Kapitalzuflüsse eines Landes im Schnitt um 7,6 Prozent des Bruttoinlandsprodukts. Genau diese Mechanik existiert für Gleichstellung nirgends."
+      },
+      {
+        "kategorie": "kapital",
+        "name": "Kreditvergabestandards der Entwicklungsbanken",
+        "grundlage": "Anteilseignerschaft in multilateralen Banken",
+        "reichweite": 65,
+        "kraft": 70,
+        "widerstand": 40,
+        "mechanik": "Europäische Staaten halten gemeinsam erhebliche Anteile an multilateralen Entwicklungsbanken. Deren Vergaberichtlinien bestimmen die Bedingungen großer Infrastrukturvorhaben über Jahrzehnte.",
+        "notiz": "Technisch, unsichtbar, langfristig bindend. Genau die Kombination, die dieser Plan sucht."
+      },
+      {
+        "kategorie": "geld",
+        "name": "Entwicklungsfinanzierung mit harter Konditionalität",
+        "grundlage": "Außenfinanzierungsinstrumente",
+        "reichweite": 70,
+        "kraft": 50,
+        "widerstand": 80,
+        "mechanik": "Auszahlung gegen nachgewiesene Rechtsänderung statt gegen Absichtserklärung.",
+        "notiz": "Die Wirkungsforschung ist ernüchternd. Die bekannteste Sanktionsstudie kommt auf eine Erfolgsquote von 34 Prozent, die schärfste Gegenkritik hält davon nur fünf von vierzig Fällen für echte Erfolge. Konditionalität ist ein Hebel, kein Schalter."
+      },
+      {
+        "kategorie": "geld",
+        "name": "Infrastrukturfinanzierung",
+        "grundlage": "Konnektivitäts- und Investitionsprogramme",
+        "reichweite": 60,
+        "kraft": 65,
+        "widerstand": 45,
+        "mechanik": "Betriebs-, Beschäftigungs- und Sicherheitsbedingungen werden in Finanzierungsverträge mit sehr langen Laufzeiten geschrieben. Sie überdauern jede beteiligte Regierung.",
+        "notiz": "Der einzige Hebel, der planmäßig länger wirkt als der Plan selbst."
+      },
+      {
+        "kategorie": "geld",
+        "name": "Bildungsmobilität",
+        "grundlage": "Austausch- und Stipendienprogramme",
+        "reichweite": 55,
+        "kraft": 35,
+        "widerstand": 20,
+        "mechanik": "Menschen, die einige Jahre in einem anderen Normengefüge gelebt haben, tragen es zurück und in Entscheidungspositionen hinein.",
+        "notiz": "Hier ist Ehrlichkeit angebracht. Die Forschung zu Erasmus findet keinen verlässlichen Effekt auf europäische Identität, und einen deutlichen Selektionseffekt: Wer teilnimmt, war schon vorher europäisch orientiert. Austausch wirkt, aber nicht auf die Weise, wie Broschüren es behaupten."
+      },
+      {
+        "kategorie": "recht",
+        "name": "Passerelle für Menschenrechtspositionen",
+        "grundlage": "Artikel 31 Absatz 3 EUV",
+        "reichweite": 40,
+        "kraft": 95,
+        "widerstand": 85,
+        "mechanik": "Ermöglicht Mehrheitsentscheidungen dort, wo heute ein einzelner Staat europäische Menschenrechtspositionen in internationalen Gremien verhindern kann.",
+        "notiz": "Formal ein Verfahrensdetail. Tatsächlich die Bedingung dafür, dass Europa außenpolitisch überhaupt mit einer Stimme spricht."
+      },
+      {
+        "kategorie": "recht",
+        "name": "Verlagerung auf die Entgeltnorm",
+        "grundlage": "Artikel 157 AEUV",
+        "reichweite": 50,
+        "kraft": 80,
+        "widerstand": 35,
+        "mechanik": "Was als Frage von Beschäftigung, Chancengleichheit und Entgelt konstruierbar ist, unterliegt dem ordentlichen Gesetzgebungsverfahren und damit keinem nationalen Veto.",
+        "notiz": "Der juristische Kniff, auf dem die Umsetzbarkeit des Plans steht. Unauffällig, unspektakulär, entscheidend."
+      },
+      {
+        "kategorie": "recht",
+        "name": "Grundwerte als Klagegrund",
+        "grundlage": "Artikel 2 EUV",
+        "reichweite": 45,
+        "kraft": 75,
+        "widerstand": 70,
+        "mechanik": "Im April 2026 entschied der Gerichtshof der EU zum ungarischen Anti-LGBTI-Gesetz und stellte erstmals einen eigenständigen Verstoß gegen Artikel 2 EUV fest, also gegen die Grundwerte der Union selbst.",
+        "notiz": "Juristisch der bedeutendste Einzelvorgang der letzten Jahre. Er verwandelt eine Präambelnorm in einen justiziablen Maßstab, und zwar nach innen wie perspektivisch in der Beitrittspolitik."
+      },
+      {
+        "kategorie": "recht",
+        "name": "Vertragsverletzungsverfahren",
+        "grundlage": "Vollzug bestehenden Unionsrechts",
+        "reichweite": 35,
+        "kraft": 75,
+        "widerstand": 30,
+        "mechanik": "Bestehendes Recht durchsetzen statt neues beschließen. Politisch unattraktiv, weil es keine Schlagzeile erzeugt, und wirksam genau deshalb.",
+        "notiz": "Der Unterschied zwischen europäischem Gleichstellungsrecht auf dem Papier und in der Praxis ist überwiegend ein Vollzugsproblem."
+      },
+      {
+        "kategorie": "norm",
+        "name": "Technische Normung",
+        "grundlage": "Normungsgremien und Auditstandards",
+        "reichweite": 70,
+        "kraft": 60,
+        "widerstand": 15,
+        "mechanik": "In Normungsausschüssen wird entschieden, was geprüft, gemessen und testiert wird. Wer dort eine Kennzahl verankert, verankert sie dauerhaft und ohne öffentliche Debatte.",
+        "notiz": "Der niedrigste Widerstand im gesamten Katalog, weil niemand hinschaut. Das ist zugleich sein demokratisches Problem."
+      },
+      {
+        "kategorie": "norm",
+        "name": "Kulturproduktion und Distribution",
+        "grundlage": "Medien-, Film- und Plattformförderung",
+        "reichweite": 85,
+        "kraft": 25,
+        "widerstand": 35,
+        "mechanik": "Verändert nicht, was erlaubt ist, sondern was als selbstverständlich gilt. Der einzige Hebel im Katalog, der Präferenzen verschiebt statt Verhalten zu erzwingen.",
+        "notiz": "Wirkt am langsamsten und hält am längsten. Siehe den eigenen Abschnitt weiter unten."
+      },
+      {
+        "kategorie": "norm",
+        "name": "Sport",
+        "grundlage": "Austragungsrechte und Übertragungsverträge",
+        "reichweite": 80,
+        "kraft": 40,
+        "widerstand": 30,
+        "mechanik": "Preisgeld- und Übertragungsparität als Bedingung für Austragungsrechte und Senderechte. Erreicht Publikum, das keine politische Kommunikation konsumiert.",
+        "notiz": "Chronisch unterschätzt, weil Sport als unpolitisch gilt. Genau das ist seine Stärke."
+      }
+    ]
+  },
+  "beweislage": {
+    "label": "Beweislage",
+    "lead": "Der Plan behauptet, dass sich globale Normen mit Marktdruck durchsetzen lassen. Das ist keine Vermutung. Es ist mehrfach passiert, und es ist mehrfach misslungen. Fünf Fälle, aus denen sich die Mechanik ableiten lässt.",
+    "faelle": [
+      {
+        "name": "Montrealer Protokoll",
+        "jahr": "1987",
+        "ergebnis": "gelungen",
+        "kennzahl": "198",
+        "kennzahlLabel": "Vertragsparteien, der erste universell ratifizierte Vertrag der UN-Geschichte",
+        "mechanik": "Der Vertrag verbietet seinen Parteien den Handel mit kontrollierten Stoffen mit Nicht-Parteien. Genau diese Handelsklausel, nicht die Einsicht, verhinderte die Abwanderung der Produktion. Zwei Jahre von der Unterzeichnung bis zum Inkrafttreten, heute sind 98 Prozent der ozonschädigenden Stoffe ausgephast.",
+        "lehre": "Ein Vertrag mit Handelsklausel schlägt zehn Verträge ohne."
+      },
+      {
+        "name": "Financial Action Task Force",
+        "jahr": "1989",
+        "ergebnis": "gelungen",
+        "kennzahl": "7,6 %",
+        "kennzahlLabel": "des BIP verliert ein gelistetes Land im Schnitt an Kapitalzuflüssen",
+        "mechanik": "Kein völkerrechtlicher Vertrag, 40 Mitglieder, über zweihundert erreichte Jurisdiktionen. Durchsetzung allein über Peer Review, Aktionspläne und öffentliche Listung. Staaten arbeiten ihre Auflagen ab und werden wieder entfernt, laufend und nachweisbar.",
+        "lehre": "Man braucht keinen Vertrag. Man braucht eine Liste, die Geld kostet."
+      },
+      {
+        "name": "Korruptionsbekämpfung",
+        "jahr": "1977 bis 1997",
+        "ergebnis": "gelungen, langsam",
+        "kennzahl": "20",
+        "kennzahlLabel": "Jahre von einem nationalen Gesetz bis zur internationalen Konvention",
+        "mechanik": "Die USA verboten Auslandsbestechung 1977 im Alleingang, zwei Jahrzehnte später folgte die OECD-Konvention, heute mit 46 Vertragsstaaten. Durchsetzung über exterritoriale Verfahren mit erheblichen Summen, im größten Fall über 3,9 Milliarden Dollar.",
+        "lehre": "Ein einzelner großer Markt kann eine Regel global machen, wenn er bereit ist, sie zwanzig Jahre lang allein zu tragen."
+      },
+      {
+        "name": "Datenschutzgrundverordnung",
+        "jahr": "2016",
+        "ergebnis": "gelungen",
+        "kennzahl": "137",
+        "kennzahlLabel": "Staaten haben heute Datenschutzgesetzgebung",
+        "mechanik": "Der Brüssel-Effekt in Reinform, in zwei Varianten: Unternehmen passen ihre globale Praxis an, ohne dass ihr Heimatstaat etwas ändert, und fremde Staaten übernehmen die Regeln in eigenes Recht. Brasilien, China und Indien haben Regelwerke nach diesem Muster gebaut.",
+        "lehre": "Das direkte Vorbild dieses Plans. Und der Beweis, dass es nur mit einem Markt funktioniert, den man nicht ignorieren kann."
+      },
+      {
+        "name": "Landminenverbot",
+        "jahr": "1997",
+        "ergebnis": "teilweise zurückgenommen",
+        "kennzahl": "5",
+        "kennzahlLabel": "europäische Staaten sind 2025 und 2026 wieder ausgetreten",
+        "mechanik": "Sieben Jahre von der Gründung der Kampagne bis zum Vertrag, 162 Vertragsstaaten, Friedensnobelpreis. Und dann kündigten Estland, Lettland, Litauen, Polen und Finnland binnen weniger Wochen den Austritt an, mit Wirkung zwischen Dezember 2025 und Februar 2026.",
+        "lehre": "Der wichtigste Fall im Katalog. Er zeigt, dass auch ein moralisch unangefochtener, breit ratifizierter Vertrag rückabwickelbar ist, sobald die Lage sich ändert. Genau deshalb baut dieser Plan nicht auf Verträge, sondern auf Marktstrukturen."
+      }
+    ]
+  },
+  "softpower": {
+    "label": "Softpower",
+    "lead": "Wie man kulturelle Projekte durchsetzt, ohne dass sie als Botschaft erkennbar werden und damit wirkungslos.",
+    "kernsatz": "Recht ändert, was Menschen dürfen. Kultur ändert, was sie sich vorstellen können. Nur das Zweite hält.",
+    "evidenz": {
+      "titel": "Dass es wirkt, ist gemessen",
+      "hinweis": "Drei Studien, die den Unterschied zwischen Kulturpolitik und Kulturglaube ausmachen.",
+      "items": [
+        {
+          "befund": "Der Empfang des größten brasilianischen Fernsehsenders senkte die Geburtswahrscheinlichkeit um 0,5 Prozentpunkte, das sind fünf Prozent des Mittelwerts. Das Signal erklärt rund sieben Prozent des gesamten Geburtenrückgangs.",
+          "was": "Telenovelas zeigten über Jahrzehnte kleine Familien und berufstätige Frauen als Normalfall, ohne das je zum Thema zu machen.",
+          "quelle": "La Ferrara, Chong und Duryea, American Economic Journal, 2012"
+        },
+        {
+          "befund": "Die Einführung von Kabelfernsehen senkte die berichtete Akzeptanz häuslicher Gewalt gegen Frauen und die Sohnpräferenz messbar und erhöhte die Autonomie von Frauen.",
+          "was": "Kein Programm, keine Kampagne, keine Aufklärung. Nur die zeitlich gestaffelte Verfügbarkeit von Unterhaltung, was die saubere Messung überhaupt erst ermöglichte.",
+          "quelle": "Jensen und Oster, Quarterly Journal of Economics, 2009"
+        },
+        {
+          "befund": "Nach zwei Wahlperioden mit vorgeschriebener weiblicher Dorfratsführung schloss sich die geschlechtsbezogene Lücke in den Bildungsaspirationen der Eltern um 25 Prozent. Die Lücke im tatsächlichen Bildungsstand der Jugendlichen verschwand vollständig.",
+          "was": "Bemerkenswert ist der zweite Befund derselben Forschungsgruppe: Die persönliche Vorliebe für männliche Führung änderte sich nicht. Verschwunden ist nur die Annahme, Frauen seien weniger wirksam. Sichtbarkeit schlägt Überzeugung.",
+          "quelle": "Beaman, Duflo, Pande und Topalova, Science, 2012, sowie Quarterly Journal of Economics, 2009"
+        }
+      ]
+    },
+    "vergleich": {
+      "titel": "Und dass Europa es nicht ernst betreibt, auch",
+      "zeilen": [
+        {
+          "label": "Südkorea, Export von Kulturinhalten, 2024",
+          "wert": "14,1 Mrd. USD",
+          "stark": true
+        },
+        {
+          "label": "Südkorea, Fördermittel für den Content-Sektor, ein Jahr",
+          "wert": "1,74 Bio. KRW"
+        },
+        {
+          "label": "Menschen weltweit, die sich als Fans koreanischer Kultur zählen, 2023",
+          "wert": "rund 225 Mio."
+        },
+        {
+          "label": "EU, Programm Creative Europe, für sieben Jahre",
+          "wert": "2,44 Mrd. EUR",
+          "stark": true
+        },
+        {
+          "label": "Deutschland, auswärtige Kultur- und Bildungspolitik gesamt, 2025",
+          "wert": "rund 957 Mio. EUR"
+        },
+        {
+          "label": "Frankreich, Institut français, Zuschuss 2025",
+          "wert": "25,6 Mio. EUR"
+        }
+      ],
+      "schluss": "Südkorea hat binnen eines Jahrzehnts aus Kulturexport ein Instrument nationaler Wirtschafts- und Außenpolitik gemacht. Europa fördert Kultur. Das ist nicht dasselbe, und der Unterschied ist eine Größenordnung. Während Korea ausbaute, schloss das Goethe-Institut neun Niederlassungen, um jährlich rund 24 Millionen Euro einzusparen."
+    },
+    "regeln": [
+      {
+        "n": "01",
+        "titel": "Unterhaltung, nicht Aufklärung",
+        "body": "Der Fonds finanziert keine Filme über Gleichstellung. Er finanziert populäre Unterhaltung, in der Frauen selbstverständlich handeln, entscheiden und verdienen, ohne dass es Thema ist. Genau so wirkten die brasilianischen Telenovelas. Ein Botschaftsfilm wird nicht gesehen."
+      },
+      {
+        "n": "02",
+        "titel": "Distribution vor Produktion",
+        "body": "Der Engpass ist nicht, dass zu wenig produziert wird. Der Engpass ist, dass es nicht in die Wohnzimmer kommt. Das Geld gehört in Synchronisation, Lizenzen, Plattformdeals und kostenlose Ausstrahlungsrechte für öffentliche Sender, nicht in weitere Produktionsförderung."
+      },
+      {
+        "n": "03",
+        "titel": "Ko-Produktion statt Export",
+        "body": "Was aus Lagos kommt, wirkt in Lagos. Was aus Brüssel kommt, wirkt als Brüssel. Europäische Beteiligung gehört in die Finanzierung und aus dem Abspann. Urheberschaft ist kein Kredit, den man einfordert, sondern ein Risiko, das man vermeidet."
+      },
+      {
+        "n": "04",
+        "titel": "Sichtbarkeit vor Argument",
+        "body": "Der stärkste belegte Befund der Wirkungsforschung lautet, dass Vorlieben sich kaum ändern, Annahmen über Kompetenz dagegen schon. Es geht also nicht darum, jemanden von etwas zu überzeugen, sondern darum, dass genug Menschen genug Frauen in Positionen sehen, bis die Frage nach der Eignung aufhört, gestellt zu werden."
+      },
+      {
+        "n": "05",
+        "titel": "Der ehrliche Vorbehalt",
+        "body": "Kulturwirkung ist schwer messbar, langsam und keiner Legislaturperiode zurechenbar. Die Erasmus-Forschung zeigt außerdem, wie leicht man sich hier selbst täuscht: Der oft behauptete Identitätseffekt ist empirisch dünn, ein Großteil dessen, was wie Wirkung aussieht, ist Selbstselektion. Wer Kulturpolitik betreibt, muss das aushalten und darf trotzdem nicht kürzen."
+      }
+    ]
+  },
+  "huerden": {
+    "label": "Hürden",
+    "lead": "Die belegbaren Blockadepunkte, sortiert nach Härte statt nach Lautstärke. Zu jedem gehört die Frage, ob es einen Weg daran vorbei gibt und was er kostet.",
+    "items": [
+      {
+        "titel": "Einstimmigkeit bei Antidiskriminierung",
+        "grundlage": "Artikel 19 Absatz 1 AEUV",
+        "haerte": 95,
+        "beschreibung": "Antidiskriminierungsmaßnahmen beschließt der Rat einstimmig. Jeder einzelne Mitgliedstaat kann jede Maßnahme verhindern. Die 2008 vorgelegte horizontale Antidiskriminierungsrichtlinie, die den Schutz über die Arbeitswelt hinaus auf Sozialschutz, Bildung, Wohnraum und den Zugang zu Gütern und Dienstleistungen ausdehnen würde, ist seither blockiert. Deutschland, Italien und Tschechien halten ihre Vorbehalte aufrecht, Deutschland durchgehend seit 2008. Im Dezember 2025 konnte die dänische Ratspräsidentschaft nicht einmal einen neuen Kompromisstext vorlegen. Im Juni 2026 ist der Vorschlag weiterhin blockiert.",
+        "umgehung": "Kein direkter Weg. Artikel 19 Absatz 2 AEUV erlaubt Fördermaßnahmen mit qualifizierter Mehrheit, solange sie keine Rechtsangleichung bewirken: Geld ja, Harmonisierung nein. Der eigentliche Ausweg ist die Verlagerung möglichst vieler Sachverhalte auf Artikel 157 AEUV.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Regulierung, die Berichte bestraft statt Ergebnisse",
+        "grundlage": "Richtlinie (EU) 2022/2381",
+        "haerte": 75,
+        "beschreibung": "Die Aufsichtsratsrichtlinie ist der Testfall des ganzen Plans, und ihr Befund ist doppeldeutig. Sie brauchte zehn Jahre im Rat. Sie verlangt bis zum 30. Juni 2026 mindestens 40 Prozent des unterrepräsentierten Geschlechts unter den nicht geschäftsführenden Direktoren oder 33 Prozent unter allen. Im Oktober 2025 lag die EU bei 38,2 Prozent unter den nicht geschäftsführenden Direktoren und bei 33,6 Prozent insgesamt. Bei den geschäftsführenden Direktoren, also dort, wo tatsächlich entschieden wird, lag sie bei 18,5 Prozent. Und die Sanktionspflicht der Richtlinie knüpft an Verstöße gegen Verfahrens- und Berichtspflichten an, nicht an das Verfehlen der Quote selbst.",
+        "umgehung": "Die Lehre ist präzise: Regulierung wirkt dort, wo sie zählbare Posten adressiert, und läuft leer, wo sie Prozesse adressiert. Jedes Instrument dieses Plans muss an ein Ergebnis geknüpft sein, nicht an ein Verfahren.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Der Entgeltausschluss in der Sozialkompetenz",
+        "grundlage": "Artikel 153 Absatz 5 AEUV",
+        "haerte": 70,
+        "beschreibung": "Die zentrale Kompetenznorm der europäischen Sozialpolitik nimmt ausdrücklich aus, was zur Lohnfrage gehört. Der Wortlaut lässt keinen Zweifel: Der Artikel gilt nicht für das Arbeitsentgelt, das Koalitionsrecht, das Streikrecht und das Aussperrungsrecht.",
+        "umgehung": "Artikel 157 AEUV ist die Sonderregel für gleiches Entgelt bei gleicher oder gleichwertiger Arbeit und arbeitet mit dem ordentlichen Gesetzgebungsverfahren. Die gesamte Entgeltagenda muss dort verankert werden und nicht bei Artikel 153.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Einstimmigkeit in der Außenpolitik",
+        "grundlage": "Artikel 31 Absatz 1 EUV",
+        "haerte": 90,
+        "beschreibung": "Beschlüsse der Gemeinsamen Außen- und Sicherheitspolitik fasst der Rat grundsätzlich einstimmig. Eine gemeinsame europäische Position in internationalen Gremien lässt sich damit von jedem einzelnen Mitgliedstaat verhindern, unabhängig von seiner Größe.",
+        "umgehung": "Die konstruktive Enthaltung: Wer sich förmlich enthält, ist zur Durchführung nicht verpflichtet, akzeptiert aber die Bindungswirkung für die Union. Das verwandelt ein Veto in einen Ausstieg. Darüber hinaus die Passerelle nach Artikel 31 Absatz 3 EUV.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Die Notbremse",
+        "grundlage": "Artikel 31 Absatz 2 EUV",
+        "haerte": 85,
+        "beschreibung": "Selbst dort, wo in der Außenpolitik ausnahmsweise mit qualifizierter Mehrheit entschieden wird, gilt: Erklärt ein Ratsmitglied, dass es aus wesentlichen Gründen der nationalen Politik den Beschluss abzulehnen beabsichtigt, findet keine Abstimmung statt. Das Veto ist also nicht auf die Einstimmigkeitsbereiche beschränkt, es lässt sich herbeiführen.",
+        "umgehung": "Keine verfahrensrechtliche. Die Hemmschwelle ist ausschließlich politisch, sie besteht in den Kosten, diese Erklärung offen abzugeben. Wer den Plan ernst meint, muss diese Kosten erhöhen, also solche Erklärungen sichtbar machen.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Der Schlüssel liegt hinter dem Schloss",
+        "grundlage": "Artikel 31 Absatz 3 EUV",
+        "haerte": 88,
+        "beschreibung": "Die Passerelle ist der einzige dokumentierte institutionelle Weg, die Vetostruktur genau dort aufzubrechen, wo es zählt. Das Europäische Parlament hat den Europäischen Rat 2023 ausdrücklich aufgefordert, sie für Unionsstandpunkte zu Menschenrechten in multilateralen Foren zu nutzen. Der Beschluss, künftig mit Mehrheit zu entscheiden, muss allerdings selbst einstimmig gefasst werden.",
+        "umgehung": "Es gibt keine Abkürzung. Der einzige Weg ist ein Tauschgeschäft, in dem der Übergang zur Mehrheitsentscheidung gegen etwas eingelöst wird, das die zögernden Staaten stärker interessiert. Das ist der teuerste einzelne Posten des gesamten Plans.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Die Gegenbewegung, finanziert aus Europa",
+        "grundlage": "Dokumentierte Geldflüsse",
+        "haerte": 82,
+        "beschreibung": "Für den Zeitraum 2009 bis 2018 sind rund 707 Millionen Dollar an Finanzierung europäischer Anti-Gender-Initiativen dokumentiert. Der größte Anteil stammt nicht aus Russland und nicht aus den Vereinigten Staaten, sondern mit rund 438 Millionen Dollar aus Europa selbst. Die Jahresausgaben stiegen in diesem Zeitraum von 22 auf 96 Millionen Dollar. Für den Folgezeitraum 2019 bis 2023 weist derselbe Erhebungsansatz 1,18 Milliarden Dollar aus.",
+        "umgehung": "Diese Zahlen sind ausdrücklich Untergrenzen, für den ersten Bericht lagen Finanzdaten nur zu 54 von 117 erfassten Organisationen vor. Eine Kausalität zwischen einzelnen Zahlungen und einzelnen Gesetzen ist in den Quellen nicht nachgewiesen. Was sie zeigen, genügt aber für die strategische Schlussfolgerung: Der Gegner dieses Plans sitzt nicht überwiegend außerhalb Europas.",
+        "status": "belegt, mit ausgewiesener Untererfassung"
+      },
+      {
+        "titel": "Konditionalität wird politisch verrechnet",
+        "grundlage": "Erfahrung mit dem Rechtsstaatsmechanismus",
+        "haerte": 80,
+        "beschreibung": "Der bekannteste europäische Konditionalitätsfall zeigt beide Seiten. Gegenüber Ungarn wurden Ende 2022 rund 32 Milliarden Euro eingefroren, etwa 16 Prozent der Wirtschaftsleistung des Landes. Im Dezember 2023 wurden 10,2 Milliarden freigegeben, zeitlich zusammenfallend mit dem Verzicht Budapests auf ein Veto in einer anderen Frage. Im Juli 2025 blieben rund 18 Milliarden eingefroren, bei attestiertem fehlendem Fortschritt in sieben von acht Punkten. Eine Milliarde verfiel endgültig.",
+        "umgehung": "Konditionalität funktioniert als Druckmittel und wird zugleich als Verhandlungsmasse gehandelt. Der Plan muss deshalb Auszahlungsentscheidungen so weit wie möglich aus der politischen Ebene herausnehmen und an vorher festgelegte, extern geprüfte Schwellen binden.",
+        "status": "belegt"
+      },
+      {
+        "titel": "Der Vorwurf des Wertekolonialismus",
+        "grundlage": "Legitimität und Deutungshoheit",
+        "haerte": 85,
+        "beschreibung": "Ein europäischer Plan zur weltweiten Durchsetzung europäisch definierter Gleichstellung ist angreifbar, und der Angriff hat historische Substanz. Er wird nicht nur von autoritären Regierungen geführt, sondern auch von Bewegungen, die inhaltlich zustimmen und die Urheberschaft ablehnen.",
+        "umgehung": "Ko-Autorenschaft von Beginn an, Trägerschaft aus dem globalen Süden, Verzicht auf europäische Sichtbarkeit. Und die einzige belastbare Antwort: dieselben Maßstäbe zuerst im eigenen Haus anwenden und die eigenen Verstöße zuerst benennen.",
+        "status": "Bewertung"
+      },
+      {
+        "titel": "Die schrumpfende Marktgröße",
+        "grundlage": "Ökonomische Voraussetzung des gesamten Plans",
+        "haerte": 92,
+        "beschreibung": "Jeder Hebel dieses Plans hängt daran, dass der Zugang zum europäischen Markt begehrenswert genug ist, um Bedingungen zu akzeptieren. Der europäische Anteil an der Weltwirtschaft sinkt. Damit sinkt die Durchsetzungskraft aller Marktinstrumente über die Laufzeit des Plans hinweg, unabhängig davon, wie gut er gemacht ist.",
+        "umgehung": "Kein Ausweg, nur ein Zeitfenster. Das ist der eigentliche Grund, warum ein solcher Plan früh und schnell laufen muss und warum die Standardallianz aus Phase III keine Kür ist, sondern die Bedingung des Überlebens.",
+        "status": "Bewertung"
+      },
+      {
+        "titel": "Die Dauer selbst",
+        "grundlage": "Institutionelles Gedächtnis",
+        "haerte": 78,
+        "beschreibung": "Vierundzwanzig Jahre bedeuten sechs Kommissionen, mindestens fünf Europawahlen und in den meisten Mitgliedstaaten fünf bis sechs Regierungswechsel. Kein europäisches Vorhaben außerhalb des Binnenmarkts und der Währungsunion hat je über einen solchen Zeitraum kohärent gehalten.",
+        "umgehung": "Der Plan darf nicht auf politischen Willen setzen, sondern nur auf Strukturen, die politischen Willen nicht mehr benötigen. Genau das ist der Grund für die gesamte Anlage der Phasen III und IV.",
+        "status": "Bewertung"
+      }
+    ]
+  },
+  "scheitern": {
+    "label": "Scheitern",
+    "lead": "Ein Plan, der nicht sagt, woran er scheitert, ist Werbung. Fünf Wege, auf denen dieser hier endet, sortiert nach Wahrscheinlichkeit.",
+    "modi": [
+      {
+        "jahr": "2029",
+        "titel": "An der Passerelle",
+        "text": "Der Europäische Rat einigt sich nicht auf den Übergang zur Mehrheitsentscheidung. Alles Folgende bleibt möglich, aber jede außenpolitische Position wird weiterhin auf den kleinsten gemeinsamen Nenner verhandelt. Der Plan läuft weiter und wirkt nur noch über den Binnenmarkt. Das ist die wahrscheinlichste Variante."
+      },
+      {
+        "jahr": "2031",
+        "titel": "Am Rückbau",
+        "text": "Die Instrumente aus Phase II werden als Bürokratie zurückgebaut, bevor die ersten Daten vorliegen, mit denen sich ihre Wirkung zeigen ließe. Berichts- und Sorgfaltspflichten haben konzentrierte, sichtbare Kosten und verteilte, unsichtbare Erträge. Diese Asymmetrie schlägt zuverlässig zu."
+      },
+      {
+        "jahr": "ab 2040",
+        "titel": "An der Marktgröße",
+        "text": "Der europäische Anteil an der Weltwirtschaft sinkt schneller, als die Kaskade greift. Bedingungen, die 2030 akzeptiert worden wären, werden 2045 abgelehnt, weil der Markt sie nicht mehr wert ist. Dagegen hilft nur Tempo."
+      },
+      {
+        "jahr": "jederzeit",
+        "titel": "An der Glaubwürdigkeit",
+        "text": "Eine große europäische Regierung schafft im eigenen Land ab, was sie außen verlangt. Ein einziger solcher Vorgang kostet mehr Durchsetzungskraft, als fünf Jahre Programmarbeit aufbauen. Diese Variante ist nicht hypothetisch. Der Austritt von fünf europäischen Staaten aus dem Landminenverbot binnen weniger Monate hat gezeigt, wie schnell das geht."
+      },
+      {
+        "jahr": "2044",
+        "titel": "Am Erfolg",
+        "text": "Die Kriterien werden übernommen, geprüft und testiert, und in der Sache ändert sich nichts. Die Aufsichtsratsrichtlinie liefert das Muster im Kleinen: 38,2 Prozent in den Aufsichtsräten, 18,5 Prozent in den Vorständen. Formale Erfüllung ist die eleganteste Form des Widerstands, weil sie den Konflikt beendet, ohne das Ergebnis zu liefern."
+      }
+    ],
+    "schluss": "Vier dieser fünf Wege enden nicht bei null. Sie enden bei weniger. Das ist bei einem Vorhaben dieser Größe der realistische Erfolgsfall, und der Plan ist so gebaut, dass auch der Teilerfolg trägt."
+  },
+  "quellen": {
+    "label": "Quellen",
+    "lead": "Alle Zahlen, Rechtsgrundlagen und Verfahrensangaben dieser Seite sind hier nachprüfbar. Die strategischen Bewertungen sind es nicht, sie sind als Bewertung gekennzeichnet.",
+    "gruppen": [
+      {
+        "name": "Ausgangslage und Kennzahlen",
+        "items": [
+          {
+            "titel": "Global Gender Gap Report 2025, Gesamtindex, Subindizes und Prognosen",
+            "org": "Weltwirtschaftsforum",
+            "jahr": "2025",
+            "url": "https://www.weforum.org/publications/global-gender-gap-report-2025/"
+          },
+          {
+            "titel": "Women, Business and the Law 2026, rechtliche Gleichstellung in 190 Volkswirtschaften",
+            "org": "Weltbank",
+            "jahr": "2026",
+            "url": "https://wbl.worldbank.org/en/reports"
+          },
+          {
+            "titel": "Frauenanteil in nationalen Parlamenten, Stand 1. Januar 2026",
+            "org": "Interparlamentarische Union",
+            "jahr": "2026",
+            "url": "https://www.ipu.org/news/press-releases/2026-03/womens-representation-in-parliament-sees-sluggish-gains"
+          },
+          {
+            "titel": "Women's Rights in Review 30 Years After Beijing, Backlash-Meldungen von 159 Regierungen",
+            "org": "UN Women",
+            "jahr": "2025",
+            "url": "https://www.unwomen.org/sites/default/files/2025-03/womens-rights-in-review-30-years-after-beijing-en.pdf"
+          },
+          {
+            "titel": "Bericht der Frauenrechtskommission über ihre 70. Tagung, Abstimmungsergebnisse März 2026",
+            "org": "Vereinte Nationen, E/2026/27",
+            "jahr": "2026",
+            "url": "https://documents.un.org/doc/undoc/gen/n26/070/12/pdf/n2607012.pdf"
+          },
+          {
+            "titel": "Politische Erklärung zum 30. Jahrestag der Aktionsplattform von Peking",
+            "org": "Vereinte Nationen, E/CN.6/2025/L.1",
+            "jahr": "2025",
+            "url": "https://documents.un.org/doc/undoc/ltd/n25/060/18/pdf/n2506018.pdf"
+          }
+        ]
+      },
+      {
+        "name": "Europäisches Recht und Verfahren",
+        "items": [
+          {
+            "titel": "AEUV Artikel 19, Einstimmigkeit bei Antidiskriminierung",
+            "org": "EUR-Lex",
+            "jahr": "2016",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX%3A12008E019"
+          },
+          {
+            "titel": "AEUV Artikel 157, gleiches Entgelt im ordentlichen Gesetzgebungsverfahren",
+            "org": "EUR-Lex",
+            "jahr": "2016",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX%3A12016E157"
+          },
+          {
+            "titel": "AEUV Artikel 153, Sozialpolitik und der Ausschluss des Arbeitsentgelts",
+            "org": "dejure.org",
+            "jahr": "2016",
+            "url": "https://dejure.org/gesetze/AEUV/153.html"
+          },
+          {
+            "titel": "EUV Artikel 31, Einstimmigkeit, konstruktive Enthaltung, Notbremse, Passerelle",
+            "org": "dejure.org",
+            "jahr": "2016",
+            "url": "https://dejure.org/gesetze/EUV/31.html"
+          },
+          {
+            "titel": "Entschließung zur Umsetzung der Passerelle-Klauseln, Anwendung auf Menschenrechtspositionen",
+            "org": "Europäisches Parlament, P9_TA(2023)0269",
+            "jahr": "2023",
+            "url": "https://www.europarl.europa.eu/doceo/document/TA-9-2023-0269_EN.html"
+          },
+          {
+            "titel": "Horizontale Antidiskriminierungsrichtlinie COM(2008)426, Blockade und Verfahrensstand",
+            "org": "Europäisches Parlament, Legislative Train, Stand Juni 2026",
+            "jahr": "2026",
+            "url": "https://www.europarl.europa.eu/legislative-train/theme-a-new-push-for-european-democracy/file-anti-discrimination-directive"
+          },
+          {
+            "titel": "Scheitern eines neuen Kompromisstextes im Rat, Dezember 2025",
+            "org": "European Platform for Rehabilitation",
+            "jahr": "2025",
+            "url": "https://www.epr.eu/danish-presidency-of-the-council-of-the-eu-fails-to-draft-a-new-compromise-on-the-equal-treatment-directive"
+          },
+          {
+            "titel": "Richtlinie (EU) 2022/2381, Quoten, Fristen und Sanktionsreichweite",
+            "org": "EUR-Lex",
+            "jahr": "2022",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32022L2381"
+          },
+          {
+            "titel": "Gender balance in business and finance, Anteile Oktober 2025",
+            "org": "EIGE",
+            "jahr": "2026",
+            "url": "https://eige.europa.eu/sites/default/files/documents/202602335_pdf_mh0126044enn_002.pdf"
+          },
+          {
+            "titel": "Begründete Stellungnahmen an neun Mitgliedstaaten, April 2026",
+            "org": "Europäische Kommission, INF/26/720",
+            "jahr": "2026",
+            "url": "https://ec.europa.eu/commission/presscorner/detail/de/inf_26_720"
+          },
+          {
+            "titel": "Urteil zum ungarischen Anti-LGBTI-Gesetz, eigenständiger Verstoß gegen Artikel 2 EUV",
+            "org": "Gerichtshof der EU, C-769/22",
+            "jahr": "2026",
+            "url": "https://epthinktank.eu/2026/05/07/hungarys-anti-lgbti-law-and-eu-values-the-cjeus-landmark-article-2-teu-judgment/"
+          },
+          {
+            "titel": "Gleichstellungsstrategie 2026 bis 2030 und angekündigter Gender Action Plan 2028 bis 2034",
+            "org": "Europäische Kommission",
+            "jahr": "2026",
+            "url": "https://commission.europa.eu/news-and-media/news/new-strategy-embeds-gender-equality-every-aspect-life-2026-03-05_en"
+          }
+        ]
+      },
+      {
+        "name": "Präzedenzfälle und Durchsetzungsmechanik",
+        "items": [
+          {
+            "titel": "Montrealer Protokoll, Vertragsparteien und Ausstiegsquote",
+            "org": "UNEP OzonAction",
+            "jahr": "2026",
+            "url": "https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol"
+          },
+          {
+            "titel": "Artikel 4 des Montrealer Protokolls, Handelsbeschränkung gegenüber Nicht-Parteien",
+            "org": "UNEP Ozone Secretariat",
+            "jahr": "2026",
+            "url": "https://ozone.unep.org/treaties/montreal-protocol/articles/article-4-control-trade-non-parties"
+          },
+          {
+            "titel": "Wirkung von Grey Listing auf Kapitalflüsse, minus 7,6 Prozent des BIP",
+            "org": "Internationaler Währungsfonds, WP/21/153",
+            "jahr": "2021",
+            "url": "https://www.imf.org/en/Publications/WP/Issues/2021/05/27/The-Impact-of-Gray-Listing-on-Capital-Flows-An-Analysis-Using-Machine-Learning-50289"
+          },
+          {
+            "titel": "OECD-Konvention gegen Auslandsbestechung, Vertragsstaaten und Verpflichtungen",
+            "org": "OECD, OECD-LEGAL-0293",
+            "jahr": "2024",
+            "url": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0293"
+          },
+          {
+            "titel": "Weltweite Verbreitung von Datenschutzgesetzgebung, 137 Staaten",
+            "org": "UNCTAD, Global Cyberlaw Tracker",
+            "jahr": "2021",
+            "url": "https://unctad.org/topic/ecommerce-and-digital-economy/ecommerce-law-reform/summary-adoption-e-commerce-legislation-worldwide"
+          },
+          {
+            "titel": "Austritte aus dem Landminenverbot, Estland, Lettland, Litauen, Polen, Finnland",
+            "org": "Arms Control Association",
+            "jahr": "2026",
+            "url": "https://www.armscontrol.org/act/2026-01/news/countries-leave-mine-ban-treaty"
+          },
+          {
+            "titel": "Wirksamkeit harter Standards in Handelsabkommen",
+            "org": "Hafner-Burton, International Organization",
+            "jahr": "2005",
+            "url": "https://ehb.ucsd.edu/pdfs/trading_hr.pdf"
+          },
+          {
+            "titel": "Erfolgsquote von Sanktionen und die Gegenkritik",
+            "org": "Hufbauer, Schott und Elliott sowie Pape, International Security",
+            "jahr": "1997",
+            "url": "https://cup.columbia.edu/book/economic-sanctions-reconsidered/9780881324129/"
+          },
+          {
+            "titel": "Teilentzug der Zollpräferenzen für Kambodscha",
+            "org": "Europäische Kommission, IP/20/229",
+            "jahr": "2020",
+            "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_20_229"
+          },
+          {
+            "titel": "Sri Lanka, Entzug 2010 und Wiedererlangung der Sonderpräferenzen 2017",
+            "org": "Sri Lanka Brief",
+            "jahr": "2017",
+            "url": "https://srilankabrief.org/fact-sheet-sri-lanka-and-gsp/"
+          },
+          {
+            "titel": "Eingefrorene EU-Mittel gegenüber Ungarn, Volumen und Wirkung",
+            "org": "Centre for European Reform sowie Euronews",
+            "jahr": "2025",
+            "url": "https://www.cer.eu/insights/freezing-eu-funds-effective-tool-enforce-rule-law"
+          },
+          {
+            "titel": "Millennium Challenge Corporation, Modell, Volumen und Abwicklung 2025",
+            "org": "Congressional Research Service, IF12850, und Devex",
+            "jahr": "2025",
+            "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF12850/IF12850.5.pdf"
+          }
+        ]
+      },
+      {
+        "name": "Kultur, Wirkung und Gegenbewegung",
+        "items": [
+          {
+            "titel": "Telenovelas und Geburtenverhalten in Brasilien",
+            "org": "La Ferrara, Chong und Duryea, American Economic Journal",
+            "jahr": "2012",
+            "url": "https://www.aeaweb.org/articles?id=10.1257%2Fapp.4.4.1"
+          },
+          {
+            "titel": "Kabelfernsehen und die Stellung von Frauen in Indien",
+            "org": "Jensen und Oster, Quarterly Journal of Economics",
+            "jahr": "2009",
+            "url": "https://academic.oup.com/qje/article/124/3/1057/1905111"
+          },
+          {
+            "titel": "Weibliche Führung, Aspirationen und Bildungsstand von Mädchen",
+            "org": "Beaman, Duflo, Pande und Topalova, Science",
+            "jahr": "2012",
+            "url": "https://www.science.org/doi/abs/10.1126/science.1212382"
+          },
+          {
+            "titel": "Quoten und die Wahrnehmung weiblicher Wirksamkeit",
+            "org": "Beaman und andere, Quarterly Journal of Economics",
+            "jahr": "2009",
+            "url": "https://academic.oup.com/qje/article-abstract/124/4/1497/1917190"
+          },
+          {
+            "titel": "Erasmus, europäische Identität und der Selektionseffekt",
+            "org": "Sigalas sowie Kuhn, Journal of Common Market Studies",
+            "jahr": "2012",
+            "url": "https://theresakuhn.eu/wp-content/uploads/2019/05/kuhn-2012-jcms__journal_of_common_market_studies.pdf"
+          },
+          {
+            "titel": "Export koreanischer Kulturinhalte und Fördervolumen",
+            "org": "Ministry of Culture, Sports and Tourism, wiedergegeben in The Korea Herald",
+            "jahr": "2025",
+            "url": "https://www.koreaherald.com/article/10684195"
+          },
+          {
+            "titel": "Creative Europe, Budget 2021 bis 2027",
+            "org": "Europäische Kommission",
+            "jahr": "2021",
+            "url": "https://culture.ec.europa.eu/news/creative-europe-2021-2027-programme-launch"
+          },
+          {
+            "titel": "Auswärtige Kultur- und Bildungspolitik im Bundeshaushalt 2025",
+            "org": "Deutscher Bundestag",
+            "jahr": "2024",
+            "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-1097826"
+          },
+          {
+            "titel": "Schließung von neun Goethe-Instituten und Sparvolumen",
+            "org": "Goethe-Institut, wiedergegeben bei UEPO",
+            "jahr": "2023",
+            "url": "https://uepo.de/2023/10/04/wegen-spardiktat-der-politik-goethe-institut-schliesst-neun-niederlassungen-vor-allem-in-frankreich-und-italien/"
+          },
+          {
+            "titel": "Tip of the Iceberg, Finanzierung der Anti-Gender-Bewegung 2009 bis 2018",
+            "org": "European Parliamentary Forum, Neil Datta",
+            "jahr": "2021",
+            "url": "https://www.epfweb.org/sites/default/files/2021-06/Tip%20of%20the%20Iceberg%20June%202021%20Final.pdf"
+          },
+          {
+            "titel": "The Next Wave, Folgeerhebung 2019 bis 2023",
+            "org": "European Parliamentary Forum",
+            "jahr": "2025",
+            "url": "https://www.epfweb.org/node/1152"
+          }
+        ]
+      }
+    ],
+    "vorbehalt": "Zwei Einschränkungen, die zur Redlichkeit gehören. Erstens: Die Zahlen des Weltwirtschaftsforums und der Weltbank waren maschinell nur über übereinstimmende Wiedergaben abrufbar, nicht über die Originaldokumente. Zweitens: Die Zahlen zur Gegenbewegung sind ausdrücklich Untergrenzen und belegen keine Kausalität zwischen einzelnen Zahlungen und einzelnen Gesetzen. Wo Zahlen fehlten, stehen sie nicht da. Geschätzt wurde nichts."
+  }
+}
