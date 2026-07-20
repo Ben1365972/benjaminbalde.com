@@ -492,6 +492,325 @@
       }
     ]
   },
+  "machtkarte": {
+    "label": "Machtkarte",
+    "lead": "Ein Hebel ohne Hand ist ein Möbelstück. Dieser Abschnitt beantwortet die Anschlussfrage des vorigen: An welchen Stellen muss dieser Plan physisch vorbei, wer sitzt dort, und wie kommt man dorthin.",
+    "kernsatz": "Macht in Europa liegt selten dort, wo abgestimmt wird. Sie liegt dort, wo entschieden wird, worüber abgestimmt wird.",
+    "vorbemerkung": "Alles hier Beschriebene sind formale Ämter mit veröffentlichten Ernennungsverfahren und dokumentierten Zugangskanälen. Das ist keine Bescheidenheit, sondern der Befund: Die wirksamsten Stellen sind öffentlich ausgeschrieben oder öffentlich geregelt. Was sie schützt, ist nicht Geheimhaltung, sondern Unauffälligkeit.",
+    "engpaesse": {
+      "titel": "Die Engpässe",
+      "lead": "Zehn Stellen, sortiert nach Hebelwirkung. Drei Größen je Stelle: wie stark sie durchgreift, wie leicht sie zu umgehen ist, und wie zugänglich sie für jemanden ist, der heute von außen kommt.",
+      "skalen": {
+        "hebel": "Hebelwirkung",
+        "umgehbar": "Umgehbarkeit",
+        "zugang": "Zugänglichkeit"
+      },
+      "items": [
+        {
+          "name": "Der Europäische Rat",
+          "ebene": "Mitgliedstaaten",
+          "kontrolliert": "Die Passerelle, und damit die Voraussetzung für alles Übrige.",
+          "hebel": 98,
+          "umgehbar": 5,
+          "zugang": 5,
+          "warum": "Der Übergang zur Mehrheitsentscheidung bei außenpolitischen Menschenrechtspositionen ist der Angelpunkt des gesamten Fahrplans. Er erfordert Einstimmigkeit im Europäischen Rat. Damit ist dies die einzige Stelle der Karte, die sich nicht besetzen, nicht umgehen und nicht unterlaufen lässt.",
+          "wegHinein": "Gar nicht. Regierungschefin wird man über nationale Wahlen. Diese Stelle ist ausschließlich politisch zu bewegen, über eine Koalition von Regierungen und über den Preis, den ein offener Widerspruch kostet.",
+          "notiz": "Jede ehrliche Machtkarte muss eine Stelle enthalten, an der die Karte endet. Das hier ist sie.",
+          "quelle": "Artikel 31 Absatz 3 EUV; Entschließung des EP P9_TA(2023)0269"
+        },
+        {
+          "name": "Der delegierte Rechtsakt zum Präferenzentzug",
+          "ebene": "Kommission und Parlament",
+          "kontrolliert": "Den schärfsten Einzelhebel des gesamten Plans.",
+          "hebel": 95,
+          "umgehbar": 10,
+          "zugang": 30,
+          "warum": "Der Entzug von Handelspräferenzen erfolgt per delegiertem Rechtsakt. Parlament und Rat haben dagegen nur ein Einspruchsrecht. Und für diesen Einspruch braucht das Parlament die Mehrheit seiner Mitglieder, also derzeit 361 von 720, nicht die Mehrheit der abgegebenen Stimmen. Enthaltungen und Abwesenheiten wirken damit faktisch wie Zustimmung. Wer den Rechtsakt will, braucht die Kommission. Wer ihn verhindern will, braucht eine absolute Mehrheit.",
+          "wegHinein": "Nicht als Person zu besetzen, sondern als Verfahren zu nutzen. Der Zugang läuft über die beiden Stellen darüber sowie über die vierwöchige öffentliche Rückmeldefrist, die für Entwürfe delegierter Rechtsakte gilt.",
+          "notiz": "Hier liegt die eigentliche Asymmetrie des europäischen Handelsrechts. Das Instrument ist scharf, es ist einsatzbereit, und es hängt an sehr wenigen Personen.",
+          "quelle": "Verordnung (EU) 2026/1395, Artikel 15, 23 und 45; Geschäftsordnung des EP, Artikel 114 Absatz 5"
+        },
+        {
+          "name": "Das Kabinett des zuständigen Kommissionsmitglieds",
+          "ebene": "Kommission",
+          "kontrolliert": "Was das Kollegium überhaupt zu sehen bekommt.",
+          "hebel": 92,
+          "umgehbar": 15,
+          "zugang": 70,
+          "warum": "Ein normales Kommissionsmitglied hat sechs Personen auf Administratorenebene im Kabinett, Kabinettschefin und Stellvertretung eingerechnet. Sechs. Diese sechs bereiten jede Vorlage vor, vertreten das Haus in der gesamten Vorbereitungskette vor der Kollegiumssitzung und entscheiden faktisch, welche Option überhaupt auf den Tisch kommt.",
+          "wegHinein": "Mindestens drei der sechs Stellen müssen mit vorhandenen Beamten besetzt werden. Die übrigen bis zu drei können direkt von außen als Bedienstete auf Zeit eingestellt werden. Es gibt dafür kein Auswahlverfahren und keinen Concours. Formal ernennt die Anstellungsbehörde, praktisch wählt das Kommissionsmitglied aus. Bindend sind nur die Nebenbedingungen: mindestens drei Nationalitäten im Kabinett, höchstens zwei Personen mit dem Pass des Kommissionsmitglieds, Kabinettschefin oder Stellvertretung muss eine andere Staatsangehörigkeit haben, und mindestens die Hälfte der Administratorenstellen muss mit Frauen besetzt sein.",
+          "notiz": "Die Stelle mit der höchsten Hebelwirkung im ganzen Katalog hat die niedrigste formale Eintrittshürde. Das ist kein Missstand, den jemand versteckt, es steht in den veröffentlichten Kabinettsregeln. Es fällt nur niemandem auf.",
+          "quelle": "Mitteilung der Präsidentin P(2024) 7 vom 1. Dezember 2024"
+        },
+        {
+          "name": "Die Sensibilitätskennzeichnung in der Generaldirektion",
+          "ebene": "Kommission",
+          "kontrolliert": "Ob ein Rechtsakt überhaupt zu einer politischen Frage wird.",
+          "hebel": 88,
+          "umgehbar": 20,
+          "zugang": 35,
+          "warum": "Der Generaldirektor ist bereits in der Planungsphase dafür verantwortlich, einen Rechtsakt im internen System als politisch sensibel oder bedeutend zu kennzeichnen. Kriterien sind unter anderem, ob er bei Mitgliedstaaten oder Parlament umstritten sein dürfte oder erhebliches öffentliches Interesse hervorruft. Wird er nicht gekennzeichnet, validiert ihn der Generaldirektor allein, und er läuft an der politischen Ebene vorbei.",
+          "wegHinein": "Generaldirektionen sind Senior-Management-Stellen der Besoldungsgruppen AD 15 und 16 und werden öffentlich ausgeschrieben. Der reguläre Weg dorthin führt über eine Beamtenlaufbahn. Die Abkürzung ist dokumentiert: Wer zwei Jahre stellvertretende Kabinettschefin war, gilt damit als qualifiziert für Referatsleitungen der Besoldungsgruppen AD 13 und AD 14.",
+          "notiz": "Der unauffälligste Weichenstellungspunkt des gesamten Systems. Er liegt Monate vor jeder Kollegiumsbefassung und erzeugt keinerlei öffentliche Spur.",
+          "quelle": "Arbeitsmethoden der Kommission P(2024) 5, Anhang I"
+        },
+        {
+          "name": "Die Vorbereitungskette vor dem Kollegium",
+          "ebene": "Kommission",
+          "kontrolliert": "Die letzte Gelegenheit, etwas zu ändern.",
+          "hebel": 85,
+          "umgehbar": 12,
+          "zugang": 40,
+          "warum": "Vor jeder Kollegiumssitzung läuft eine feste Kette aus vier Gremien. Die Arbeitsmethoden der Kommission halten ausdrücklich fest, dass in einer dieser Sitzungen abgeschlossene Punkte später nicht erneut aufgegriffen werden sollen. Das ist eine Sperrklinke. Wer in der Kette nicht durchdringt, bekommt im Kollegium keine zweite Chance.",
+          "wegHinein": "Sitz in der Kette hat, wer einem Kabinett angehört. Für eine Handels- und Außenwirtschaftsagenda ist das entscheidende Gremium EXCO, in dem jedes Kabinett ein ständiges Mitglied benennt.",
+          "notiz": "Die öffentliche Aufmerksamkeit richtet sich auf die Kollegiumssitzung am Mittwoch. Entschieden wird spätestens am Montag davor.",
+          "quelle": "Arbeitsmethoden der Kommission P(2024) 5, Abschnitt I.3 und Anhang I"
+        },
+        {
+          "name": "Die rotierende Ratspräsidentschaft",
+          "ebene": "Rat",
+          "hebel": 84,
+          "umgehbar": 22,
+          "zugang": 10,
+          "kontrolliert": "Sechs Monate Tagesordnung, Kompromisstexte und Verhandlungsführung gegenüber dem Parlament.",
+          "warum": "Der Vorsitz beruft die Tagungen ein, stellt die vorläufige Tagesordnung auf, legt fest, welche neuen Vorschläge wichtig genug für eine öffentliche Beratung sind, bestimmt die Reihenfolge der Punkte und die Redezeit, veranlasst die Abstimmung und verhandelt im Namen des Rates mit dem Parlament. Und er setzt Gesetzgebungspunkte von der Tagesordnung ab, deren Vorprüfung nicht rechtzeitig abgeschlossen ist.",
+          "wegHinein": "Man muss die Regierung eines Mitgliedstaats stellen. Die Reihenfolge steht bis 2030 fest: Irland führt den Vorsitz von Juli bis Dezember 2026, danach Litauen, Griechenland, Italien, Lettland, Luxemburg, die Niederlande, die Slowakei und Malta. Jedes Land kommt rechnerisch alle dreizehneinhalb Jahre einmal an die Reihe.",
+          "notiz": "Das einzige planbare Zeitfenster im ganzen System, und zugleich ein Beleg für dessen Grenzen. Beim Antidiskriminierungsdossier hat nahezu jeder Vorsitz seit 2008 das Thema auf die Ratsagenda gesetzt. Im Juni 2025 hielt der polnische Vorsitz aktenkundig fest, er habe keinen neuen Kompromisstext vorschlagen können, weil von den Staaten mit Bedenken keine Formulierungsvorschläge kamen.",
+          "quelle": "Geschäftsordnung des Rates, Artikel 1, 3, 8, 11 und 20; Ratsdokument 9573/25 vom 6. Juni 2025"
+        },
+        {
+          "name": "Der Ausschuss der Ständigen Vertreter",
+          "ebene": "Rat",
+          "hebel": 82,
+          "umgehbar": 18,
+          "zugang": 12,
+          "kontrolliert": "Ob ein Dossier den Ministertisch überhaupt noch als offene Frage erreicht.",
+          "warum": "Alle Tagesordnungspunkte einer Ratstagung werden vorher im Ausschuss der Ständigen Vertreter geprüft, der sich bemüht, auf seiner Ebene Einvernehmen zu erzielen. Gelingt das, läuft der Punkt als sogenannter A-Punkt, den der Rat ohne Aussprache annimmt. Für Gleichstellung und Antidiskriminierung ist der Rat für Beschäftigung und Soziales zuständig, und der wird nicht von den Botschaftern vorbereitet, sondern von deren Stellvertretern.",
+          "wegHinein": "Über den nationalen diplomatischen Dienst. Entscheidend ist eine Einschränkung, die der Rat selbst benennt: Die Ständigen Vertreter arbeiten auf Anweisung ihrer Regierung. Sie entscheiden nicht, sie führen aus.",
+          "notiz": "Die verbreitete Behauptung, achtzig Prozent der Ratsbeschlüsse fielen unterhalb der Ministerebene, geht auf eine Quelle zurück, die sich selbst als Hörensagen bezeichnet. Die breiteste Messung kommt auf andere Werte: Bei rund 43 Prozent der untersuchten Rechtsakte fiel die Entscheidung in einer Arbeitsgruppe, bei 22 Prozent im Ausschuss der Ständigen Vertreter und bei 35 Prozent bei den Ministern.",
+          "quelle": "Geschäftsordnung des Rates, Artikel 3 und 19; Häge, Journal of Common Market Studies 2008"
+        },
+        {
+          "name": "Das Verhandlungsteam im Trilog",
+          "ebene": "Parlament, Rat und Kommission",
+          "kontrolliert": "Den tatsächlichen Gesetzestext.",
+          "hebel": 82,
+          "umgehbar": 20,
+          "zugang": 30,
+          "warum": "Der Trilog hat keine primärrechtliche Grundlage, in den Verträgen kommt er nicht vor. Er ist Praxis, kodifiziert in der Geschäftsordnung des Parlaments. Das Verhandlungsteam wird vom Berichterstatter geleitet, den Vorsitz führt der Ausschussvorsitz, und die Schattenberichterstatter der beteiligten Fraktionen gehören ihm an. Die dort erzielte vorläufige Einigung wird anschließend in einer einzigen Abstimmung mit der Mehrheit der abgegebenen Stimmen angenommen.",
+          "wegHinein": "Über die Rolle als Berichterstatterin oder Schattenberichterstatterin, und die vergeben die Koordinatoren.",
+          "notiz": "Zwischen zehn und zwanzig Personen verhandeln den Text, den anschließend 720 Abgeordnete in einer Abstimmung bestätigen oder verwerfen.",
+          "quelle": "Geschäftsordnung des EP, Artikel 73 bis 76"
+        },
+        {
+          "name": "Die Fraktionskoordinatoren im Ausschuss",
+          "ebene": "Parlament",
+          "kontrolliert": "Wer Berichterstatter wird.",
+          "hebel": 78,
+          "umgehbar": 25,
+          "zugang": 45,
+          "warum": "Die Benennung von Berichterstattern ist in der Geschäftsordnung des Parlaments nicht geregelt. Sie erfolgt über ein informelles Punktesystem, in dem jede Fraktion ein Kontingent proportional zu ihrer Größe erhält, und die Verteilung nehmen die Fraktionskoordinatoren des Ausschusses vor. Deren Sitzungen sind nicht öffentlich, und ihre Beschlüsse gelten als angenommen, wenn ihnen nicht widersprochen wird.",
+          "wegHinein": "Koordinatorin wird man durch Benennung der eigenen Fraktion aus den Reihen der Ausschussmitglieder. Fraktionslose Abgeordnete können keine Koordinatoren benennen und sind von diesen Sitzungen ausgeschlossen.",
+          "notiz": "Der wichtigste Personalentscheidungsprozess des Parlaments steht in keinem Regelwerk des Parlaments. Belegt ist er durch einen Analysedienst des Parlaments selbst.",
+          "quelle": "Geschäftsordnung des EP, Artikel 220; EPRS-Briefing PE 637.966"
+        },
+        {
+          "name": "Das Generalsekretariat der Kommission",
+          "ebene": "Kommission",
+          "kontrolliert": "Die Tagesordnung.",
+          "hebel": 75,
+          "umgehbar": 25,
+          "zugang": 25,
+          "warum": "Das Generalsekretariat unterstützt die Präsidentin bei der Festlegung der Tagesordnung des Kollegiums, führt die Sekretariate der Vorbereitungsgremien, leitet die dienststellenübergreifenden Koordinierungsgruppen für politisch sensible Initiativen, entscheidet über beschleunigte Konsultationen und vertritt die Kommission im Ausschuss der Ständigen Vertreter.",
+          "wegHinein": "Regulärer Beamtenweg über das Auswahlverfahren, in der Regel nach Stationen in einer Fachgeneraldirektion.",
+          "notiz": "Kein Ministerium, kein politisches Amt, keine Wahl. Und trotzdem der Ort, an dem entschieden wird, wann etwas verhandelt wird und wann nicht.",
+          "quelle": "Arbeitsmethoden der Kommission P(2024) 5"
+        },
+        {
+          "name": "Die Ratsarbeitsgruppe",
+          "ebene": "Rat",
+          "hebel": 72,
+          "umgehbar": 28,
+          "zugang": 30,
+          "kontrolliert": "Den Text, bevor ihn jemand politisch liest.",
+          "warum": "Rund 150 Vorbereitungsgremien leisten die fachliche Arbeit des Rates, und nur die im öffentlichen Verzeichnis aufgeführten dürfen überhaupt zusammentreten. Für dieses Vorhaben ist die Gruppe Sozialfragen einschlägig, die ausdrücklich für Gleichstellung der Geschlechter und Antidiskriminierungsfragen zuständig ist. Sie besteht aus nationalen Fachleuten der Mitgliedstaaten.",
+          "wegHinein": "Über eine nationale Verwaltung, die einen entsendet. Der Zugang ist damit an eine Beamtenlaufbahn in einem Mitgliedstaat gebunden, nicht an eine europäische.",
+          "notiz": "Die unterste Ebene der Karte und zugleich diejenige, auf der nach der besten verfügbaren Messung die meisten Entscheidungen faktisch fallen. Wer einen Text hier nicht ändert, ändert ihn meistens gar nicht mehr.",
+          "quelle": "Geschäftsordnung des Rates, Artikel 19 Absatz 3; Verzeichnis der Vorbereitungsgremien des Rates, Stand 9. Juli 2026"
+        },
+        {
+          "name": "Der Arbeitsausschuss der nationalen Normungsorganisation",
+          "ebene": "Normung",
+          "kontrolliert": "Was gemessen, geprüft und testiert wird.",
+          "hebel": 70,
+          "umgehbar": 30,
+          "zugang": 85,
+          "warum": "Europäische Normen arbeiten nach dem Prinzip der nationalen Delegation. Man arbeitet nicht als Person, Unternehmen oder Organisation direkt mit, sondern wird von der nationalen Normungsorganisation entsandt. Eine angenommene europäische Norm verpflichtet die Mitglieder aus 34 Ländern zur identischen Übernahme und zur Zurückziehung entgegenstehender nationaler Normen. Ein Parlament ist daran nicht beteiligt. Der Gerichtshof hat 2024 festgestellt, dass harmonisierte Normen Teil des Unionsrechts sind und Rechte und Pflichten Einzelner festlegen können.",
+          "wegHinein": "In Deutschland über den zuständigen Arbeitsausschuss der nationalen Normungsorganisation, der zugleich das Spiegelgremium für die europäische und die internationale Ebene ist. Der Zugang läuft über direkte Kontaktaufnahme.",
+          "notiz": "Die zugänglichste Stelle mit ernsthafter Reichweite im gesamten Katalog. In der europäischen Normungsverordnung sind Interessenträgerorganisationen für kleine Unternehmen, Verbraucher, Umwelt und Gewerkschaften vorgesehen. Für Gleichstellung ist keine vorgesehen.",
+          "quelle": "CEN-CENELEC Internal Regulations Part 2:2026; EuGH, Rechtssache C-588/21 P vom 5. März 2024"
+        },
+        {
+          "name": "Die Anteilseigner der Europäischen Investitionsbank",
+          "ebene": "Kapital",
+          "kontrolliert": "Die Bedingungen großer Infrastrukturvorhaben über Jahrzehnte.",
+          "hebel": 65,
+          "umgehbar": 40,
+          "zugang": 20,
+          "warum": "Anteilseigner sind ausschließlich die 27 Mitgliedstaaten. Deutschland, Frankreich und Italien halten je 18,78 Prozent des gezeichneten Kapitals, zusammen 56,34 Prozent. Beschlüsse des Rates der Gouverneure müssen von einer Mehrheit der Mitglieder getragen werden, die mindestens 50 Prozent des gezeichneten Kapitals repräsentiert. Drei Regierungen können damit gemeinsam jede Kapitalmehrheit stellen.",
+          "wegHinein": "Über nationale Finanzministerien. Der Verwaltungsrat besteht aus 28 Direktoren, je einem pro Mitgliedstaat und einem der Kommission, benannt für ein gemeinsames Fünfjahresmandat. Die Bank selbst hält fest, dass viele Mitglieder zugleich hohe Positionen in nationalen Ministerien bekleiden.",
+          "notiz": "Die Bank hat eine eigene Gleichstellungsstrategie und einen Aktionsplan für 2026 bis 2030. Ob die Kriterien formale Auszahlungsbedingungen sind oder Portfolioziele, ließ sich nicht belegen. Das ist genau der Unterschied, auf den es ankommt.",
+          "quelle": "EIB Financial Report 2024; EIB Group Corporate Governance Report 2024"
+        }
+      ]
+    },
+    "laufbahnen": {
+      "titel": "Wie man diese Personen wird",
+      "lead": "Die dokumentierten Wege nebeneinander. Auffällig ist weniger, wie schwer sie sind, als wie unterschiedlich sie sind.",
+      "wege": [
+        {
+          "name": "Kabinettsmitglied",
+          "verfahren": "Direkte Einstellung als Bedienstete auf Zeit oder Abordnung als Beamtin. Kein Auswahlverfahren.",
+          "dauer": "sofort",
+          "huerde": "niedrig, aber persönlich",
+          "notiz": "Bis zu drei der sechs Stellen eines normalen Kabinetts sind für Externe offen. Die Verträge enden mit der Amtszeit des Kommissionsmitglieds."
+        },
+        {
+          "name": "Beamtin der Union",
+          "verfahren": "Europäisches Auswahlverfahren mit Tests zu sprachlichem, numerischem und abstraktem Schlussfolgern, danach Reserveliste.",
+          "dauer": "lang",
+          "huerde": "hoch und formalisiert",
+          "notiz": "Zwei Funktionsgruppen, Administration und Assistenz. Für Administratorenstellen ist ein Hochschulabschluss und die Kenntnis von mindestens zwei Amtssprachen erforderlich."
+        },
+        {
+          "name": "Abgeordnete nationale Sachverständige",
+          "verfahren": "Entsendung aus einer nationalen Verwaltung.",
+          "dauer": "mittel",
+          "huerde": "läuft über den nationalen Dienstweg",
+          "notiz": "Der klassische Weg aus einem Ministerium in die Kommission. Bemerkenswert: Auf den öffentlichen Karriereseiten der Kommission ist er kaum auffindbar. Wer ihn gehen will, erfährt davon über die eigene Verwaltung, nicht über Brüssel. In Kabinetten sind nationale Sachverständige ausdrücklich nicht zugelassen."
+        },
+        {
+          "name": "Mitglied des Europäischen Parlaments",
+          "verfahren": "Kandidatur über eine nationale Partei.",
+          "dauer": "mittel bis lang",
+          "huerde": "parteiintern",
+          "notiz": "Der europäische Direktwahlakt regelt das Wahlsystem, nicht die Kandidatenauswahl. Wer auf welchen Listenplatz kommt, entscheiden nationale Parteigremien nach 27 verschiedenen Regelwerken. Eine unionsrechtliche Paritätsvorgabe für Listen gibt es nicht."
+        },
+        {
+          "name": "Delegierte in der Normung",
+          "verfahren": "Entsendung durch die nationale Normungsorganisation in den zuständigen Arbeitsausschuss.",
+          "dauer": "kurz",
+          "huerde": "sehr niedrig",
+          "notiz": "Der offenste Zugang zu einem Gremium mit echter Rechtswirkung. Die genauen Aufnahmebedingungen und etwaige Mitarbeitsgebühren ließen sich nicht belegen und sollte man vorher erfragen."
+        }
+      ],
+      "befund": "Die formale Hürde und die tatsächliche Wirkung stehen in keinem Verhältnis zueinander. Der längste und formalisierteste Weg, das Auswahlverfahren für Beamte, führt in die Verwaltung. Der kürzeste und am wenigsten formalisierte, das Kabinett, führt an den Tisch, an dem entschieden wird."
+    },
+    "zugang": {
+      "titel": "Wie man von außen herankommt",
+      "lead": "Für alle, die keines dieser Ämter anstreben. Diese Kanäle sind real, dokumentiert und schwächer, als ihre Existenz vermuten lässt.",
+      "kanaele": [
+        {
+          "name": "Transparenzregister",
+          "was": "Wer Einfluss auf europäische Entscheidungen nehmen will, muss sich registrieren. Über 12.000 Interessenvertreter sind eingetragen. Kommissionsmitglieder und ihre Kabinette treffen nur registrierte Gegenüber und müssen diese Treffen samt Protokoll offenlegen.",
+          "wirkung": "Die Pflicht wurde in dieser Amtszeit auf alle Führungskräfte der Kommission ausgeweitet, also weit über die frühere Beschränkung auf Kommissionsmitglieder, Kabinette und Generaldirektoren hinaus. Das Register ist damit zugleich Zugangsvoraussetzung und öffentliche Karte darüber, wer bereits Zugang hat."
+        },
+        {
+          "name": "Expertengruppen",
+          "was": "Die Kommission stützt sich bei Legislativvorschlägen und ausdrücklich auch bei der Vorbereitung delegierter Rechtsakte auf externe Expertengruppen. Zusammensetzung, Auftrag, Tagesordnungen und Protokolle stehen in einem öffentlichen Register.",
+          "wirkung": "Bei delegierten Rechtsakten sitzen die Mitgliedstaaten in diesen Gruppen ohne Stimmrecht. Das unterscheidet sie von den Ausschüssen bei Durchführungsrechtsakten, in denen abgestimmt wird. Wer in einer Expertengruppe sitzt, berät, entscheidet aber nicht."
+        },
+        {
+          "name": "Öffentliche Rückmeldung",
+          "was": "Für Entwürfe delegierter Rechtsakte gibt es eine vierwöchige Frist, in der Bürgerinnen und Interessengruppen Stellung nehmen können.",
+          "wirkung": "Vier Wochen sind kurz, und die Eingaben binden niemanden. Der Kanal ist trotzdem der einzige, der ohne Registrierung, ohne Amt und ohne Einladung funktioniert."
+        }
+      ],
+      "vorbehalt": "Keiner dieser Kanäle verschafft Entscheidungsmacht. Sie verschaffen Anwesenheit. Der Unterschied ist der gesamte Inhalt dieses Abschnitts."
+    },
+    "minimum": {
+      "titel": "Die Minimalbesetzung",
+      "lead": "Die Frage, auf die dieser Abschnitt hinausläuft: Wie wenige Menschen an den richtigen Stellen genügen, um diesen Plan überhaupt in Bewegung zu setzen. Die Antwort ist unangenehm klein, und sie ist aus genau diesem Grund auch keine gute Nachricht.",
+      "kernTitel": "Sechs, ohne die nichts anläuft",
+      "kern": [
+        {
+          "rolle": "Ein Kommissionsmitglied mit dem Handelsressort",
+          "warum": "Ohne die politische Ebene gibt es keinen delegierten Rechtsakt und damit kein scharfes Instrument."
+        },
+        {
+          "rolle": "Ein Kabinettsmitglied bei dieser Person",
+          "warum": "Trägt das Dossier durch die Vorbereitungskette. Von sechs Stellen sind bis zu drei ohne Auswahlverfahren von außen zu besetzen."
+        },
+        {
+          "rolle": "Eine Leitungsperson in der Generaldirektion Handel",
+          "warum": "Entscheidet über die Sensibilitätskennzeichnung und verantwortet den Bericht, auf dem jeder Präferenzentzug aufbaut."
+        },
+        {
+          "rolle": "Eine Person im Juristischen Dienst",
+          "warum": "Die Verlagerung auf die Entgeltnorm steht und fällt mit der Rechtsgrundlagenkonstruktion. Hält sie nicht, verliert man vor Gericht."
+        },
+        {
+          "rolle": "Ein Fraktionskoordinator im Handelsausschuss",
+          "warum": "Dort wird entschieden, wer Berichterstatter wird. Wer die Berichterstattung hat, leitet später das Verhandlungsteam im Trilog."
+        },
+        {
+          "rolle": "Eine Regierung mit einer Ratspräsidentschaft",
+          "warum": "Sechs Monate Kontrolle über Tagesordnung und Kompromisstexte. Das ist das einzige planbare Zeitfenster im ganzen System."
+        }
+      ],
+      "erweiterungTitel": "Acht, ohne die es nicht hält",
+      "erweiterung": [
+        {
+          "rolle": "Eine Ständige Vertreterin in einem blockierenden Mitgliedstaat",
+          "warum": "Dossiers sterben im Ausschuss der Ständigen Vertreter, nicht im Rat."
+        },
+        {
+          "rolle": "Eine Referatsleitung im federführenden Ressort in Berlin",
+          "warum": "Die deutsche Position entsteht in der Ressortabstimmung, lange bevor sie in Brüssel vorgetragen wird."
+        },
+        {
+          "rolle": "Eine Berichterstatterin im Gleichstellungsausschuss",
+          "warum": "Der Ausschuss ist formal weder für Handel noch für Normung zuständig. Genau deshalb braucht es jemanden, der die Verbindung herstellt."
+        },
+        {
+          "rolle": "Eine Delegierte im zuständigen Normungsausschuss",
+          "warum": "Der niedrigste Widerstand und die längste Haltbarkeit im gesamten Katalog."
+        },
+        {
+          "rolle": "Eine Person im Verwaltungsrat einer Entwicklungsbank",
+          "warum": "Vergaberichtlinien binden Infrastrukturvorhaben über Jahrzehnte und überstehen jede Regierung."
+        },
+        {
+          "rolle": "Eine Statistikerin, die den Index verantwortet",
+          "warum": "Konditionalität braucht eine Zahl, die vor Gericht hält und die niemand nachträglich anpassen kann."
+        },
+        {
+          "rolle": "Eine Finanzierung, die über Legislaturperioden trägt",
+          "warum": "Die Messinfrastruktur muss die erste Sparrunde überleben, sonst ist alles Übrige gegenstandslos."
+        },
+        {
+          "rolle": "Eine Trägerorganisation im globalen Süden",
+          "warum": "Ohne Ko-Autorenschaft von außerhalb Europas bleibt das Vorhaben als europäisches angreifbar."
+        }
+      ],
+      "schluss": [
+        "Vierzehn Rollen. Das klingt nach wenig, und dieser Eindruck täuscht in zwei Richtungen.",
+        "Er täuscht nach unten, weil keine dieser Stellen ein Ergebnis befehlen kann. Sie entscheiden nur darüber, ob ein Vorschlag überhaupt bis zu einem Entscheidungspunkt gelangt. Das ist notwendig und nicht hinreichend. Vierzehn gut platzierte Menschen können einen Prozess eröffnen. Beenden können sie ihn nicht.",
+        "Und er täuscht nach oben, denn dieselbe Zahl gilt für jede andere Agenda auch. Wenn vierzehn Personen genügen, um diesen Plan anzuschieben, dann genügen vierzehn andere, um ihn anzuhalten. Genau das ist seit 2008 bei der Antidiskriminierungsrichtlinie zu beobachten, und dort waren es weniger.",
+        "Die eigentliche Erkenntnis dieser Karte ist deshalb keine strategische, sondern eine demokratische. Ein politisches System, in dem die wirksamsten Stellen die kleinsten Gremien und die niedrigsten Eintrittshürden haben, ist nicht schwer zu beeinflussen. Es ist nur schwer zu beobachten."
+      ]
+    },
+    "irrtum": {
+      "titel": "Ein verbreiteter Irrtum, der die Karte verzerrt",
+      "punkte": [
+        "Es heißt oft, Deutschland müsse sich im Rat enthalten, wenn sich die Ressorts nicht einigen. Eine Rechtsnorm dafür gibt es nicht. Weder die Gemeinsame Geschäftsordnung der Bundesministerien noch das Gesetz über die Zusammenarbeit von Bundesregierung und Bundestag in EU-Angelegenheiten kennen eine solche Pflicht. Die Praxis wurzelt in Koalitionsvereinbarungen, also in politischer, nicht in rechtlicher Bindung.",
+        "Und sie wirkt nicht so, wie meist angenommen. Bei Entscheidungen mit qualifizierter Mehrheit fehlt eine Enthaltung auf der Ja-Seite und wirkt deshalb wie eine Ablehnung. Bei Einstimmigkeitsentscheidungen, und dazu gehört die Antidiskriminierungsrichtlinie, steht eine Enthaltung der Annahme dagegen nicht entgegen. Dort blockiert nur ein Nein oder ein förmlicher Vorbehalt.",
+        "Auch die Zahlen stützen das Bild nicht. Zwischen 2010 und 2023 stimmte Deutschland in 95,36 Prozent aller Fälle zu und enthielt sich in 2,58 Prozent. Österreich, Ungarn, Polen und vor allem das Vereinigte Königreich enthielten sich häufiger.",
+        "Das ist kein Detail. Wer eine Blockade an der falschen Stelle vermutet, adressiert die falschen Personen."
+      ],
+      "quelle": "Wimmel, integration 3/2024, auf Grundlage der Abstimmungsdaten des Rates 2010 bis 2023"
+    }
+  },
   "beweislage": {
     "label": "Beweislage",
     "lead": "Der Plan behauptet, dass sich globale Normen mit Marktdruck durchsetzen lassen. Das ist keine Vermutung. Es ist mehrfach passiert, und es ist mehrfach misslungen. Fünf Fälle, aus denen sich die Mechanik ableiten lässt.",
@@ -636,7 +955,7 @@
         "titel": "Einstimmigkeit bei Antidiskriminierung",
         "grundlage": "Artikel 19 Absatz 1 AEUV",
         "haerte": 95,
-        "beschreibung": "Antidiskriminierungsmaßnahmen beschließt der Rat einstimmig. Jeder einzelne Mitgliedstaat kann jede Maßnahme verhindern. Die 2008 vorgelegte horizontale Antidiskriminierungsrichtlinie, die den Schutz über die Arbeitswelt hinaus auf Sozialschutz, Bildung, Wohnraum und den Zugang zu Gütern und Dienstleistungen ausdehnen würde, ist seither blockiert. Deutschland, Italien und Tschechien halten ihre Vorbehalte aufrecht, Deutschland durchgehend seit 2008. Im Dezember 2025 konnte die dänische Ratspräsidentschaft nicht einmal einen neuen Kompromisstext vorlegen. Im Juni 2026 ist der Vorschlag weiterhin blockiert.",
+        "beschreibung": "Antidiskriminierungsmaßnahmen beschließt der Rat einstimmig. Jeder einzelne Mitgliedstaat kann jede Maßnahme verhindern. Die 2008 vorgelegte horizontale Antidiskriminierungsrichtlinie, die den Schutz über die Arbeitswelt hinaus auf Sozialschutz, Bildung, Wohnraum und den Zugang zu Gütern und Dienstleistungen ausdehnen würde, ist seither blockiert. Deutschland, Italien und Tschechien halten ihre Vorbehalte aufrecht, Deutschland durchgehend seit 2008. Nahezu jeder Ratsvorsitz seit 2008 hat das Dossier auf die Agenda gesetzt. Im Juni 2025 hielt der polnische Vorsitz aktenkundig fest, er habe keinen neuen Kompromisstext vorschlagen können, weil von den Mitgliedstaaten mit fortbestehenden Bedenken keine Formulierungsvorschläge kamen. Im Dezember 2025 erreichte das Dossier den Rat für Beschäftigung und Soziales nur noch als Fortschrittsbericht zur Kenntnisnahme. Im Juni 2026 ist der Vorschlag weiterhin blockiert.",
         "umgehung": "Kein direkter Weg. Artikel 19 Absatz 2 AEUV erlaubt Fördermaßnahmen mit qualifizierter Mehrheit, solange sie keine Rechtsangleichung bewirken: Geld ja, Harmonisierung nein. Der eigentliche Ausweg ist die Verlagerung möglichst vieler Sachverhalte auf Artikel 157 AEUV.",
         "status": "belegt"
       },
@@ -839,10 +1158,10 @@
             "url": "https://www.europarl.europa.eu/legislative-train/theme-a-new-push-for-european-democracy/file-anti-discrimination-directive"
           },
           {
-            "titel": "Scheitern eines neuen Kompromisstextes im Rat, Dezember 2025",
-            "org": "European Platform for Rehabilitation",
+            "titel": "Beratungsstand zur Gleichbehandlungsrichtlinie, Fortschrittsbericht des Vorsitzes",
+            "org": "Rat der EU, Dokument 9573/25",
             "jahr": "2025",
-            "url": "https://www.epr.eu/danish-presidency-of-the-council-of-the-eu-fails-to-draft-a-new-compromise-on-the-equal-treatment-directive"
+            "url": "https://www.parlament.gv.at/dokument/XXVIII/EU/24941/imfname_11488164.pdf"
           },
           {
             "titel": "Richtlinie (EU) 2022/2381, Quoten, Fristen und Sanktionsreichweite",
@@ -1021,6 +1340,95 @@
             "org": "European Parliamentary Forum",
             "jahr": "2025",
             "url": "https://www.epfweb.org/node/1152"
+          }
+        ]
+      },
+      {
+        "name": "Machtkarte, Ämter und Verfahren",
+        "items": [
+          {
+            "titel": "Regeln für die Zusammensetzung der Kabinette der Mitglieder der Kommission",
+            "org": "Europäische Kommission, P(2024) 7",
+            "jahr": "2024",
+            "url": "https://commission.europa.eu/document/download/ef4cd545-2fa4-445c-8374-8dce9e10acf5_de"
+          },
+          {
+            "titel": "Arbeitsmethoden der Europäischen Kommission 2024 bis 2029, Vorbereitungskette und Sensibilitätskennzeichnung",
+            "org": "Europäische Kommission, P(2024) 5",
+            "jahr": "2024",
+            "url": "https://commission.europa.eu/document/download/4b958a25-a16a-4ac2-bda8-c14a18bd117c_de"
+          },
+          {
+            "titel": "Geschäftsordnung des Rates, Coreper, Tagesordnung, Vorsitzbefugnisse",
+            "org": "Beschluss 2009/937/EU des Rates",
+            "jahr": "2009",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32009D0937"
+          },
+          {
+            "titel": "Verzeichnis der Vorbereitungsgremien des Rates und Gruppe Sozialfragen",
+            "org": "Rat der Europäischen Union",
+            "jahr": "2026",
+            "url": "https://www.consilium.europa.eu/de/council-eu/preparatory-bodies/"
+          },
+          {
+            "titel": "Reihenfolge der Ratsvorsitze bis 2030",
+            "org": "Rat der Europäischen Union",
+            "jahr": "2026",
+            "url": "https://www.consilium.europa.eu/de/council-eu/presidency-council-eu/list-of-presidencies-of-the-council-of-the-european-union/"
+          },
+          {
+            "titel": "Auf welcher Ebene im Rat tatsächlich entschieden wird, quantitative Untersuchung",
+            "org": "Häge, Journal of Common Market Studies",
+            "jahr": "2008",
+            "url": "https://www.frankhaege.eu/publication/hage-2008-decides/hage-2008-decides.pdf"
+          },
+          {
+            "titel": "Geschäftsordnung des Europäischen Parlaments, Koordinatoren, Trilog, Einspruch gegen delegierte Rechtsakte",
+            "org": "Europäisches Parlament",
+            "jahr": "2024",
+            "url": "https://www.europarl.europa.eu/rules/rules20240716/Rules20240716_DE.pdf"
+          },
+          {
+            "titel": "Verteilung von Berichten und Ausschussvorsitzen im Parlament",
+            "org": "EPRS-Briefing PE 637.966",
+            "jahr": "2019",
+            "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2019/637966/EPRS_BRI(2019)637966_EN.pdf"
+          },
+          {
+            "titel": "Prinzip der nationalen Delegation und gewichtete Abstimmung in der europäischen Normung",
+            "org": "CEN-CENELEC Internal Regulations Part 2",
+            "jahr": "2026",
+            "url": "https://boss.cen.eu/media/BOSS%20CENELEC/ref/ir2_e.pdf"
+          },
+          {
+            "titel": "Harmonisierte Normen sind Teil des Unionsrechts",
+            "org": "Gerichtshof der EU, Rechtssache C-588/21 P",
+            "jahr": "2024",
+            "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2024-03/cp240041en.pdf"
+          },
+          {
+            "titel": "Kapitalverteilung und Beschlussfassung der Europäischen Investitionsbank",
+            "org": "EIB Financial Report 2024 und Corporate Governance Report 2024",
+            "jahr": "2025",
+            "url": "https://www.eib.org/attachments/lucalli/20240237_070525_financial_report_2024_en.pdf"
+          },
+          {
+            "titel": "Stimmrechtsanteile im IBRD, Stand 30. Juni 2026",
+            "org": "Weltbank, Corporate Secretariat",
+            "jahr": "2026",
+            "url": "https://thedocs.worldbank.org/en/doc/a16374a6cee037e274c5e932bf9f88c6-0330032021/original/IBRDCountryVotingTable.pdf"
+          },
+          {
+            "titel": "Transparenzregister der EU",
+            "org": "Europäisches Parlament, Rat und Kommission",
+            "jahr": "2026",
+            "url": "https://transparency-register.europa.eu/"
+          },
+          {
+            "titel": "Abstimmungsverhalten im Rat 2010 bis 2023 und der sogenannte German Vote",
+            "org": "Wimmel, integration 3/2024",
+            "jahr": "2024",
+            "url": "https://iep-berlin.de/site/assets/files/3848/wimmel_german_vote_free_content_integration_3_24.pdf"
           }
         ]
       }

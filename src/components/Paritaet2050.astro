@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import daten from '../data/paritaet-2050.de.json';
 
-const { meta, ausgangslage, doktrin, fahrplan, hebel, beweislage, softpower, huerden, scheitern, quellen } = daten;
+const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, beweislage, softpower, huerden, scheitern, quellen } = daten;
 
 const catById = Object.fromEntries(hebel.kategorien.map((k) => [k.id, k]));
 const tempo = ausgangslage.tempo;
@@ -274,11 +274,143 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== V. BEWEISLAGE ===================== -->
-  <section class="section" id="beweislage">
+  <!-- ===================== V. MACHTKARTE ===================== -->
+  <section class="section" id="machtkarte">
     <div class="shell">
       <div class="sec-head" data-reveal>
         <span class="sec-num">(V)</span>
+        <span class="sec-label">{machtkarte.label}</span>
+      </div>
+      <p class="lead-in" data-reveal>{machtkarte.lead}</p>
+      <p class="kernsatz" data-reveal>{machtkarte.kernsatz}</p>
+      <p class="vorbem" data-reveal>{machtkarte.vorbemerkung}</p>
+
+      <!-- Engpässe -->
+      <div class="mk-head" data-reveal>
+        <h3 class="block-title">{machtkarte.engpaesse.titel}</h3>
+        <p class="block-note">{machtkarte.engpaesse.lead}</p>
+      </div>
+
+      <div class="choke-list">
+        {machtkarte.engpaesse.items.map((c, i) => (
+          <details class="choke" data-reveal style={`--delay:${(i % 3) * 50}ms`} open={i === 0}>
+            <summary>
+              <span class="choke-rank">{String(i + 1).padStart(2, '0')}</span>
+              <span class="choke-main">
+                <span class="choke-name">{c.name}</span>
+                <span class="choke-ctrl">{c.kontrolliert}</span>
+              </span>
+              <span class="choke-ebene">{c.ebene}</span>
+              <span class="choke-meters" aria-hidden="true">
+                <span class="cm"><span class="cm-l">H</span><span class="cm-t"><span class="cm-f" style={`--w:${c.hebel}%`}></span></span></span>
+                <span class="cm"><span class="cm-l">U</span><span class="cm-t"><span class="cm-f is-alt" style={`--w:${c.umgehbar}%`}></span></span></span>
+                <span class="cm"><span class="cm-l">Z</span><span class="cm-t"><span class="cm-f is-alt" style={`--w:${c.zugang}%`}></span></span></span>
+              </span>
+            </summary>
+            <div class="choke-body">
+              <p class="choke-why">{c.warum}</p>
+              <div class="choke-in">
+                <span class="mini-lab">Weg dorthin</span>
+                <p>{c.wegHinein}</p>
+              </div>
+              <p class="choke-note">{c.notiz}</p>
+              <p class="choke-src">{c.quelle}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+      <p class="legend" data-reveal>
+        <span>H {machtkarte.engpaesse.skalen.hebel}</span>
+        <span>U {machtkarte.engpaesse.skalen.umgehbar}</span>
+        <span>Z {machtkarte.engpaesse.skalen.zugang}</span>
+      </p>
+
+      <!-- Laufbahnen -->
+      <div class="block" data-reveal>
+        <h3 class="block-title">{machtkarte.laufbahnen.titel}</h3>
+        <p class="block-note">{machtkarte.laufbahnen.lead}</p>
+        <div class="paths">
+          {machtkarte.laufbahnen.wege.map((w) => (
+            <article class="path">
+              <h4 class="path-name">{w.name}</h4>
+              <p class="path-proc">{w.verfahren}</p>
+              <p class="path-meta"><span>{w.dauer}</span><span>{w.huerde}</span></p>
+              <p class="path-note">{w.notiz}</p>
+            </article>
+          ))}
+        </div>
+        <p class="block-schluss">{machtkarte.laufbahnen.befund}</p>
+      </div>
+
+      <!-- Zugang von außen -->
+      <div class="block" data-reveal>
+        <h3 class="block-title">{machtkarte.zugang.titel}</h3>
+        <p class="block-note">{machtkarte.zugang.lead}</p>
+        <div class="ev-list">
+          {machtkarte.zugang.kanaele.map((k) => (
+            <article class="ev">
+              <p class="ev-befund">{k.name}</p>
+              <p class="ev-was">{k.was}</p>
+              <p class="ev-was ev-eff">{k.wirkung}</p>
+            </article>
+          ))}
+        </div>
+        <p class="block-schluss">{machtkarte.zugang.vorbehalt}</p>
+      </div>
+
+      <!-- Irrtum -->
+      <div class="block warn" data-reveal>
+        <h3 class="block-title">{machtkarte.irrtum.titel}</h3>
+        <ul class="ticks">
+          {machtkarte.irrtum.punkte.map((p) => <li>{p}</li>)}
+        </ul>
+        <p class="block-src">{machtkarte.irrtum.quelle}</p>
+      </div>
+
+      <!-- Minimalbesetzung -->
+      <div class="minmax" data-reveal>
+        <h3 class="block-title">{machtkarte.minimum.titel}</h3>
+        <p class="block-note">{machtkarte.minimum.lead}</p>
+
+        <div class="crew">
+          <div class="crew-col">
+            <div class="crew-head">
+              <span class="crew-n">{machtkarte.minimum.kern.length}</span>
+              <span class="crew-t">{machtkarte.minimum.kernTitel}</span>
+            </div>
+            <ol class="crew-list">
+              {machtkarte.minimum.kern.map((r) => (
+                <li><span class="crew-r">{r.rolle}</span><span class="crew-w">{r.warum}</span></li>
+              ))}
+            </ol>
+          </div>
+          <div class="crew-col crew-soft">
+            <div class="crew-head">
+              <span class="crew-n">{machtkarte.minimum.erweiterung.length}</span>
+              <span class="crew-t">{machtkarte.minimum.erweiterungTitel}</span>
+            </div>
+            <ol class="crew-list">
+              {machtkarte.minimum.erweiterung.map((r) => (
+                <li><span class="crew-r">{r.rolle}</span><span class="crew-w">{r.warum}</span></li>
+              ))}
+            </ol>
+          </div>
+        </div>
+
+        <div class="crew-schluss">
+          {machtkarte.minimum.schluss.map((s) => <p>{s}</p>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== VI. BEWEISLAGE ===================== -->
+  <section class="section" id="beweislage">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">(VI)</span>
         <span class="sec-label">{beweislage.label}</span>
       </div>
       <p class="lead-in" data-reveal>{beweislage.lead}</p>
@@ -307,11 +439,11 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== VI. SOFTPOWER ===================== -->
+  <!-- ===================== VII. SOFTPOWER ===================== -->
   <section class="section" id="softpower">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(VI)</span>
+        <span class="sec-num">(VII)</span>
         <span class="sec-label">{softpower.label}</span>
       </div>
       <p class="lead-in" data-reveal>{softpower.lead}</p>
@@ -360,11 +492,11 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== VII. HÜRDEN ===================== -->
+  <!-- ===================== VIII. HÜRDEN ===================== -->
   <section class="section" id="huerden">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(VII)</span>
+        <span class="sec-num">(VIII)</span>
         <span class="sec-label">{huerden.label} · {huerden.items.length}</span>
       </div>
       <p class="lead-in" data-reveal>{huerden.lead}</p>
@@ -396,11 +528,11 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== VIII. SCHEITERN ===================== -->
+  <!-- ===================== IX. SCHEITERN ===================== -->
   <section class="section" id="scheitern">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(VIII)</span>
+        <span class="sec-num">(IX)</span>
         <span class="sec-label">{scheitern.label}</span>
       </div>
       <p class="lead-in" data-reveal>{scheitern.lead}</p>
@@ -422,11 +554,11 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== IX. QUELLEN ===================== -->
+  <!-- ===================== X. QUELLEN ===================== -->
   <section class="section note" id="quellen">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(IX)</span>
+        <span class="sec-num">(X)</span>
         <span class="sec-label">{quellen.label}</span>
       </div>
       <p class="lead-in" data-reveal>{quellen.lead}</p>
@@ -587,6 +719,79 @@ const tempoCfg = {
   .lever-mech { font-size: 0.9rem; color: var(--muted); }
   .lever-note { font-size: 0.87rem; color: var(--ink-soft); border-top: 1px solid var(--hair); padding-top: 0.7rem; margin-top: auto; }
   .empty { margin-top: 2rem; color: var(--muted); font-size: 0.95rem; }
+
+  /* ---------- Machtkarte ---------- */
+  .vorbem {
+    font-size: 0.95rem; color: var(--muted); max-width: 64ch;
+    border-left: 1px solid var(--hair-strong); padding-left: 1.1rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+  .mk-head { margin-bottom: 1.75rem; }
+
+  .choke-list { border-top: 1px solid var(--hair-strong); }
+  .choke { border-bottom: 1px solid var(--hair); }
+  .choke summary {
+    list-style: none; cursor: pointer; padding: 1.15rem 0;
+    display: grid; grid-template-columns: 2.25rem 1fr; gap: 0.4rem 1rem; align-items: start;
+  }
+  .choke summary::-webkit-details-marker { display: none; }
+  @media (min-width: 900px) {
+    .choke summary { grid-template-columns: 2.25rem minmax(0, 1fr) 7.5rem 9rem; align-items: center; }
+  }
+  .choke-rank { font-size: 0.8rem; color: var(--accent); font-variant-numeric: tabular-nums; padding-top: 0.15rem; }
+  .choke-main { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+  .choke-name { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.018em; }
+  .choke-ctrl { font-size: 0.88rem; color: var(--muted); }
+  .choke-ebene {
+    font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint);
+    grid-column: 2; justify-self: start;
+  }
+  @media (min-width: 900px) { .choke-ebene { grid-column: auto; } }
+  .choke-meters { display: none; flex-direction: column; gap: 4px; }
+  @media (min-width: 900px) { .choke-meters { display: flex; } }
+  .cm { display: grid; grid-template-columns: 1rem 1fr; gap: 0.4rem; align-items: center; }
+  .cm-l { font-size: 9.5px; color: var(--faint); letter-spacing: 0.05em; }
+  .cm-t { height: 4px; background: var(--hair); position: relative; overflow: hidden; }
+  .cm-f { position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--accent); }
+  .cm-f.is-alt { background: var(--hair-strong); }
+  .choke-body { padding-bottom: 1.75rem; display: flex; flex-direction: column; gap: 1.1rem; max-width: 72ch; }
+  .choke-why { font-size: 0.95rem; color: var(--muted); }
+  .choke-in { border-left: 2px solid var(--accent); padding-left: 1.1rem; }
+  .choke-in p { font-size: 0.95rem; color: var(--ink-soft); }
+  .choke-note { font-size: 0.93rem; color: var(--ink); font-weight: 500; }
+  .choke-src { font-size: 11.5px; color: var(--faint); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1rem; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); }
+
+  .paths { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 1.75rem; }
+  .path { background: var(--paper); padding: 1.15rem; display: flex; flex-direction: column; gap: 0.55rem; }
+  .path-name { font-size: 1rem; font-weight: 600; letter-spacing: -0.015em; }
+  .path-proc { font-size: 0.88rem; color: var(--ink-soft); }
+  .path-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .path-meta span { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--hair-strong); padding: 0.2rem 0.45rem; }
+  .path-note { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--hair); padding-top: 0.6rem; margin-top: auto; }
+
+  .ev-eff { color: var(--ink-soft); }
+
+  .minmax { border: 2px solid var(--ink); padding: clamp(1.5rem, 3.5vw, 2.5rem); margin-top: clamp(2rem, 4vw, 3rem); }
+  .crew { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 4vw, 3rem); margin-top: 2rem; }
+  @media (min-width: 860px) { .crew { grid-template-columns: 1fr 1fr; } }
+  .crew-head { display: flex; align-items: baseline; gap: 0.9rem; border-bottom: 1px solid var(--hair-strong); padding-bottom: 0.75rem; }
+  .crew-n { font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .crew-soft .crew-n { color: var(--faint); }
+  .crew-t { font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em; }
+  .crew-list { list-style: none; counter-reset: crew; margin-top: 1.25rem; display: flex; flex-direction: column; gap: 1rem; }
+  .crew-list li { counter-increment: crew; position: relative; padding-left: 2rem; }
+  .crew-list li::before {
+    content: counter(crew, decimal-leading-zero);
+    position: absolute; left: 0; top: 0.1rem;
+    font-size: 0.75rem; color: var(--faint); font-variant-numeric: tabular-nums;
+  }
+  .crew-r { display: block; font-size: 0.97rem; font-weight: 600; letter-spacing: -0.01em; }
+  .crew-w { display: block; font-size: 0.88rem; color: var(--muted); margin-top: 0.25rem; }
+  .crew-schluss { margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--hair); display: flex; flex-direction: column; gap: 1rem; }
+  .crew-schluss p { font-size: 0.97rem; color: var(--ink-soft); max-width: 68ch; }
+  .crew-schluss p:last-child { font-weight: 500; color: var(--ink); }
 
   /* ---------- Beweislage ---------- */
   .cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: clamp(1.5rem, 3vw, 2.25rem); }
