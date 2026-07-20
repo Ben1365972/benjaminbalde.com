@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import daten from '../data/paritaet-2050.de.json';
 
-const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, quellen } = daten;
+const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, kritik, quellen } = daten;
 
 // Abschnitte nummerieren sich selbst, damit neue Abschnitte keine Handarbeit erzwingen
 const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
@@ -788,6 +788,56 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
+  <!-- ===================== KRITIK ===================== -->
+  <section class="section" id="kritik">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">{sec()}</span>
+        <span class="sec-label">{kritik.label}</span>
+      </div>
+      <p class="lead-in" data-reveal>{kritik.lead}</p>
+      <p class="kernsatz" data-reveal>{kritik.kernsatz}</p>
+      <p class="vorbem" data-reveal>{kritik.vorbemerkung}</p>
+
+      <div class="lenses" data-reveal>
+        {kritik.perspektiven.map((pv) => (
+          <div class="lens">
+            <span class="lens-who">{pv.wer}</span>
+            <p class="lens-line">{pv.satz}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="einw-list">
+        {kritik.einwaende.map((e, i) => (
+          <details class="einw" data-reveal style={`--delay:${(i % 3) * 50}ms`} open={i < 2}>
+            <summary>
+              <span class="einw-n">{e.n}</span>
+              <span class="einw-main">
+                <span class="einw-title">{e.titel}</span>
+                <span class="einw-who">{e.wer}</span>
+              </span>
+              <span class={`einw-verdict v-${e.urteil.split(',')[0].split(' ')[0]}`}>{e.urteil}</span>
+            </summary>
+            <div class="einw-body">
+              <p class="einw-text">{e.text}</p>
+              <div class="einw-folge"><span class="mini-lab">Konsequenz</span><p>{e.folge}</p></div>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <div class="block warn" data-reveal>
+        <h3 class="block-title">{kritik.meta.titel}</h3>
+        {kritik.meta.text.map((t) => <p class="meta-p">{t}</p>)}
+      </div>
+
+      <p class="kernsatz" data-reveal>{kritik.fazit}</p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
   <!-- ===================== X. QUELLEN ===================== -->
   <section class="section note" id="quellen">
     <div class="shell">
@@ -1194,6 +1244,41 @@ const tempoCfg = {
   .fail-jahr { font-size: 0.85rem; color: var(--accent); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; padding-top: 0.3rem; }
   .fail-title { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
   .fail-body p { font-size: 0.95rem; color: var(--muted); margin-top: 0.6rem; max-width: 66ch; }
+
+  /* ---------- Kritik ---------- */
+  .lenses { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-block: clamp(2rem, 4vw, 3rem); }
+  @media (min-width: 720px) { .lenses { grid-template-columns: 1fr 1fr; } }
+  .lens { background: var(--paper); padding: clamp(1.15rem, 2.5vw, 1.6rem); }
+  .lens-who { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+  .lens-line { font-size: 0.97rem; color: var(--ink-soft); margin-top: 0.6rem; font-weight: 500; max-width: 42ch; }
+
+  .einw-list { border-top: 1px solid var(--hair-strong); }
+  .einw { border-bottom: 1px solid var(--hair); }
+  .einw summary {
+    list-style: none; cursor: pointer; padding: 1.15rem 0;
+    display: grid; grid-template-columns: 2rem 1fr; gap: 0.4rem 1rem; align-items: start;
+  }
+  .einw summary::-webkit-details-marker { display: none; }
+  @media (min-width: 860px) { .einw summary { grid-template-columns: 2rem minmax(0, 1fr) 11rem; align-items: center; } }
+  .einw-n { font-size: 0.8rem; color: var(--accent); font-variant-numeric: tabular-nums; padding-top: 0.15rem; }
+  .einw-main { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+  .einw-title { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.018em; }
+  .einw-who { font-size: 11.5px; color: var(--faint); letter-spacing: 0.02em; }
+  .einw-verdict {
+    grid-column: 2; justify-self: start;
+    font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.28rem 0.55rem; border: 1px solid var(--hair-strong); color: var(--muted); white-space: nowrap;
+  }
+  @media (min-width: 860px) { .einw-verdict { grid-column: auto; justify-self: end; } }
+  .einw-verdict.v-offen { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .einw-verdict.v-eingeräumt { border-color: var(--ink); color: var(--ink); }
+  .einw-verdict.v-teils { color: var(--muted); }
+  .einw-body { padding-bottom: 1.75rem; display: flex; flex-direction: column; gap: 1.1rem; max-width: 72ch; }
+  .einw-text { font-size: 0.95rem; color: var(--muted); }
+  .einw-folge { border-left: 2px solid var(--accent); padding-left: 1.1rem; }
+  .einw-folge p { font-size: 0.95rem; color: var(--ink-soft); }
+  .meta-p { font-size: 0.95rem; color: var(--ink-soft); max-width: 70ch; margin-top: 0.9rem; }
+  .meta-p:first-of-type { margin-top: 0.5rem; }
 
   /* ---------- Quellen ---------- */
   .note { background: var(--paper-2); }
