@@ -2,7 +2,12 @@
 import Base from '../layouts/Base.astro';
 import daten from '../data/paritaet-2050.de.json';
 
-const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, beweislage, softpower, huerden, scheitern, quellen } = daten;
+const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, beweislage, softpower, huerden, scheitern, quellen } = daten;
+
+// Abschnitte nummerieren sich selbst, damit neue Abschnitte keine Handarbeit erzwingen
+const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
+let secCount = 0;
+const sec = () => `(${ROMAN[secCount++]})`;
 
 const catById = Object.fromEntries(hebel.kategorien.map((k) => [k.id, k]));
 const tempo = ausgangslage.tempo;
@@ -33,7 +38,7 @@ const tempoCfg = {
   <section class="section" id="ausgangslage">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(I)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{ausgangslage.label}</span>
       </div>
       <p class="lead-in" data-reveal>{ausgangslage.lead}</p>
@@ -128,7 +133,7 @@ const tempoCfg = {
   <section class="section" id="doktrin">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(II)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{doktrin.label}</span>
       </div>
       <p class="lead-in" data-reveal>{doktrin.lead}</p>
@@ -154,7 +159,7 @@ const tempoCfg = {
   <section class="section" id="fahrplan">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(III)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{fahrplan.label}</span>
       </div>
       <p class="lead-in" data-reveal>{fahrplan.lead}</p>
@@ -219,7 +224,7 @@ const tempoCfg = {
   <section class="section" id="hebel">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(IV)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{hebel.label} · {hebel.items.length} Instrumente</span>
       </div>
       <p class="lead-in" data-reveal>{hebel.lead}</p>
@@ -278,7 +283,7 @@ const tempoCfg = {
   <section class="section" id="machtkarte">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(V)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{machtkarte.label}</span>
       </div>
       <p class="lead-in" data-reveal>{machtkarte.lead}</p>
@@ -406,11 +411,158 @@ const tempoCfg = {
 
   <hr class="rule shell-rule" />
 
-  <!-- ===================== VI. BEWEISLAGE ===================== -->
+  <!-- ===================== REGIONEN ===================== -->
+  <section class="section" id="regionen">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">{sec()}</span>
+        <span class="sec-label">{regionen.label}</span>
+      </div>
+      <p class="lead-in" data-reveal>{regionen.lead}</p>
+      <p class="kernsatz" data-reveal>{regionen.kernsatz}</p>
+
+      <!-- Die Umkehrung -->
+      <div class="block warn" data-reveal>
+        <h3 class="block-title">{regionen.umkehrung.titel}</h3>
+        <p class="block-note">{regionen.umkehrung.lead}</p>
+        <ul class="ticks">
+          {regionen.umkehrung.punkte.map((p) => <li>{p}</li>)}
+        </ul>
+        <p class="block-schluss">{regionen.umkehrung.folgerung}</p>
+      </div>
+
+      <!-- Tempo je Region -->
+      <div class="block" data-reveal>
+        <h3 class="block-title">{regionen.tempo.titel}</h3>
+        <p class="block-note">{regionen.tempo.hinweis}</p>
+        <div class="rtempo" data-viz="bars">
+          {regionen.tempo.items.map((r) => (
+            <div class="rt-row">
+              <span class="rt-name">{r.name}</span>
+              <div class="rt-track">
+                <div class="rt-fill" style={`--w:${Math.round((r.jahre / 208) * 100)}%`}></div>
+              </div>
+              <span class="rt-j">{r.jahre} J.</span>
+              <span class="rt-s">{r.score.toFixed(1).replace('.', ',')} %</span>
+              <span class="rt-d">+{r.seit.toFixed(1).replace('.', ',')} Pp seit 2006</span>
+            </div>
+          ))}
+        </div>
+        <p class="block-src">{regionen.tempo.quelle}</p>
+        <p class="block-schluss">{regionen.tempo.schluss}</p>
+      </div>
+
+      <!-- Regionen einzeln -->
+      <div class="reg-list">
+        {regionen.items.map((r, i) => (
+          <details class="reg" data-reveal style={`--delay:${(i % 3) * 50}ms`} open={i === 0}>
+            <summary>
+              <span class="reg-main">
+                <span class="reg-name">{r.name}</span>
+                <span class="reg-top">{r.spitze}</span>
+              </span>
+              <span class="reg-j">{r.jahre}<span class="reg-ju">Jahre</span></span>
+            </summary>
+            <div class="reg-body">
+              <p class="reg-profil">{r.profil}</p>
+              <div class="reg-cols">
+                <div class="reg-col">
+                  <span class="mini-lab">Schwachstelle</span>
+                  <p>{r.schwaeche}</p>
+                </div>
+                <div class="reg-col">
+                  <span class="mini-lab">Regionales Instrument</span>
+                  <p class="reg-instr">{r.instrument}</p>
+                  <p>{r.instrumentStand}</p>
+                </div>
+              </div>
+              <div class="reg-ansatz">
+                <span class="mini-lab">Ansatz</span>
+                <p>{r.ansatz}</p>
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Reformer -->
+      <div class="block" data-reveal>
+        <h3 class="block-title">{regionen.reformer.titel}</h3>
+        <p class="block-note">{regionen.reformer.text}</p>
+        <div class="reformers">
+          {regionen.reformer.laender.map((l) => <span class="reformer">{l}</span>)}
+        </div>
+        <p class="block-schluss">{regionen.reformer.schluss}</p>
+        <p class="block-src">{regionen.reformer.quelle}</p>
+      </div>
+
+      <p class="vorbem" data-reveal>{regionen.methodik}</p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== NETZWERKE ===================== -->
+  <section class="section" id="netzwerke">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">{sec()}</span>
+        <span class="sec-label">{netzwerke.label}</span>
+      </div>
+      <p class="lead-in" data-reveal>{netzwerke.lead}</p>
+      <p class="kernsatz" data-reveal>{netzwerke.kernsatz}</p>
+
+      {netzwerke.ebenen.map((e) => (
+        <div class="nw-ebene" data-reveal>
+          <h3 class="nw-ebene-t">{e.name}</h3>
+          <div class="nw-grid">
+            {e.items.map((o) => (
+              <article class="nw">
+                <div class="nw-head">
+                  <h4 class="nw-name">{o.name}</h4>
+                  {o.gegruendet && <span class="nw-jahr">{o.gegruendet}</span>}
+                </div>
+                <p class="nw-reach">{o.reichweite}</p>
+                <p class="nw-focus">{o.schwerpunkt}</p>
+                <p class="nw-eff">{o.wirkung}</p>
+                <p class="nw-acc"><span class="mini-lab">Zugang</span>{o.zugang}</p>
+                {o.notiz && <p class="nw-note">{o.notiz}</p>}
+                <a class="nw-url" href={o.url} target="_blank" rel="noopener">{o.url.replace('https://', '').replace(/\/$/, '')}</a>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- Rangliste -->
+      <div class="block" data-reveal>
+        <h3 class="block-title">{netzwerke.rangliste.titel}</h3>
+        <p class="block-note">{netzwerke.rangliste.lead}</p>
+        <ol class="nwrank">
+          {netzwerke.rangliste.items.map((r) => (
+            <li><span class="nwrank-n">{r.n}</span><span class="nwrank-b"><span class="nwrank-name">{r.name}</span><span class="nwrank-w">{r.warum}</span></span></li>
+          ))}
+        </ol>
+      </div>
+
+      <!-- Missverhältnis -->
+      <div class="block warn" data-reveal>
+        <h3 class="block-title">{netzwerke.luecke.titel}</h3>
+        <p class="block-note">{netzwerke.luecke.text}</p>
+        <p class="block-schluss">{netzwerke.luecke.folgerung}</p>
+      </div>
+
+      <p class="vorbem" data-reveal>{netzwerke.vorbehalt}</p>
+    </div>
+  </section>
+
+  <hr class="rule shell-rule" />
+
+  <!-- ===================== BEWEISLAGE ===================== -->
   <section class="section" id="beweislage">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(VI)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{beweislage.label}</span>
       </div>
       <p class="lead-in" data-reveal>{beweislage.lead}</p>
@@ -443,7 +595,7 @@ const tempoCfg = {
   <section class="section" id="softpower">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(VII)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{softpower.label}</span>
       </div>
       <p class="lead-in" data-reveal>{softpower.lead}</p>
@@ -496,7 +648,7 @@ const tempoCfg = {
   <section class="section" id="huerden">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(VIII)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{huerden.label} · {huerden.items.length}</span>
       </div>
       <p class="lead-in" data-reveal>{huerden.lead}</p>
@@ -532,7 +684,7 @@ const tempoCfg = {
   <section class="section" id="scheitern">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(IX)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{scheitern.label}</span>
       </div>
       <p class="lead-in" data-reveal>{scheitern.lead}</p>
@@ -558,7 +710,7 @@ const tempoCfg = {
   <section class="section note" id="quellen">
     <div class="shell">
       <div class="sec-head" data-reveal>
-        <span class="sec-num">(X)</span>
+        <span class="sec-num">{sec()}</span>
         <span class="sec-label">{quellen.label}</span>
       </div>
       <p class="lead-in" data-reveal>{quellen.lead}</p>
@@ -792,6 +944,67 @@ const tempoCfg = {
   .crew-schluss { margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--hair); display: flex; flex-direction: column; gap: 1rem; }
   .crew-schluss p { font-size: 0.97rem; color: var(--ink-soft); max-width: 68ch; }
   .crew-schluss p:last-child { font-weight: 500; color: var(--ink); }
+
+  /* ---------- Regionen ---------- */
+  .rtempo { margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .rt-row { display: grid; grid-template-columns: 1fr; gap: 0.2rem; font-size: 0.9rem; }
+  @media (min-width: 780px) {
+    .rt-row { grid-template-columns: 13rem 1fr 4rem 4.5rem 10rem; gap: 0.9rem; align-items: center; }
+  }
+  .rt-name { color: var(--ink-soft); font-weight: 500; }
+  .rt-track { height: 8px; background: var(--hair); position: relative; overflow: hidden; }
+  .rt-fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--accent); transition: width 1.1s var(--ease); }
+  .rtempo.run .rt-fill { width: var(--w); }
+  .rt-j { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .rt-s { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 0.85rem; }
+  .rt-d { font-size: 11.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
+
+  .reg-list { border-top: 1px solid var(--hair-strong); margin-top: clamp(2rem, 4vw, 3rem); }
+  .reg { border-bottom: 1px solid var(--hair); }
+  .reg summary {
+    list-style: none; cursor: pointer; padding: 1.15rem 0;
+    display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+  }
+  .reg summary::-webkit-details-marker { display: none; }
+  .reg-main { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+  .reg-name { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.02em; }
+  .reg-top { font-size: 0.85rem; color: var(--muted); }
+  .reg-j { font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; display: flex; flex-direction: column; align-items: flex-end; }
+  .reg-ju { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); font-weight: 500; margin-top: 0.3rem; }
+  .reg-body { padding-bottom: 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; }
+  .reg-profil { font-size: 0.95rem; color: var(--ink-soft); max-width: 72ch; }
+  .reg-cols { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+  @media (min-width: 780px) { .reg-cols { grid-template-columns: 1fr 1fr; } }
+  .reg-col p { font-size: 0.9rem; color: var(--muted); max-width: 46ch; }
+  .reg-instr { color: var(--ink-soft) !important; font-weight: 500; margin-bottom: 0.35rem; }
+  .reg-ansatz { border-left: 2px solid var(--accent); padding-left: 1.1rem; }
+  .reg-ansatz p { font-size: 0.95rem; color: var(--ink-soft); max-width: 68ch; }
+
+  .reformers { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .reformer { font-size: 0.9rem; padding: 0.4rem 0.8rem; border: 1px solid var(--accent); color: var(--accent); }
+
+  /* ---------- Netzwerke ---------- */
+  .nw-ebene { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .nw-ebene-t { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding-bottom: 0.75rem; border-bottom: 1px solid var(--hair-strong); margin-bottom: 1px; }
+  .nw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); border-top: 0; }
+  .nw { background: var(--paper); padding: clamp(1.15rem, 2.5vw, 1.6rem); display: flex; flex-direction: column; gap: 0.6rem; }
+  .nw-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+  .nw-name { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.018em; }
+  .nw-jahr { font-size: 11.5px; color: var(--faint); font-variant-numeric: tabular-nums; flex: none; }
+  .nw-reach { font-size: 0.85rem; color: var(--accent); }
+  .nw-focus { font-size: 0.88rem; color: var(--ink-soft); }
+  .nw-eff { font-size: 0.85rem; color: var(--muted); }
+  .nw-acc { font-size: 0.85rem; color: var(--muted); }
+  .nw-note { font-size: 0.85rem; color: var(--ink); border-top: 1px solid var(--hair); padding-top: 0.65rem; }
+  .nw-url { font-size: 11.5px; color: var(--faint); text-decoration: none; margin-top: auto; padding-top: 0.5rem; word-break: break-all; }
+  .nw-url:hover { color: var(--accent); }
+
+  .nwrank { list-style: none; margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.9rem; }
+  .nwrank li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.75rem; align-items: start; }
+  .nwrank-n { font-size: 0.78rem; color: var(--accent); font-variant-numeric: tabular-nums; padding-top: 0.2rem; }
+  .nwrank-b { display: flex; flex-direction: column; gap: 0.2rem; }
+  .nwrank-name { font-size: 0.97rem; font-weight: 600; letter-spacing: -0.01em; }
+  .nwrank-w { font-size: 0.87rem; color: var(--muted); max-width: 62ch; }
 
   /* ---------- Beweislage ---------- */
   .cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: clamp(1.5rem, 3vw, 2.25rem); }

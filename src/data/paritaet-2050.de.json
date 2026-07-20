@@ -811,6 +811,467 @@
       "quelle": "Wimmel, integration 3/2024, auf Grundlage der Abstimmungsdaten des Rates 2010 bis 2023"
     }
   },
+  "regionen": {
+    "label": "Weltregionen",
+    "lead": "Ein Fahrplan, der von Europa ausgeht, muss zuerst eine unbequeme Frage beantworten: Ist Europa überhaupt vorn? Die Daten sagen an entscheidenden Stellen nein.",
+    "kernsatz": "Europa hat den Vorsprung, den es zu haben glaubt, in mehreren Feldern nicht. Wer das übersieht, baut einen Plan auf einer Fiktion.",
+    "umkehrung": {
+      "titel": "Sechs Befunde, die die Rollenverteilung umdrehen",
+      "lead": "Alle aus derselben Erhebung, die Europa üblicherweise zitiert, wenn es sich vorn sieht.",
+      "punkte": [
+        "Namibia liegt auf Rang 8 der Welt. Deutschland auf Rang 9.",
+        "In Subsahara-Afrika sind 40,2 Prozent der Ministerposten und 37,7 Prozent der Parlamentssitze von Frauen besetzt. Die Region liegt im Teilindex zur wirtschaftlichen Teilhabe weltweit auf Rang 5.",
+        "Beim Teilindex zur wirtschaftlichen Teilhabe führt weltweit nicht ein europäisches Land, sondern Botswana mit 87,3 Prozent.",
+        "Bangladesch liegt auf Rang 24 und hat sich binnen eines Jahres um 75 Plätze verbessert, den größten Sprung aller Länder. Damit steht es vor der Mehrheit der EU-Staaten.",
+        "Lateinamerika und die Karibik bewegen sich dreimal so schnell wie Zentralasien und erreichen die Parität rechnerisch 19 Jahre vor Europa.",
+        "Europa hat seit 2024 keinen Fortschritt gemacht. Der Wert steht still."
+      ],
+      "folgerung": "Daraus folgt nicht, dass der Plan falsch ist. Es folgt, dass seine Erzählung falsch wäre, wenn sie von Belehrung ausginge. Europas Beitrag liegt nicht darin, ein Vorbild zu sein, sondern darin, einen Markt zu besitzen, an den sich Bedingungen knüpfen lassen. Das ist eine schwächere und ehrlichere Begründung."
+    },
+    "tempo": {
+      "titel": "Wie lange die Regionen brauchen",
+      "hinweis": "Bei aktuellem Tempo, sortiert nach verbleibenden Jahren. Der Wert dahinter zeigt, wie viele Prozentpunkte die Region seit 2006 gutgemacht hat. Die beiden Spalten erzählen unterschiedliche Geschichten.",
+      "quelle": "Weltwirtschaftsforum, Global Gender Gap Report 2025, 148 Volkswirtschaften",
+      "items": [
+        {
+          "name": "Lateinamerika und Karibik",
+          "score": 74.5,
+          "jahre": 57,
+          "seit": 8.6
+        },
+        {
+          "name": "Europa",
+          "score": 75.1,
+          "jahre": 76,
+          "seit": 6.3
+        },
+        {
+          "name": "Nordamerika",
+          "score": 75.8,
+          "jahre": 89,
+          "seit": 5.2
+        },
+        {
+          "name": "Subsahara-Afrika",
+          "score": 68.0,
+          "jahre": 107,
+          "seit": 5.6
+        },
+        {
+          "name": "Südasien",
+          "score": 64.6,
+          "jahre": 138,
+          "seit": 4.9
+        },
+        {
+          "name": "Ostasien und Pazifik",
+          "score": 69.4,
+          "jahre": 179,
+          "seit": 3.3
+        },
+        {
+          "name": "Naher Osten und Nordafrika",
+          "score": 61.7,
+          "jahre": 185,
+          "seit": 3.9
+        },
+        {
+          "name": "Zentralasien und Südkaukasus",
+          "score": 69.8,
+          "jahre": 208,
+          "seit": 2.7
+        }
+      ],
+      "schluss": "Der höchste Stand und das höchste Tempo fallen nicht zusammen. Nordamerika steht am besten da und braucht dennoch 89 Jahre. Lateinamerika steht schlechter und ist 32 Jahre schneller. Für einen Fahrplan zählt die zweite Spalte, nicht die erste."
+    },
+    "items": [
+      {
+        "name": "Lateinamerika und Karibik",
+        "jahre": 57,
+        "score": 74.5,
+        "spitze": "Barbados (15.), Costa Rica (16.), Nicaragua (18.)",
+        "schluss": "Belize (89.)",
+        "profil": "Die schnellste Region der Welt. Politisch auf Rang 2 mit 35,0 Prozent, zehn von 23 Volkswirtschaften haben volle Bildungsparität, die übrigen dreizehn liegen innerhalb von drei Prozentpunkten. Nicaragua und Mexiko haben volle parlamentarische Parität. Fünfzehn Volkswirtschaften hatten in fünf Jahrzehnten eine Frau an der Staatsspitze.",
+        "schwaeche": "Wirtschaftlich mit 65,6 Prozent drittniedrigster Wert weltweit. Politische Repräsentation und wirtschaftliche Teilhabe klaffen hier weiter auseinander als anderswo.",
+        "instrument": "Konvention von Belém do Pará der Organisation Amerikanischer Staaten mit dem Folgemechanismus MESECVI",
+        "instrumentStand": "Der Ratifikationsstand konnte nicht aus der Primärquelle belegt werden, die Server der Organisation blockieren automatisierte Zugriffe.",
+        "ansatz": "Die Region braucht keine Belehrung, sondern Partnerschaft auf Augenhöhe. Sie ist der wahrscheinlichste erste Partner für die Standardallianz aus Phase III, weil sie schneller ist als Europa und ein eigenes verbindliches Regionalinstrument besitzt."
+      },
+      {
+        "name": "Europa",
+        "jahre": 76,
+        "score": 75.1,
+        "spitze": "Island (1.), Finnland (2.), Norwegen (3.)",
+        "schluss": "Türkei (135.)",
+        "profil": "Politisch der weltweit höchste Regionalwert mit 35,4 Prozent, 55,3 Prozent Ministerinnen und 53,3 Prozent Parlamentarierinnen. Island hält Rang 1 seit 2009 und ist seit 2022 die einzige Volkswirtschaft über 90 Prozent.",
+        "schwaeche": "Seit 2024 kein Fortschritt. Die Spannweite innerhalb Europas beträgt beim politischen Teilindex 89,5 Prozentpunkte. Bei der Gesundheit hat Europa seit Beginn der Messung rund einen Prozentpunkt verloren, die gesunde Lebenserwartung 2,6 Punkte. Tschechien liegt auf Rang 102, Ungarn auf 105.",
+        "instrument": "Istanbul-Konvention des Europarats",
+        "instrumentStand": "39 Ratifikationen. Sechs Staaten haben nur unterzeichnet: Armenien, Bulgarien, Tschechien, Ungarn, Litauen und die Slowakei. Aserbaidschan hat weder unterzeichnet noch ratifiziert. Die Türkei hat 2021 als bislang einziger Staat gekündigt. Die EU ist 2023 beigetreten. Über zwanzig Staaten, darunter Deutschland, haben Vorbehalte hinterlegt.",
+        "ansatz": "Die eigene Baustelle. Der Stillstand seit 2024 ist der stärkste Einzelbeleg für die dritte Doktrin dieses Plans. Solange Europa steht, ist jede Forderung nach außen eine Forderung, schneller zu sein als der Fordernde."
+      },
+      {
+        "name": "Nordamerika",
+        "jahre": 89,
+        "score": 75.8,
+        "spitze": "nicht gesondert ausgewiesen",
+        "schluss": "nicht gesondert ausgewiesen",
+        "profil": "Der höchste regionale Gesamtstand weltweit.",
+        "schwaeche": "Und trotzdem 89 Jahre bis zur Parität, also 32 Jahre länger als Lateinamerika. Ein hoher Stand bei niedrigem Tempo ist für einen Fahrplan der ungünstigste Fall.",
+        "instrument": "Kein verbindliches regionales Gleichstellungsinstrument",
+        "instrumentStand": "Die Vereinigten Staaten haben weder das Übereinkommen zur Entgeltgleichheit noch das zur Diskriminierung in Beschäftigung und Beruf ratifiziert, ebenso wenig das Übereinkommen gegen Gewalt und Belästigung in der Arbeitswelt.",
+        "ansatz": "Nicht als Partner einplanen, sondern als Variable. Die Ratifikationslücke bei den grundlegenden Arbeitsübereinkommen ist strukturell und überdauert einzelne Regierungen."
+      },
+      {
+        "name": "Subsahara-Afrika",
+        "jahre": 107,
+        "score": 68.0,
+        "spitze": "Namibia (8.), Kap Verde (30.), Südafrika (33.), Ruanda (39.)",
+        "schluss": "Tschad (146.)",
+        "profil": "Die Region mit dem stärksten politischen Profil außerhalb Europas: 40,2 Prozent Ministerinnen, 37,7 Prozent Parlamentssitze. Im Teilindex wirtschaftliche Teilhabe Rang 5 weltweit, angeführt von Botswana mit dem weltweit höchsten Wert überhaupt. Ruanda hat volle parlamentarische Parität.",
+        "schwaeche": "Die größte Spreizung aller Regionen: von Rang 8 bis Rang 146. Der Tschad hat den weltweit niedrigsten Wirtschafts-Score mit 44,4 Prozent. Gegenüber dem Vorjahr hat die Region 0,2 Prozentpunkte verloren. Togo stürzte um 44 Plätze ab, Sierra Leone um 32.",
+        "instrument": "Maputo-Protokoll der Afrikanischen Union",
+        "instrumentStand": "44 von 55 Mitgliedstaaten haben ratifiziert. Nicht ratifiziert haben Botswana, Burundi, die Zentralafrikanische Republik, Tschad, Ägypten, Eritrea, Madagaskar, Marokko, Niger, Somalia und Sudan. Botswana, Ägypten und Marokko haben nicht einmal unterzeichnet. Äthiopien hat sieben Vorbehalte hinterlegt.",
+        "ansatz": "Die Region ist in der politischen Repräsentation weiter als ihr Ruf und besitzt mit dem Maputo-Protokoll ein verbindliches Instrument, das breiter ratifiziert ist als die Istanbul-Konvention in Europa. Der Ansatz ist deshalb Ko-Trägerschaft, nicht Programmarbeit. Hier liegt die glaubwürdigste Antwort auf den Vorwurf des Wertekolonialismus."
+      },
+      {
+        "name": "Südasien",
+        "jahre": 138,
+        "score": 64.6,
+        "spitze": "Bangladesch (24.)",
+        "schluss": "Pakistan (148., weltweit letzter Platz)",
+        "profil": "Die Region mit der größten Einzelbewegung: Bangladesch hat sich um 75 Plätze verbessert und liegt damit vor der Mehrheit der EU-Staaten. Der politische Teilindex lag 2006 mit 21,9 Prozent höher als in jeder anderen Region.",
+        "schwaeche": "Seither nur 4,9 Punkte Zuwachs in der Politik. Wirtschaftlich 40,6 Prozent. In Pakistan sind 48,5 Prozent der Frauen alphabetisiert. Bhutan und die Malediven liegen parlamentarisch unter fünf Prozent. Das geschätzte Erwerbseinkommen ist regional um 7,8 Punkte gefallen.",
+        "instrument": "Kein belegbares verbindliches Regionalinstrument",
+        "instrumentStand": "Zu den Instrumenten der südasiatischen Regionalorganisation liegen keine belegten Angaben vor.",
+        "ansatz": "Handelspolitisch der stärkste Ansatzpunkt der Welt für europäische Instrumente, weil Bangladesch der mit Abstand größte Nutzer des europäischen Zollpräferenzsystems für die am wenigsten entwickelten Länder ist und zugleich unter verschärfter Beobachtung steht. Marktdruck wirkt hier tatsächlich."
+      },
+      {
+        "name": "Ostasien und Pazifik",
+        "jahre": 179,
+        "score": 69.4,
+        "spitze": "Neuseeland (5.), Australien (13.), Philippinen (20.)",
+        "schluss": "Papua-Neuguinea (133.)",
+        "profil": "Wirtschaftlich auf Rang 2 weltweit mit 71,6 Prozent. Die Philippinen liegen auf Rang 20, vor den meisten EU-Staaten.",
+        "schwaeche": "Politisch nur 15,3 Prozent. Nur Neuseeland überschreitet die Hälfte. Japan, Kambodscha, Malaysia, Brunei, Fidschi, Papua-Neuguinea und Vanuatu liegen politisch unter zehn Prozent. Neun von 19 Volkswirtschaften hatten nie ein weibliches Staatsoberhaupt. Der weltweit niedrigste Gesundheitswert. Die Parität in der Primarschulbildung ist um 2,2 Punkte gefallen.",
+        "instrument": "Kein belegbares verbindliches Regionalinstrument",
+        "instrumentStand": "Zu den Erklärungen und Aktionsplänen der südostasiatischen Staatengemeinschaft liegen keine belegten Angaben vor.",
+        "ansatz": "Die Region ist wirtschaftlich stark und politisch verschlossen. Deshalb greifen hier Instrumente, die an Unternehmen ansetzen, und nicht solche, die an Regierungen ansetzen. Lieferkette und Kapitalmarkt statt Diplomatie."
+      },
+      {
+        "name": "Naher Osten und Nordafrika",
+        "jahre": 185,
+        "score": 61.7,
+        "spitze": "Vereinigte Arabische Emirate (69.), Israel (76.)",
+        "schluss": "Sudan (147.)",
+        "profil": "Der niedrigste Gesamtstand aller Regionen und zugleich die stärkste relative Bewegung in der Politik: von einem sehr niedrigen Ausgangswert um 8,3 Punkte auf 10,5 Prozent, also mehr als verdreifacht. Bildung liegt bei 97,6 Prozent, Rang 5 weltweit. Jordanien meldet über 50 Prozent Frauenanteil bei leitenden Angestellten.",
+        "schwaeche": "Wirtschaftlich 42,4 Prozent, der zweitniedrigste Wert weltweit. In Algerien, Ägypten, Iran, Jordanien und Sudan nehmen Männer fast viermal so häufig am Arbeitsmarkt teil wie Frauen.",
+        "instrument": "Kein verbindliches regionales Gleichstellungsinstrument",
+        "instrumentStand": "Ägypten und Marokko haben das Maputo-Protokoll nicht unterzeichnet.",
+        "ansatz": "Der Widerspruch zwischen Bildungsparität und wirtschaftlicher Ausschließung ist hier am schärfsten und damit auch am angreifbarsten. Die Region bildet Frauen aus und lässt sie nicht arbeiten. Das ist ein ökonomisches Argument, kein moralisches, und es ist das einzige, das dort Gehör findet."
+      },
+      {
+        "name": "Zentralasien und Südkaukasus",
+        "jahre": 208,
+        "score": 69.8,
+        "spitze": "Armenien (59.), Georgien (63.)",
+        "schluss": "Tadschikistan (129.)",
+        "profil": "Homogenste Region der Welt: Nur acht Prozentpunkte trennen das beste vom schwächsten Land. Gesundheit bei 97,3 Prozent.",
+        "schwaeche": "Das langsamste Tempo der Welt, 208 Jahre. Politisch 11,6 Prozent. Und der einzige Fall regionaler Rückentwicklung in der Bildung: minus 0,3 Prozentpunkte seit 2006.",
+        "instrument": "Teilweise Istanbul-Konvention",
+        "instrumentStand": "Armenien hat nur unterzeichnet, Aserbaidschan weder unterzeichnet noch ratifiziert.",
+        "ansatz": "Die Region mit dem geringsten europäischen Hebel und dem größten Abstand. Realistisch ist hier auf Sicht keine Marktkonditionalität, sondern nur Bildungsmobilität und Sichtbarkeit. Ein ehrlicher Plan gesteht ein, dass er hier am wenigsten kann."
+      }
+    ],
+    "reformer": {
+      "titel": "Wer tatsächlich reformiert",
+      "text": "Die Weltbank zählt Rechtsreformen zugunsten von Frauen. Zwischen Oktober 2023 und Oktober 2025 haben 68 Volkswirtschaften reformiert. Als führende Reformer weist sie namentlich sechs aus. Kein einziger davon liegt in Europa.",
+      "laender": [
+        "Ägypten",
+        "Jordanien",
+        "Kirgisische Republik",
+        "Oman",
+        "Madagaskar",
+        "Somalia"
+      ],
+      "schluss": "Das ist kein Grund zur Beruhigung, denn diese Länder starten von sehr niedrigen Niveaus, und Reformen auf dem Papier sind nicht Durchsetzung in der Praxis. Es ist aber ein Grund, die Richtung der Belehrung zu überdenken. Bewegung entsteht dort, wo noch viel zu holen ist, nicht dort, wo man sich für fertig hält.",
+      "quelle": "Weltbank, Women, Business and the Law 2026, Datenstand 1. Oktober 2025"
+    },
+    "methodik": "Die Regionenzuschnitte folgen der Einteilung des Weltwirtschaftsforums, nicht politischen Regionsbegriffen. Der Westbalkan, die Ukraine, Belarus, Moldau und die Türkei zählen dort zu Europa, der Südkaukasus zu Zentralasien. Zu den Regionalinstrumenten Lateinamerikas und Südostasiens ließen sich die Ratifikationsstände nicht aus Primärquellen belegen, weil die zuständigen Organisationen automatisierte Zugriffe blockieren. Sie sind hier deshalb ohne Zahlen beschrieben."
+  },
+  "netzwerke": {
+    "label": "Netzwerke",
+    "lead": "Ein Verzeichnis der organisierten Verbündeten. Alles hier Aufgeführte sind eingetragene Verbände, Stiftungen und Agenturen, die diese Agenda öffentlich betreiben. Was fehlt, fehlt nicht aus Diskretion, sondern weil es sich nicht belegen ließ.",
+    "kernsatz": "Die Bewegung ist gut organisiert und schlecht ausgestattet. Beides muss man wissen, bevor man auf sie baut.",
+    "ebenen": [
+      {
+        "name": "Deutschland",
+        "items": [
+          {
+            "name": "Deutscher Frauenrat",
+            "gegruendet": null,
+            "reichweite": "58 Mitgliedsorganisationen, eigene Mitgliedschaft in 37 weiteren Verbänden",
+            "schwerpunkt": "Größte frauen- und gleichstellungspolitische Interessenvertretung Deutschlands, tätig auf Bundes-, EU- und UN-Ebene.",
+            "wirkung": "Eingetragen im Lobbyregister des Bundestages unter R002377, Status aktiv. Jahresausgaben 2025 zwischen 160.001 und 170.000 Euro, 1,15 Vollzeitäquivalente. Die Mitgliedsverbände reichen von Gewerkschaften über Kirchen und Parteien bis zu Sport, Kultur und Wirtschaft.",
+            "zugang": "Dachverband, Mitgliedschaft über Organisationen.",
+            "notiz": "Der bemerkenswerteste Befund dieses ganzen Verzeichnisses: Die größte gleichstellungspolitische Interessenvertretung des Landes arbeitet mit etwas mehr als einer einzigen Vollzeitstelle. Zum Vergleich stehen die dokumentierten dreistelligen Millionenbeträge auf der Gegenseite.",
+            "url": "https://www.frauenrat.de/"
+          },
+          {
+            "name": "FidAR, Frauen in die Aufsichtsräte",
+            "gegruendet": null,
+            "reichweite": "Bundesweit mit Regionalstruktur",
+            "schwerpunkt": "Mehr Frauen in Aufsichtsräten und Vorständen.",
+            "wirkung": "Gibt die Women-on-Board-Index-Reihe heraus, darunter den WoB-Index 185 für DAX, MDAX, SDAX und mitbestimmte Unternehmen des regulierten Marktes sowie einen eigenen Index für öffentliche Unternehmen. Damit besitzt der Verband das etablierte Monitoringinstrument für den deutschen Kapitalmarkt.",
+            "zugang": "nicht belegbar",
+            "notiz": "Wer eine Kennzahl besitzt, auf die andere sich beziehen, hat mehr Einfluss als wer Mitglieder zählt. Genau darum geht es in Phase III dieses Plans.",
+            "url": "https://www.fidar.de/"
+          },
+          {
+            "name": "Business and Professional Women Germany",
+            "gegruendet": 1931,
+            "reichweite": "Rund 1.300 Mitglieder in 28 Clubs in Deutschland, rund 17.500 in Europa, rund 36.000 in über 110 Ländern",
+            "schwerpunkt": "Berufliche Entwicklung, Entgeltgleichheit, digitale Teilhabe, Mentoring.",
+            "wirkung": "Hat 2008 den Equal Pay Day in Deutschland eingeführt. Das ist die am klarsten belegte Einzelwirkung eines deutschen Frauennetzwerks in diesem Verzeichnis.",
+            "zugang": "Über die regionalen Clubs.",
+            "notiz": "Die internationale Struktur macht den Verband zu einem der wenigen deutschen Netzwerke mit unmittelbarer globaler Anschlussfähigkeit.",
+            "url": "https://www.bpw-germany.de/"
+          },
+          {
+            "name": "Deutscher Juristinnenbund",
+            "gegruendet": null,
+            "reichweite": "Bundesweit, Geschäftsstelle in Berlin",
+            "schwerpunkt": "Rechtliche Fortentwicklung einer geschlechtergerechten Gesellschaft.",
+            "wirkung": "Regelmäßige Stellungnahmen im Gesetzgebungsverfahren, belegt unter anderem zu Familienrechtsreform, Gewaltschutz und Elternzeit.",
+            "zugang": "nicht belegbar",
+            "notiz": "Für einen Plan, der auf Rechtsgrundlagenkonstruktion und Vertragsverletzungsverfahren setzt, ist juristische Fachkompetenz der knappste Rohstoff. Dieser Verband ist der naheliegendste Ort dafür.",
+            "url": "https://www.djb.de/"
+          },
+          {
+            "name": "Generation CEO",
+            "gegruendet": 2007,
+            "reichweite": "274 Mitglieder im deutschsprachigen Raum",
+            "schwerpunkt": "Netzwerk weiblicher Führungskräfte.",
+            "wirkung": "nicht belegbar",
+            "zugang": "C-Level-Position, Vorstandsmandat oder Unternehmerinnenstatus, mindestens zehn Jahre Berufserfahrung.",
+            "notiz": "Klein und sehr selektiv. Der Wert liegt nicht in der Zahl, sondern darin, dass die Mitglieder die Personen sind, die Aufsichtsratsposten tatsächlich besetzen können.",
+            "url": "https://www.generation-ceo.com/"
+          },
+          {
+            "name": "EWMD, European Women's Management Development",
+            "gegruendet": 1984,
+            "reichweite": "Rund 1.000 Mitglieder, Sektionen in sechs europäischen Ländern sowie in den USA, Südafrika, Indien und Asien",
+            "schwerpunkt": "Sichtbarkeit und Beteiligung von Frauen in Führungspositionen in Wirtschaft, Bildung, Politik und Kultur.",
+            "wirkung": "nicht belegbar",
+            "zugang": "Offen für Einzel- und Firmenmitglieder, alle Branchen, angestellt wie selbstständig.",
+            "notiz": null,
+            "url": "https://www.ewmd.org/"
+          },
+          {
+            "name": "Deutscher Akademikerinnenbund",
+            "gegruendet": null,
+            "reichweite": "Bundesweit, Sitz in Essen",
+            "schwerpunkt": "Förderung von Akademikerinnen und Studentinnen, Gleichberechtigung in Familie, Beruf und Politik.",
+            "wirkung": "International eingebunden über University Women of Europe, UN Women und ein europäisches Pharmazeutinnennetzwerk.",
+            "zugang": "nicht belegbar",
+            "notiz": "Rund hundert Jahre alt und damit einer der ältesten Verbände dieses Verzeichnisses.",
+            "url": "https://www.dab-ev.org/"
+          },
+          {
+            "name": "Global Digital Women",
+            "gegruendet": null,
+            "reichweite": "Über 400 Veranstaltungen in gut drei Jahren, Reichweite überwiegend über soziale Netzwerke",
+            "schwerpunkt": "Sichtbarkeit von Gründerinnen, Führungsfrauen und Frauen in technischen Berufen.",
+            "wirkung": "Formate zu Empowerment, Talentprogramme und Hackathons.",
+            "zugang": "nicht belegbar",
+            "notiz": "Kein Verein, sondern ein Unternehmen. Für den Kulturstrang dieses Plans relevanter als für den Rechtsstrang, weil hier Sichtbarkeit produziert wird und nicht Politik.",
+            "url": "https://global-digital-women.com/"
+          }
+        ]
+      },
+      {
+        "name": "Europa",
+        "items": [
+          {
+            "name": "European Women's Lobby",
+            "gegruendet": 1990,
+            "reichweite": "Über 2.000 Mitgliedsorganisationen, nationale Verbände in 26 EU-Staaten, vier Beitrittskandidaten, Island, Norwegen und dem Vereinigten Königreich, dazu 17 europaweite Mitgliedsorganisationen",
+            "schwerpunkt": "Einfluss auf Gesetzgebung und Handeln der EU-Institutionen.",
+            "wirkung": "Sitz in Brüssel, EU-Förderung ist ausgewiesen. Die konkrete Fördersumme ließ sich nicht belegen.",
+            "zugang": "Dachverband über nationale Koordinationen und europaweite Organisationen.",
+            "notiz": "Die größte belegte Aggregation zivilgesellschaftlicher Frauenorganisationen in Europa und damit der naheliegendste Partner für alles, was in Brüssel Anwesenheit braucht.",
+            "url": "https://womenlobby.org/"
+          },
+          {
+            "name": "Europäisches Institut für Gleichstellungsfragen",
+            "gegruendet": null,
+            "reichweite": "EU-Agentur",
+            "schwerpunkt": "Gender Mainstreaming in EU-Institutionen, geschlechtsspezifische Gewalt, Forschung und Datenerhebung.",
+            "wirkung": "Gibt den Gleichstellungsindex der EU, die Gender-Statistik-Datenbank und die EU-weite Erhebung zu geschlechtsspezifischer Gewalt heraus. Auf diese Daten stützt sich die europäische Politik.",
+            "zugang": "Keine Mitgliedschaft, es ist eine Behörde.",
+            "notiz": "Kein Netzwerk, sondern die Institution mit formalem Mandat. Für Phase I dieses Plans, in dem ein einziger methodisch eingefrorener Index gebaut werden soll, ist das der zuständige Ort.",
+            "url": "https://eige.europa.eu/"
+          },
+          {
+            "name": "Women Political Leaders",
+            "gegruendet": null,
+            "reichweite": "Sitz in Brüssel, weltweite Mitgliedschaft",
+            "schwerpunkt": "Zahl und Einfluss von Frauen in politischen Führungspositionen erhöhen.",
+            "wirkung": "Gipfeltreffen, Dialoge, Politikinitiativen, Forschung und Auszeichnungen.",
+            "zugang": "Ausschließlich Frauen in politischen Ämtern: Präsidentinnen, Regierungschefinnen, Ministerinnen, Abgeordnete, Bürgermeisterinnen.",
+            "notiz": "Das exklusivste Zugangskriterium im ganzen Verzeichnis, und damit das einzige Netzwerk, dessen Mitglieder qua Amt Entscheidungen treffen können statt sie zu beeinflussen.",
+            "url": "https://www.womenpoliticalleaders.org/"
+          },
+          {
+            "name": "European Women on Boards",
+            "gegruendet": 2013,
+            "reichweite": "Sitz in Brüssel",
+            "schwerpunkt": "Mehr Frauen in europäischen Führungsgremien, mit dem ausdrücklichen Argument, dass Gesetzgebung allein nicht genügt.",
+            "wirkung": "Forschung zu Diversität in europäischen Aufsichts- und Leitungsgremien.",
+            "zugang": "nicht belegbar",
+            "notiz": null,
+            "url": "https://europeanwomenonboards.eu/"
+          },
+          {
+            "name": "PWN Global",
+            "gegruendet": null,
+            "reichweite": "26 Stadtnetzwerke weltweit, 3.300 Mitglieder aus über 90 Nationen, über 600 Veranstaltungen jährlich",
+            "schwerpunkt": "Führungskräfteentwicklung und branchenübergreifendes internationales Netzwerken.",
+            "wirkung": "Mentoring, Programme zur Vorbereitung auf Aufsichtsratsmandate.",
+            "zugang": "Mitgliedschaft und ehrenamtliche Mitarbeit möglich.",
+            "notiz": null,
+            "url": "https://www.pwnglobal.net/"
+          }
+        ]
+      },
+      {
+        "name": "Weltweit",
+        "items": [
+          {
+            "name": "2X Global",
+            "gegruendet": null,
+            "reichweite": "Über 150 Institutionen: Entwicklungsfinanzierer, Fondsmanager, Vermögensverwalter, Pensionsfonds, multilaterale Entwicklungsbanken, Banken, Versicherer und Stiftungen",
+            "schwerpunkt": "Gleichstellungsorientierte Kapitalallokation.",
+            "wirkung": "Namentlich beteiligt sind unter anderem die Weltbanktochter für Privatsektorfinanzierung, die Osteuropabank, die Europäische Investitionsbank sowie die niederländische und die französische Entwicklungsbank. Das mobilisierte Kapitalvolumen ließ sich nicht belegen.",
+            "zugang": "Institutionelle Mitgliedschaft.",
+            "notiz": "Für diesen Plan das wichtigste Netzwerk überhaupt, weil sein Hebel auf der Kapitalseite liegt und nicht bei Mitgliederzahlen. Genau dort setzt Phase II an.",
+            "url": "https://www.2xglobal.org/"
+          },
+          {
+            "name": "Women20",
+            "gegruendet": 2015,
+            "reichweite": "Nationale Delegationen der G20-Staaten",
+            "schwerpunkt": "Arbeit und Entgeltgleichheit, Finanzdienstleistungen und Unternehmertum, Gewalt gegen Frauen, digitale Inklusion, Umwelt.",
+            "wirkung": "Als offizielle Beteiligungsgruppe der G20 werden die Empfehlungen formal an die Staats- und Regierungschefs übergeben. Ein dokumentierter Umsetzungsnachweis ließ sich nicht belegen.",
+            "zugang": "Über nationale Delegationen.",
+            "notiz": "Formaler Zugang zum mächtigsten informellen Gremium der Weltwirtschaft. Der Zugang ist belegt, die Wirkung nicht. Das ist genau die Konstellation, vor der der Abschnitt über das Scheitern warnt.",
+            "url": "https://www.w20italia.it/"
+          },
+          {
+            "name": "30% Club",
+            "gegruendet": 2010,
+            "reichweite": "Über 20 Länder auf sechs Kontinenten, darunter ein deutsches Kapitel",
+            "schwerpunkt": "Wirtschaftskampagne für mehr Frauen in Aufsichts- und Leitungsgremien.",
+            "wirkung": "Über 1.000 Aufsichtsratsvorsitzende und Vorstandsvorsitzende haben sich auf mindestens 30 Prozent verpflichtet. Ob sich dadurch Anteile messbar verändert haben, ließ sich nicht belegen.",
+            "zugang": "Kostenlos, offen für Aufsichtsratsvorsitzende und Vorstandsvorsitzende, in der Regel börsennotierter Unternehmen oder solcher mit mindestens 250 Beschäftigten.",
+            "notiz": "Der niedrigste Zugangspreis bei der höchsten Adressatenebene. Kostenlose Mitgliedschaft für Vorstandsvorsitzende ist eine bemerkenswerte Konstruktion.",
+            "url": "https://30percentclub.org/"
+          },
+          {
+            "name": "Vital Voices Global Partnership",
+            "gegruendet": 1997,
+            "reichweite": "Über 49.000 direkt unterstützte Frauen in 188 Ländern",
+            "schwerpunkt": "Führungskräfteentwicklung, Frauen in Entscheidungspositionen, Sozialunternehmerinnen.",
+            "wirkung": "Nach eigener Angabe frühe Unterstützerin mehrerer späterer Friedensnobelpreisträgerinnen.",
+            "zugang": "Programmteilnahme.",
+            "notiz": "Die größte belegte individuelle Reichweite weltweit.",
+            "url": "https://www.vitalvoices.org/"
+          },
+          {
+            "name": "Cherie Blair Foundation for Women",
+            "gegruendet": 2008,
+            "reichweite": "Über 100 Länder, 300.000 unterstützte Unternehmerinnen",
+            "schwerpunkt": "Unternehmensgründung und Wachstum in Ländern mit niedrigem und mittlerem Einkommen.",
+            "wirkung": "Mentoring- und Wachstumsprogramme mit Zugang zu Finanzierung und Märkten.",
+            "zugang": "Programmteilnahme, keine Mitgliedschaft.",
+            "notiz": null,
+            "url": "https://cherieblairfoundation.org/"
+          },
+          {
+            "name": "Women's World Banking",
+            "gegruendet": null,
+            "reichweite": "Afrika, Lateinamerika, Süd- und Südostasien, Sitz in New York",
+            "schwerpunkt": "Inklusive digitale Finanzdienstleistungen für Frauen mit niedrigem Einkommen.",
+            "wirkung": "Betreibt eine eigene Vermögensverwaltungssparte. Das Fondsvolumen ließ sich nicht belegen.",
+            "zugang": "nicht belegbar",
+            "notiz": null,
+            "url": "https://www.womensworldbanking.org/"
+          },
+          {
+            "name": "The International Alliance for Women",
+            "gegruendet": null,
+            "reichweite": "Gering dokumentiert, Sitz in den Vereinigten Staaten",
+            "schwerpunkt": "Wirtschaftliche Teilhabe, Mentoring, Finanzbildung, Mikrokredit.",
+            "wirkung": "nicht belegbar",
+            "zugang": "nicht belegbar",
+            "notiz": null,
+            "url": "https://www.tiaw.org/"
+          }
+        ]
+      }
+    ],
+    "rangliste": {
+      "titel": "Wo tatsächlich Hebel liegt",
+      "lead": "Sortiert nicht nach Bekanntheit, sondern nach belegbarem Zugang zu Entscheidungsprozessen. Wer weit unten steht, ist deshalb nicht unwichtig, sondern schlechter dokumentiert.",
+      "items": [
+        {
+          "n": "01",
+          "name": "Europäisches Institut für Gleichstellungsfragen",
+          "warum": "Einzige Institution mit formalem EU-Mandat. Liefert die Daten, auf die sich europäische Politik stützt. Für den Index aus Phase I der zuständige Ort."
+        },
+        {
+          "n": "02",
+          "name": "2X Global",
+          "warum": "Über 150 Institutionen auf der Kapitalseite, darunter die europäischen Entwicklungsbanken. Setzt genau dort an, wo Phase II ansetzt."
+        },
+        {
+          "n": "03",
+          "name": "European Women's Lobby",
+          "warum": "Über 2.000 Mitgliedsorganisationen und Sitz in Brüssel. Der Weg zu Anwesenheit in den Verfahren, die die Machtkarte beschreibt."
+        },
+        {
+          "n": "04",
+          "name": "Women20",
+          "warum": "Formaler, institutionalisierter Zugang zum G20-Prozess. Zugang belegt, Wirkung nicht."
+        },
+        {
+          "n": "05",
+          "name": "Women Political Leaders",
+          "warum": "Mitglieder, die qua Amt entscheiden statt zu beeinflussen. Kleinster Kreis, höchste Ebene."
+        },
+        {
+          "n": "06",
+          "name": "Deutscher Frauenrat",
+          "warum": "Einziger vollständig belegter, aktueller Lobbyregistereintrag mit nachweisbarem Zugang zur Bundespolitik."
+        },
+        {
+          "n": "07",
+          "name": "30% Club",
+          "warum": "Über 1.000 verpflichtete Vorstands- und Aufsichtsratsvorsitzende. Direkter Zugriff auf Besetzungsentscheidungen."
+        },
+        {
+          "n": "08",
+          "name": "FidAR",
+          "warum": "Besitzt die Kennzahl, auf die sich der deutsche Kapitalmarkt bezieht. Wer misst, bestimmt."
+        }
+      ]
+    },
+    "luecke": {
+      "titel": "Das Missverhältnis",
+      "text": "Die größte gleichstellungspolitische Interessenvertretung Deutschlands arbeitet mit 1,15 Vollzeitstellen und Jahresausgaben von rund 165.000 Euro. Für die Gegenbewegung sind für den Zeitraum 2009 bis 2018 rund 707 Millionen Dollar dokumentiert, mit steigender Tendenz, und der größte Anteil davon stammt aus Europa selbst. Diese beiden Zahlen sind nicht direkt vergleichbar, sie messen Unterschiedliches. Aber die Größenordnung ist der Punkt.",
+      "folgerung": "Ein Plan, der auf zivilgesellschaftliche Netzwerke als Träger setzt, setzt auf eine Infrastruktur, die chronisch unterfinanziert ist. Deshalb steht in der Minimalbesetzung eine Finanzierung, die über Legislaturperioden trägt, und nicht ein weiteres Netzwerk."
+    },
+    "vorbehalt": "Zu mehreren Organisationen ließen sich Gründungsjahr, Mitgliederzahl oder Wirkung nicht aus der eigenen Website belegen, teils weil die Server automatisierte Zugriffe blockieren. Diese Lücken sind einzeln ausgewiesen und nicht mit Schätzungen gefüllt. Vier weitere Organisationen, darunter der Verband deutscher Unternehmerinnen, sind hier gar nicht aufgeführt, weil keine einzige Angabe belegbar war."
+  },
   "beweislage": {
     "label": "Beweislage",
     "lead": "Der Plan behauptet, dass sich globale Normen mit Marktdruck durchsetzen lassen. Das ist keine Vermutung. Es ist mehrfach passiert, und es ist mehrfach misslungen. Fünf Fälle, aus denen sich die Mechanik ableiten lässt.",
@@ -1429,6 +1890,47 @@
             "org": "Wimmel, integration 3/2024",
             "jahr": "2024",
             "url": "https://iep-berlin.de/site/assets/files/3848/wimmel_german_vote_free_content_integration_3_24.pdf"
+          }
+        ]
+      },
+      {
+        "name": "Weltregionen und Netzwerke",
+        "items": [
+          {
+            "titel": "Global Gender Gap Report 2025, Regionalwerte, Teilindizes und Länderrangliste",
+            "org": "Weltwirtschaftsforum",
+            "jahr": "2025",
+            "url": "https://www3.weforum.org/docs/WEF_GGGR_2025.pdf"
+          },
+          {
+            "titel": "Women, Business and the Law 2026, Drei-Säulen-Werte und führende Reformer",
+            "org": "Weltbank",
+            "jahr": "2026",
+            "url": "https://wbl.worldbank.org/content/dam/sites/wbl/documents/2026/infographic_WBL2026.pdf"
+          },
+          {
+            "titel": "Maputo-Protokoll, Ratifikationsstand und Vorbehalte",
+            "org": "Afrikanische Union",
+            "jahr": "2023",
+            "url": "https://au.int/sites/default/files/treaties/37077-sl-PROTOCOL_TO_THE_AFRICAN_CHARTER_ON_HUMAN_AND_PEOPLES_RIGHTS_ON_THE_RIGHTS_OF_WOMEN_IN_AFRICA.pdf"
+          },
+          {
+            "titel": "Istanbul-Konvention, Zeichnungs- und Ratifikationstabelle CETS 210",
+            "org": "Europarat",
+            "jahr": "2026",
+            "url": "https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=210"
+          },
+          {
+            "titel": "Lobbyregister-Eintrag R002377 mit Ausgaben und Personalstärke",
+            "org": "Deutscher Bundestag",
+            "jahr": "2026",
+            "url": "https://www.lobbyregister.bundestag.de/"
+          },
+          {
+            "titel": "Mitgliederzahlen, Zugangskriterien und Wirkungsangaben der Netzwerke",
+            "org": "Websites der jeweiligen Organisationen, im Verzeichnis einzeln verlinkt",
+            "jahr": "2026",
+            "url": "https://womenlobby.org/"
           }
         ]
       }
