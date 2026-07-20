@@ -854,6 +854,14 @@ const tempoCfg = {
         <p>{quellen.vorbehalt}</p>
         <p>{meta.einordnung}</p>
       </div>
+
+      <div class="end-dl" data-reveal>
+        <p class="end-dl-line">Diesen Plan weitergeben? Die einseitige Kurzfassung als PDF.</p>
+        <a class="dl-btn" href={meta.pdf} download>
+          <span>{meta.pdfLabel}</span>
+          <span class="dl-arrow" aria-hidden="true">&#8595;</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1312,6 +1320,8 @@ const tempoCfg = {
 
   .disclaimer { border-top: 1px solid var(--hair-strong); padding-top: 1.5rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem; }
   .disclaimer p { font-size: 0.9rem; color: var(--muted); max-width: 70ch; }
+  .end-dl { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--hair-strong); }
+  .end-dl-line { font-size: 1rem; color: var(--ink-soft); font-weight: 500; max-width: 40ch; }
 
   @media (max-width: 640px) {
     .bar-row { grid-template-columns: 1fr; gap: 0.35rem; }
