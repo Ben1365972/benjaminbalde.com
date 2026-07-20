@@ -98,7 +98,7 @@
   },
   "doktrin": {
     "label": "Doktrin",
-    "lead": "Sechs Sätze, aus denen sich der gesamte Fahrplan ableitet. Wer einen davon streicht, bekommt einen anderen Plan.",
+    "lead": "Die Sätze, aus denen sich der gesamte Fahrplan ableitet. Wer einen davon streicht, bekommt einen anderen Plan.",
     "punkte": [
       {
         "n": "01",
@@ -140,13 +140,19 @@
         "n": "07",
         "titel": "Was reversibel ist, zählt nicht",
         "satz": "Jede Maßnahme wird danach bewertet, ob eine feindliche Regierung sie in einer Wahlperiode zurücknehmen kann.",
-        "body": "Drei Vorgänge aus jüngster Zeit genügen als Beleg. Die Millennium Challenge Corporation, das ambitionierteste Konditionalitätsmodell der westlichen Entwicklungspolitik, mit 45 Verträgen in 32 Ländern und über 17 Milliarden Dollar Volumen, wurde 2025 binnen Monaten zusammengestrichen. Aus dem Landminenverbot, einem der erfolgreichsten Abrüstungsverträge überhaupt, sind 2025 und 2026 fünf europäische Staaten ausgetreten. Und die europäische Nachhaltigkeitsberichterstattung wurde 2026 von rund fünfzigtausend auf etwa sechstausendsiebenhundert Unternehmen zusammengestrichen, ein Rückbau von etwa 85 Prozent. Was daran für diesen Plan zählt, steht im nächsten Absatz."
+        "body": "Zwei Vorgänge aus jüngster Zeit genügen als Beleg. Die Millennium Challenge Corporation, das ambitionierteste Konditionalitätsmodell der westlichen Entwicklungspolitik, wurde 2025 binnen Monaten zusammengestrichen. Und aus dem Landminenverbot sind fünf europäische Staaten ausgetreten. Daraus folgt eine schärfere Regel als bloße Dauerhaftigkeit: Jedes Erzwingungsinstrument ist symmetrisch. Mehrheitsentscheidung, Konditionalität und Listung dienen der nächsten feindlichen Mehrheit genauso. Wer sie schafft, schmiedet auch die Waffe für die Gegenrichtung. Tauglich ist ein Instrument deshalb nur, wenn es schwerer rückgängig zu machen als einzuführen ist. Das sind Verträge, Beitrittsbedingungen und technische Normen, nicht Ratsbeschlüsse, die eine neue Mehrheit mit demselben Verfahren wieder kassiert."
       },
       {
         "n": "08",
         "titel": "Überlebt hat, was verkabelt war",
         "satz": "Der wichtigste Konstruktionshinweis des ganzen Plans stammt aus einem Deregulierungspaket.",
         "body": "Als die EU 2026 ihre Nachhaltigkeitsberichterstattung radikal zurückbaute und die verpflichtenden Datenpunkte um rund 61 Prozent kürzte, verschwanden die geschlechterbezogenen Angaben zu Elternzeit, Weiterbildung und Altersstruktur. Die Kennzahl zur Entgeltlücke blieb. Nicht weil sie politisch verteidigt wurde, sondern weil sie zugleich ein verpflichtender Indikator einer anderen Verordnung ist und deren Streichung mit erledigt hätte werden müssen. Die Geschlechterverteilung in der obersten Führungsebene wurde sogar zu einer eigenen Angabepflicht aufgewertet. Daraus folgt die gesamte Bauweise dieses Plans: Eine Kennzahl überlebt, wenn andere Prozesse auf ihr aufsetzen. Alles andere ist Beiwerk und wird in der nächsten Sparrunde gestrichen."
+      },
+      {
+        "n": "09",
+        "titel": "Ohne Sorge ist die Quote nichts",
+        "satz": "Eine Erwerbsquote, die auf unbezahlte Sorgearbeit aufsetzt statt sie zu ersetzen, produziert Doppelbelastung, keine Gleichstellung.",
+        "body": "Die wirtschaftliche Lücke ruht auf einer materiellen Grundlage: der unbezahlten Sorgearbeit, die weltweit zu über zwei Dritteln Frauen leisten. Wer Frauen in Erwerbsquoten drückt, ohne diese Arbeit öffentlich zu tragen, verlagert die Last nur, meist auf ärmere, oft migrantische Frauen. Ein Plan, der Frauen an der Spitze zählt und die Sorgearbeit an der Basis übersieht, misst das Falsche. Deshalb steht öffentliche Sorge-Infrastruktur in diesem Plan nicht am Rand, sondern als Bedingung jeder Erwerbszahl. Und deshalb ist körperliche Selbstbestimmung, die Verfügung über den eigenen Körper, keine Nebenfrage, sondern die Voraussetzung, ohne die jede andere Zahl Makulatur bleibt."
       }
     ]
   },
@@ -167,8 +173,8 @@
         ],
         "instrumente": [
           {
-            "name": "Passerelle für Menschenrechtspositionen",
-            "was": "Der Europäische Rat kann nach Artikel 31 Absatz 3 EUV einstimmig beschließen, in Teilen der Außenpolitik zur qualifizierten Mehrheit überzugehen. Das Europäische Parlament hat 2023 ausdrücklich gefordert, das für Unionsstandpunkte zu Menschenrechten in multilateralen Foren zu tun. Dieser eine Beschluss ist der Angelpunkt des gesamten Plans."
+            "name": "Die zwei Brücken über die Einstimmigkeit",
+            "was": "Zwei verschiedene Riegel, zwei verschiedene Brücken. Für außenpolitische Menschenrechtspositionen ist es Artikel 31 Absatz 3 EUV, den das Parlament 2023 aktivieren wollte. Für den internen Riegel der Antidiskriminierung, Artikel 19 AEUV, gibt es nur die allgemeine Passerelle nach Artikel 48 Absatz 7 EUV, und die ist ungleich schwerer: Sie verlangt zusätzlich die Zustimmung des Parlaments und ein Vetorecht jedes nationalen Parlaments. In Deutschland kommt ein Gesetz von Bundestag und Bundesrat hinzu. Beide Brücken sind seit 2009 nie begangen worden. Wer das verschweigt, verkauft den schwersten Schritt als den leichtesten."
           },
           {
             "name": "Verlagerung auf Artikel 157 AEUV",
@@ -184,7 +190,7 @@
           },
           {
             "name": "Ein einziger Index",
-            "was": "Konditionalität braucht eine Zahl, die vor Gericht hält: jährlich erhoben, methodisch eingefroren, extern geprüft. Wer die Methodik nachträglich anpassen kann, hat kein Instrument, sondern ein Argument."
+            "was": "Konditionalität braucht eine Zahl, die vor Gericht hält: jährlich erhoben, methodisch eingefroren, extern geprüft. Entscheidend ist, dass sie Wirkung misst und nicht Erfüllung. Sobald eine Kennzahl zur Pflicht wird, wird genau sie bedient und nichts daneben, das ist der Normalfall jeder Regulierung. Ein Index, der nur zählt, ob berichtet wurde, erzeugt bessere Berichte, keine bessere Wirklichkeit. Er muss deshalb an Ergebnissen ansetzen, nicht an Verfahren."
           }
         ],
         "meilenstein": "Ende 2029 liegt entweder ein Ratsbeschluss zur Passerelle vor oder ein dokumentiertes Scheitern mit namentlicher Zuordnung.",
@@ -215,6 +221,10 @@
             "was": "Wenn Gleichstellungskennzahlen berichtspflichtig sind, fließen sie in Bewertungsmodelle ein und wirken über Finanzierungskosten. Das Ziel ist nicht Überzeugung, sondern dass ein Finanzvorstand die eigene Zahl kennt, weil sie den Zinssatz bewegt."
           },
           {
+            "name": "Positive Konditionalität statt Entzug",
+            "was": "Der Entzug von Handelspräferenzen trifft zuerst die Beschäftigten, nicht die Regierungen. Deshalb wird die Logik umgedreht: zusätzlicher Marktzugang und günstigere Finanzierung als Belohnung für nachgewiesene Verbesserungen bei existenzsichernden Löhnen und Vereinigungsfreiheit, statt Bestrafung durch Wegnahme. Wo doch entzogen wird, haftet die europäische Abnehmerseite mit, und ein von den Zielländern und ihren Gewerkschaften mitverwalteter Ausgleichsfonds fängt die Betroffenen auf. Ohne diesen Umbau schädigt der Hebel die Frauen, deren Zahl er heben soll."
+          },
+          {
             "name": "Harte Entwicklungskonditionalität",
             "was": "Auszahlung gegen nachgewiesene Rechtsänderung statt gegen Absichtserklärung, mit vorher festgelegten Schwellen. Voraussetzung ist, dass die Nichtauszahlung tatsächlich stattfindet. Genau daran scheitert das Modell in der Praxis fast immer."
           },
@@ -224,7 +234,7 @@
           }
         ],
         "meilenstein": "Bis 2036 hat mindestens die Hälfte der großen Handelspartner mindestens eine Rechtsänderung vorgenommen, die ohne diesen Druck nachweislich nicht stattgefunden hätte.",
-        "risiko": "Handelskonditionalität trifft zuerst die Beschäftigten, nicht die Regierungen. Als die EU 2020 Kambodscha einen Teil der Zollpräferenzen entzog, betraf das Waren im Wert von rund einer Milliarde Euro in einem Land, das etwa die Hälfte seiner Exporte in die EU liefert. Getroffen wurden zuerst Näherinnen."
+        "risiko": "Handelskonditionalität trifft in ihrer klassischen Form zuerst die Beschäftigten. Als die EU 2020 Kambodscha einen Teil der Zollpräferenzen entzog, betraf das Waren im Wert von rund einer Milliarde Euro und traf zuerst Näherinnen. Genau deshalb steht in dieser Phase die positive Konditionalität vor dem Entzug und der Ausgleichsfonds daneben. Ein Plan, der das nicht mitdenkt, ist im Kern gegen die gerichtet, denen er helfen will."
       },
       {
         "id": "p3",
@@ -256,7 +266,7 @@
           }
         ],
         "meilenstein": "Bis 2044 sind die Kriterien in mindestens einem großen nicht-europäischen Regelwerk verankert, über das Europa keine Kontrolle hat.",
-        "risiko": "Übernahme als Formalie. Die Kriterien werden erfüllt, geprüft, testiert und ändern in der Sache nichts. Compliance ist die eleganteste Form des Widerstands."
+        "risiko": "Zwei Gefahren. Erstens Übernahme als Formalie: Die Kriterien werden erfüllt, geprüft, testiert und ändern in der Sache nichts. Zweitens Leckage: Gleichstellung ist eine trennbare Prozesseigenschaft, kein Produktmerkmal. Ein Konzern kann in Europa konform berichten und dort produzieren, wo die Bedingung nicht gilt. Ein Ausgleich an der Grenze wie beim CO2 lässt sich für Arbeitsbedingungen nicht bauen. Dagegen hilft nur, dass genug große Märkte dieselbe Bedingung stellen, also die Standardallianz früh genug trägt. Sie ist deshalb keine Kür, sondern das Leck-Ventil."
       },
       {
         "id": "p4",
@@ -286,7 +296,7 @@
   },
   "hebel": {
     "label": "Hebel",
-    "lead": "Neunzehn Instrumente, bewertet nach drei Größen: wie viele Menschen sie erreichen, wie hart sie durchsetzbar sind, wie viel Widerstand sie erzeugen. Die interessantesten stehen nicht oben, sondern dort, wo Reichweite hoch und Widerstand niedrig ist.",
+    "lead": "Zwanzig Instrumente, bewertet nach drei Größen: wie viele Menschen sie erreichen, wie hart sie durchsetzbar sind, wie viel Widerstand sie erzeugen. Die interessantesten stehen nicht oben, sondern dort, wo Reichweite hoch und Widerstand niedrig ist.",
     "kategorien": [
       {
         "id": "markt",
@@ -358,7 +368,7 @@
         "kraft": 55,
         "widerstand": 75,
         "mechanik": "Vergünstigter Marktzugang gegen Einhaltung von Standards, Entzug bei Verstoß. Der Entzug ist die eigentliche Drohung, seine Anwendung der Beweis der Ernsthaftigkeit.",
-        "notiz": "Es funktioniert gelegentlich: Sri Lanka verlor 2010 die Sonderpräferenzen und erhielt sie 2017 nach Reformzusagen zurück. Und es ist moralisch das heikelste Instrument, weil der Entzug die Beschäftigten trifft."
+        "notiz": "Moralisch das heikelste Instrument, weil der klassische Entzug die Beschäftigten trifft und nicht die Verantwortlichen. Tauglich wird es erst, wenn man es umdreht: Marktzugang als Belohnung für nachgewiesene Verbesserung statt als Strafe durch Wegnahme, mit Mithaftung der europäischen Abnehmer und einem Ausgleichsfonds für die Betroffenen."
       },
       {
         "kategorie": "kapital",
@@ -509,6 +519,16 @@
         "widerstand": 70,
         "mechanik": "Wer den Siebenjahreshaushalt der Union verhandelt, bestimmt, welche Politik überlebt. Gleichstellungsprogramme leben und sterben hier. Beschlossen wird der Rahmen einstimmig.",
         "notiz": "Die größte Leerstelle des ersten Entwurfs. Jede europäische Politik, die überdauert, ist eine, die jemand bezahlt. Ein Plan ohne Geldarchitektur ist eine unfinanzierte Maschine. Die Einstimmigkeit macht den Rahmen zudem zur Geisel derselben Vetostruktur, die der Plan überwinden will."
+      },
+      {
+        "kategorie": "geld",
+        "name": "Öffentliche Sorge-Infrastruktur",
+        "grundlage": "Investition in Betreuung und Pflege",
+        "reichweite": 65,
+        "kraft": 70,
+        "widerstand": 35,
+        "mechanik": "Die wirtschaftliche Lücke ruht auf der unbezahlten Sorgearbeit. Öffentliche Investition in Kinderbetreuung, Pflege und bezahlbare Betreuungszeiten ist die Bedingung, unter der jede Erwerbszahl überhaupt echt wird, statt nur eine zweite Schicht zu verlangen. Finanzierbar über denselben mehrjährigen Finanzrahmen und dieselbe öffentliche Beschaffung, die dieser Plan ohnehin nutzt.",
+        "notiz": "Der Hebel, den ein rein marktorientierter Blick übersieht und ohne den er ins Leere läuft. Er wirkt nach innen, in Europa selbst, und macht den Plan glaubwürdig, bevor er nach außen etwas verlangt."
       }
     ]
   },
@@ -944,7 +964,7 @@
         "schwaeche": "Wirtschaftlich mit 65,6 Prozent drittniedrigster Wert weltweit. Politische Repräsentation und wirtschaftliche Teilhabe klaffen hier weiter auseinander als anderswo.",
         "instrument": "Konvention von Belém do Pará der Organisation Amerikanischer Staaten mit dem Folgemechanismus MESECVI",
         "instrumentStand": "Der Ratifikationsstand konnte nicht aus der Primärquelle belegt werden, die Server der Organisation blockieren automatisierte Zugriffe.",
-        "ansatz": "Die Region braucht keine Belehrung, sondern Partnerschaft auf Augenhöhe. Sie ist der wahrscheinlichste erste Partner für die Standardallianz aus Phase III, weil sie schneller ist als Europa und ein eigenes verbindliches Regionalinstrument besitzt."
+        "ansatz": "Die Region braucht keine Belehrung, sondern Partnerschaft auf Augenhöhe. Sie ist der wahrscheinlichste erste Partner für die Standardallianz, weil sie schneller ist als Europa und ein eigenes verbindliches Regionalinstrument besitzt. Konkrete Ko-Träger gibt es bereits: das Comité de América Latina y el Caribe para la Defensa de los Derechos de las Mujeres und die aus der Region hervorgegangene Bewegung gegen Frauenmorde. Der Plan tritt hier als Verbündeter auf, nicht als Geber."
       },
       {
         "name": "Europa",
@@ -980,7 +1000,7 @@
         "schwaeche": "Die größte Spreizung aller Regionen: von Rang 8 bis Rang 146. Der Tschad hat den weltweit niedrigsten Wirtschafts-Score mit 44,4 Prozent. Gegenüber dem Vorjahr hat die Region 0,2 Prozentpunkte verloren. Togo stürzte um 44 Plätze ab, Sierra Leone um 32.",
         "instrument": "Maputo-Protokoll der Afrikanischen Union",
         "instrumentStand": "44 von 55 Mitgliedstaaten haben ratifiziert. Nicht ratifiziert haben Botswana, Burundi, die Zentralafrikanische Republik, Tschad, Ägypten, Eritrea, Madagaskar, Marokko, Niger, Somalia und Sudan. Botswana, Ägypten und Marokko haben nicht einmal unterzeichnet. Äthiopien hat sieben Vorbehalte hinterlegt.",
-        "ansatz": "Die Region ist in der politischen Repräsentation weiter als ihr Ruf und besitzt mit dem Maputo-Protokoll ein verbindliches Instrument, das breiter ratifiziert ist als die Istanbul-Konvention in Europa. Der Ansatz ist deshalb Ko-Trägerschaft, nicht Programmarbeit. Hier liegt die glaubwürdigste Antwort auf den Vorwurf des Wertekolonialismus."
+        "ansatz": "Die Region ist in der politischen Repräsentation weiter als ihr Ruf und besitzt mit dem Maputo-Protokoll ein verbindliches Instrument, das breiter ratifiziert ist als die Istanbul-Konvention in Europa. Der Ansatz ist deshalb Ko-Trägerschaft, nicht Programmarbeit, und Ko-Trägerschaft braucht benannte Träger: die panafrikanische Koalition Solidarity for African Women's Rights, die das Maputo-Protokoll erkämpft hat, und Netzwerke wie das African Women's Development and Communication Network. Nicht als Empfänger, sondern als Miturheber. Hier liegt die glaubwürdigste Antwort auf den Vorwurf des Wertekolonialismus."
       },
       {
         "name": "Südasien",
@@ -1264,6 +1284,16 @@
             "zugang": "nicht belegbar",
             "notiz": null,
             "url": "https://www.tiaw.org/"
+          },
+          {
+            "name": "Asia Floor Wage Alliance",
+            "gegruendet": null,
+            "reichweite": "Textilproduzierende Länder Asiens, Gewerkschaften und Arbeitsrechtsorganisationen",
+            "schwerpunkt": "Existenzsichernde Löhne und Rechte in der globalen Bekleidungslieferkette.",
+            "wirkung": "Die organisierte Stimme genau der Arbeiterinnen, die eine falsch gebaute Handelskonditionalität zuerst treffen würde. Für den in Phase II umgebauten Hebel der unverzichtbare Gegenpart auf der Produktionsseite.",
+            "zugang": "Über Gewerkschaften und Arbeitsrechtsorganisationen der Produktionsländer.",
+            "notiz": "Ohne diese Seite am Tisch bleibt jede Lieferkettenpolitik eine Politik über die Köpfe der Betroffenen hinweg.",
+            "url": "https://asia.floorwage.org/"
           }
         ]
       }
@@ -1718,7 +1748,7 @@
         "titel": "Die schrumpfende Marktgröße",
         "grundlage": "Ökonomische Voraussetzung des gesamten Plans",
         "haerte": 92,
-        "beschreibung": "Jeder Hebel dieses Plans hängt daran, dass der Zugang zum europäischen Markt begehrenswert genug ist, um Bedingungen zu akzeptieren. Der europäische Anteil an der Weltwirtschaft sinkt. Damit sinkt die Durchsetzungskraft aller Marktinstrumente über die Laufzeit des Plans hinweg, unabhängig davon, wie gut er gemacht ist.",
+        "beschreibung": "Jeder Hebel dieses Plans hängt daran, dass der Zugang zum europäischen Markt begehrenswert genug ist, um Bedingungen zu akzeptieren. Der europäische Anteil an der Weltwirtschaft sinkt. Verschärfend kommt die Leckage hinzu: Weil Gleichstellung eine trennbare Prozesseigenschaft ist und kein Produktmerkmal, lässt sich die belastete Aktivität verlagern, während die europäische Kennzahl sich optisch verbessert. Der Brüssel-Effekt, der bei Produktregeln wie dem Datenschutz funktioniert, greift hier nur eingeschränkt.",
         "umgehung": "Kein Ausweg, nur ein Zeitfenster. Das ist der eigentliche Grund, warum ein solcher Plan früh und schnell laufen muss und warum die Standardallianz aus Phase III keine Kür ist, sondern die Bedingung des Überlebens.",
         "status": "Bewertung"
       },
@@ -1763,105 +1793,6 @@
       }
     ],
     "schluss": "Vier dieser fünf Wege enden nicht bei null. Sie enden bei weniger. Das ist bei einem Vorhaben dieser Größe der realistische Erfolgsfall, und der Plan ist so gebaut, dass auch der Teilerfolg trägt."
-  },
-  "kritik": {
-    "label": "Der Einspruch",
-    "lead": "Vier Praktiker haben diesen Entwurf gelesen und zerlegt: jemand aus Kommission und Ratssekretariat, ein Referatsleiter aus einem Bundesministerium, eine Strategin aus der internationalen Frauenrechtsbewegung, eine Konzernstrategin und Aufsichtsrätin. Der Auftrag war, nicht zu loben, sondern die Stelle zu finden, an der es kippt. Was sie fanden, steht hier ungeglättet.",
-    "kernsatz": "Ein Plan, der seine Schwächen nur benennt, hat sie nicht gelöst. Er hat sie benannt. Dieser Abschnitt trennt beides.",
-    "vorbemerkung": "Die schärfste Einzelkritik richtete sich gegen die Ehrlichkeit dieser Seite selbst: Sie benenne ihre tödlichen Fehler, um sich Glaubwürdigkeit zu kaufen, und verfahre dann, als wären sie damit erledigt. Der Einwand sitzt. Deshalb bekommt jeder Punkt unten ein Urteil, und drei davon lauten offen oder eingeräumt, nicht beantwortet.",
-    "perspektiven": [
-      {
-        "wer": "Kommission und Ratssekretariat",
-        "satz": "Der Angelpunkt steht auf dem falschen Stein, und die Prämisse ist vom Rechtsruck in Rat und Parlament bereits widerlegt."
-      },
-      {
-        "wer": "Bundesministerium",
-        "satz": "Der Plan verwechselt die juristische Existenz eines Verfahrens mit seiner politischen Verfügbarkeit und ignoriert den Bundesrat, die Ressortlogik und das Bundesverfassungsgericht."
-      },
-      {
-        "wer": "Frauenrechtsbewegung",
-        "satz": "Es ist ein Einbindungsplan, kein Gleichstellungsplan, und an der einen Stelle, wo er zugibt zu schaden, zieht er keine Konsequenz."
-      },
-      {
-        "wer": "Wirtschaft und Aufsichtsrat",
-        "satz": "Analytisch scharf, ökonomisch naiv an genau den drei Stellen, an denen er wirken müsste: Verlagerung, Umgehung und politische Reversibilität."
-      }
-    ],
-    "einwaende": [
-      {
-        "n": "01",
-        "titel": "Die falsche Brücke",
-        "wer": "Kommission, Bundesministerium",
-        "urteil": "eingeräumt",
-        "text": "Der als Angelpunkt gesetzte Artikel 31 Absatz 3 EUV betrifft nur die Außenpolitik und ist seit 2009 nie aktiviert worden, ein Vorschlag von 2018 im identischen Feld starb im Rat. Der interne Riegel, um den sich die ganze Doktrin dreht, läuft über Artikel 19 AEUV, und dessen einzige Brücke ist die allgemeine Passerelle nach Artikel 48 Absatz 7 EUV, die zusätzlich jedem nationalen Parlament ein Veto gibt. In Deutschland verlangt das Integrationsverantwortungsgesetz dafür ein Gesetz von Bundestag und Bundesrat.",
-        "folge": "Das Fundament stand auf dem falschen Artikel. Korrigiert im Abschnitt Hürden. Die ehrliche Konsequenz ist unbequem: Der Weg ist nicht schwerer, als der Plan dachte, sondern in einem Mitgliedstaat praktisch versperrt."
-      },
-      {
-        "n": "02",
-        "titel": "Die Prämisse ist schon widerlegt",
-        "wer": "Kommission, Bundesministerium",
-        "urteil": "offen",
-        "text": "Der Plan braucht 24 Jahre lang mehrheitlich unterstützende Regierungen in Rat und Parlament, ausgerechnet in dem Moment, in dem beide nach rechts kippen. Und jedes Erzwingungsinstrument ist symmetrisch: Mehrheitsentscheidung, Konditionalität und Listung stehen der nächsten feindlichen Mehrheit genauso zur Verfügung, dann ohne deutsche Vetooption. Der Plan könnte die Waffe für die Gegenrichtung schmieden.",
-        "folge": "Der tiefste Einwand, und er hat keine Antwort. Die Reversibilitäts-Doktrin schützt gegen Vergessen, nicht gegen eine Mehrheit, die den Apparat umdreht. Wer das ernst nimmt, muss den Plan als Wette auf eine politische Konstellation lesen, die gerade zerfällt."
-      },
-      {
-        "n": "03",
-        "titel": "Die Waffe trifft die Ärmsten zuerst",
-        "wer": "Frauenrechtsbewegung, Kommission",
-        "urteil": "eingeräumt, ungelöst",
-        "text": "Der Entzug von Handelspräferenzen trifft zuerst die überwiegend weiblichen Näherinnen, nicht die Regierungen. Der Fall Kambodscha von 2020 steht als Beleg auf der Seite. Der Plan benennt das und geht weiter, ohne einen einzigen Ausgleichs-, Schutz- oder Übergangsmechanismus. Ein Kernhebel, der die Frauen schädigt, deren Zahl er hochtreiben will.",
-        "folge": "Das ist kein Detailfehler, sondern ein Konstruktionsfehler. Die einzige ehrliche Reparatur ist, die Konditionalität umzudrehen: Marktzugang an nachgewiesene Verbesserungen koppeln statt an Entzug, Haftung bei den europäischen Abnehmern verankern, einen von den Zielländern mitverwalteten Ausgleichsfonds danebenstellen. Bis das im Plan steht, bleibt der Vorwurf berechtigt."
-      },
-      {
-        "n": "04",
-        "titel": "Leckage statt Wirkung",
-        "wer": "Wirtschaft",
-        "urteil": "teils beantwortet",
-        "text": "Der Brüssel-Effekt greift bei Produkteigenschaften, die global nicht doppelt herstellbar sind. Gleichstellung ist aber eine trennbare Prozesseigenschaft: Ein Konzern berichtet in Europa konform und produziert dort, wo die Bedingung nicht gilt. Der Binnenmarkt schrumpft, China und die USA belasten ihren Marktzugang nicht, und ein Ausgleich an der Grenze wie beim CO2 ist für Arbeitsbedingungen nicht baubar.",
-        "folge": "Die Antwort des Plans, Tempo und Standardallianz, ist dünn. Der Einwand entwertet den Marktmacht-Ansatz nicht ganz, aber er deckelt ihn: Er wirkt auf das, was verkauft wird, schwächer als erhofft auf das, was verlagert werden kann."
-      },
-      {
-        "n": "05",
-        "titel": "Ein Einbindungsplan, kein Gleichstellungsplan",
-        "wer": "Frauenrechtsbewegung",
-        "urteil": "teils eingeräumt",
-        "text": "Der Plan misst Gleichstellung an Erwerbsquoten, Aufsichtsräten und Lohnlücken. Sorgearbeit kommt nicht vor, obwohl sie die materielle Grundlage der Erwerbslücke ist. Reproduktive Selbstbestimmung erscheint als einzige Fußnote. Trans und nichtbinäre Menschen fehlen, Intersektionalität fehlt, der globale Süden wird als Beleg zitiert, aber keine einzige Partnerorganisation benannt. Er zählt eine bestimmte Sorte Frauen in bestehende Strukturen ein, statt die Strukturen zu ändern.",
-        "folge": "Die Verengung war Absicht, damit der Marktdruck-Ansatz trägt. Aber sie ist eine Amputation, und ein Teil gehört zurück: Sorgearbeit als eigener Hebel, reproductive Rechte als eigenes Ziel, und benannte Ko-Träger statt der Behauptung von Ko-Trägerschaft."
-      },
-      {
-        "n": "06",
-        "titel": "Formale Erfüllung ist der Normalfall",
-        "wer": "Wirtschaft",
-        "urteil": "eingeräumt",
-        "text": "Sobald eine Kennzahl zur Pflicht wird, wird genau sie bedient und nichts daneben. Aufsichtsratsquoten haben die Aufsichtsräte verändert und die Vorstände fast unberührt gelassen. Das ist keine Ausnahme, das ist der Betriebszustand jedes erzwungenen Kennzahlenregimes. Der Plan nennt es einmal im Abschnitt Scheitern und rechnet es nicht als Grundlast ein.",
-        "folge": "Die wahrscheinliche reale Wirkung ist damit ein Bruchteil der papierenen. Wer das einpreist, muss Wirkung messen statt Erfüllung, und das ist teurer, langsamer und angreifbarer, als der Plan zugibt."
-      },
-      {
-        "n": "07",
-        "titel": "Die Machtkarte ist ein Kategorienfehler",
-        "wer": "Kommission, Bundesministerium",
-        "urteil": "teils beantwortet",
-        "text": "Die Kommission entscheidet als Kollegium, der Juristische Dienst ist ein Vetospieler und kein anzuheuernder Verbündeter, und die deutsche Enthaltung im Rat ist eine Verfassungsfolge aus Ressortprinzip und Koalitionsklausel, nicht die Haltung einer Referatsleiterin, die man überzeugt. Was vierzehn Personen eröffnen, kann jeder Einzelne von Dutzenden Gegenknoten abwürgen.",
-        "folge": "Der Plan sagt selbst, diese Rollen könnten einen Prozess nur eröffnen, nicht beenden. Aber er überschätzt, was das Eröffnen wert ist, und unterschätzt, wie viele Hände es danach anhalten können. Die Minimalbesetzung ist eine notwendige, keine hinreichende Bedingung, und das steht zu leise auf der Seite."
-      },
-      {
-        "n": "08",
-        "titel": "Das Geld und die Erweiterung fehlten ganz",
-        "wer": "Kommission",
-        "urteil": "eingeräumt",
-        "text": "Die zwei Instrumente, die Drittstaaten real bewegen und europäische Politik am Leben halten, kamen im ersten Entwurf nicht vor: der mehrjährige Finanzrahmen, aus dem jede überlebende Politik bezahlt wird, und die Beitrittskonditionalität, der einzige Hebel, mit dem die EU nachweislich Gleichstellungsrecht im Inneren von Drittstaaten verändert hat.",
-        "folge": "Beide sind jetzt als Hebel ergänzt. Die Erweiterung wirkt nur am Rand, dort aber stärker als jede Handelskonditionalität. Der Finanzrahmen ist die eigentliche Machtfrage und zugleich Geisel derselben Einstimmigkeit, die der Plan überwinden will."
-      }
-    ],
-    "meta": {
-      "titel": "Der Einwand gegen diesen Abschnitt",
-      "text": [
-        "Der schärfste Vorwurf war methodisch: Eine Seite, die ihre eigenen Schwächen aufzählt, immunisiert sich gegen Kritik, statt sie zu beantworten. Das Benennen einer tödlichen Kontradiktion ist nicht ihre Auflösung.",
-        "Der Vorwurf ist richtig, und dieser Abschnitt kann ihn nicht durch mehr Text entkräften. Nur durch das Urteil in jeder Zeile. Von acht Einwänden sind zwei offen oder ungelöst, drei nur teilweise beantwortet, drei durch echte Korrekturen am Plan eingeräumt. Das ist die ehrliche Bilanz: Der Plan ist nicht robust, er ist bestenfalls reparierbar, und an mindestens einer Stelle, der Prämisse, weiß niemand, wie.",
-        "Wer daraus schließt, das Ganze sei ein Selbstgespräch ohne Konsequenz, hat einen Punkt. Die einzige Widerlegung dieses Verdachts sind die vorgenommenen Änderungen, nicht ihre Ankündigung."
-      ]
-    },
-    "fazit": "Kein einziger der vier Praktiker hielt den Plan für undurchführbar aus Mangel an Instrumenten. Alle vier hielten ihn für gefährdet aus Mangel an politischer Wirklichkeit: eine feindlicher werdende Mehrheit, eine Waffe, die in beide Richtungen schneidet, ein Kernhebel, der die Falschen trifft, und ein Ziel, das mit dem Zählen von Frauen an der Spitze verwechselt, was Befreiung an der Basis wäre. Das ist die Kritik, um die man einen Plan bauen sollte, nicht die, die man an sein Ende hängt."
   },
   "quellen": {
     "label": "Quellen",

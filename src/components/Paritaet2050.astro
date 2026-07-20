@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import daten from '../data/paritaet-2050.de.json';
 
-const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, kritik, quellen } = daten;
+const { meta, ausgangslage, doktrin, fahrplan, hebel, machtkarte, regionen, netzwerke, organisationen, beweislage, softpower, huerden, scheitern, quellen } = daten;
 
 // Abschnitte nummerieren sich selbst, damit neue Abschnitte keine Handarbeit erzwingen
 const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
@@ -783,56 +783,6 @@ const tempoCfg = {
         ))}
       </ol>
       <p class="kernsatz" data-reveal>{scheitern.schluss}</p>
-    </div>
-  </section>
-
-  <hr class="rule shell-rule" />
-
-  <!-- ===================== KRITIK ===================== -->
-  <section class="section" id="kritik">
-    <div class="shell">
-      <div class="sec-head" data-reveal>
-        <span class="sec-num">{sec()}</span>
-        <span class="sec-label">{kritik.label}</span>
-      </div>
-      <p class="lead-in" data-reveal>{kritik.lead}</p>
-      <p class="kernsatz" data-reveal>{kritik.kernsatz}</p>
-      <p class="vorbem" data-reveal>{kritik.vorbemerkung}</p>
-
-      <div class="lenses" data-reveal>
-        {kritik.perspektiven.map((pv) => (
-          <div class="lens">
-            <span class="lens-who">{pv.wer}</span>
-            <p class="lens-line">{pv.satz}</p>
-          </div>
-        ))}
-      </div>
-
-      <div class="einw-list">
-        {kritik.einwaende.map((e, i) => (
-          <details class="einw" data-reveal style={`--delay:${(i % 3) * 50}ms`} open={i < 2}>
-            <summary>
-              <span class="einw-n">{e.n}</span>
-              <span class="einw-main">
-                <span class="einw-title">{e.titel}</span>
-                <span class="einw-who">{e.wer}</span>
-              </span>
-              <span class={`einw-verdict v-${e.urteil.split(',')[0].split(' ')[0]}`}>{e.urteil}</span>
-            </summary>
-            <div class="einw-body">
-              <p class="einw-text">{e.text}</p>
-              <div class="einw-folge"><span class="mini-lab">Konsequenz</span><p>{e.folge}</p></div>
-            </div>
-          </details>
-        ))}
-      </div>
-
-      <div class="block warn" data-reveal>
-        <h3 class="block-title">{kritik.meta.titel}</h3>
-        {kritik.meta.text.map((t) => <p class="meta-p">{t}</p>)}
-      </div>
-
-      <p class="kernsatz" data-reveal>{kritik.fazit}</p>
     </div>
   </section>
 
