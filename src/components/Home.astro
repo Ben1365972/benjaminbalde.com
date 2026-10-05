@@ -11,7 +11,7 @@ const focusList = focus[lang];
 const offeringList = offerings[lang];
 ---
 
-<Base lang={lang} isHome={true}>
+<Base lang={lang} title={lang === 'en' ? 'Archive' : 'Archiv'} noindex={true}>
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="shell hero-shell">

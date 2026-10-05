@@ -3,6 +3,12 @@ export const defaultLang = 'de';
 // Base path + home URL per language
 export const home = { de: '/', en: '/en/' };
 
+// Alte Startseite, seit 2026-10 unter /legacy archiviert
+export const legacyHome = { de: '/legacy/', en: '/legacy/en/' };
+
+// Kontaktbereich der Speakerpage (public/index.html)
+export const contact = { de: '/#redaktion', en: '/#redaktion-en' };
+
 export const ui = {
   de: {
     'nav.kontakt': 'Kontakt',

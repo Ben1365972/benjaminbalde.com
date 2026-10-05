@@ -1,13 +1,16 @@
 ---
-import { ui, home, defaultLang } from '../i18n.js';
+import { ui, home, legacyHome, contact, defaultLang } from '../i18n.js';
 
 interface Props {
   lang?: 'de' | 'en';
 }
 const { lang = defaultLang } = Astro.props;
 const t = ui[lang];
-const base = home[lang];
+const isLegacy = Astro.url.pathname.startsWith('/legacy');
+const homes = isLegacy ? legacyHome : home;
+const base = homes[lang];
 const other = lang === 'de' ? 'en' : 'de';
+const kontakt = isLegacy ? `${base}#kontakt` : contact[lang];
 ---
 
 <header class="nav">
@@ -15,8 +18,8 @@ const other = lang === 'de' ? 'en' : 'de';
     <a href={base} class="brand" aria-label="Benjamin Balde">Benjamin Balde</a>
     <nav class="nav-right" aria-label="Hauptnavigation">
       <a href="https://balde.blog" class="nav-link">Blog</a>
-      <a href={`${base}#kontakt`} class="nav-link">{t['nav.kontakt']}</a>
-      <a href={home[other]} class="lang" aria-label={other === 'en' ? 'English' : 'Deutsch'}>
+      <a href={kontakt} class="nav-link">{t['nav.kontakt']}</a>
+      <a href={homes[other]} class="lang" aria-label={other === 'en' ? 'English' : 'Deutsch'}>
         {other.toUpperCase()}
       </a>
     </nav>
